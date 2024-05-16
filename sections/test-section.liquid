@@ -1,5 +1,5 @@
 <h1>{{section.settings.text}}</h1>
-
+{{images ['mountcable.png'] |  image_url: width: 300 | image_tag }}
 {% schema %}
     {
         "name": "Test Section",
@@ -11,8 +11,9 @@
             },
             {
                 "type": "image_picker",
-                "id": "product-pic",
+                "id": "productpic",
                 "label": "image"
+                
             }
         ],
         "presets": [{ "name": "Default Test Section"}],
