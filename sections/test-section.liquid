@@ -1,25 +1,19 @@
-<h1>{{section.settings.text}}</h1>
-{{product.featured_image}}
+
 {% schema %}
     {
-        "name": "Test Section",
+        "name": "FAQ",
         "settings": [
             {
-                "type": "product",
-                "id": "product",
-                "label": "Text"
-            },
-            {
-                "type": "image_picker",
-                "id": "productpic",
-                "label": "image"
-                
+                "type": "text",
+                "label": "Headline",
+                "id": "headline"
             }
         ],
-        "presets": [{ "name": "Default Test Section"}],
-        "tag": "section",
-        "class": "test-section",
-        "limit": 1
+        "presets": [
+            {"name": "FAQ"}
+        ]
+
+
 
     }
 {% endschema %}
