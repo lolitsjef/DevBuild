@@ -4,12 +4,14 @@
 <div class="page-width faq">
     <h2 class="h1">{{ section.settings.headline }}</h2>
     {% for block in section.blocks %}
-        <div class="faq__row">
-            <input type="checkbox" id="question-{{forloop.index}}" class="faq__toggle">
-            {% assign product = all_products[block.settings.myproduct] %}
-            <label for="question-{{forloop.index}}" class="faq__question">{{ product.title }}</label>
-            <div class="faq__answer">{{product.featured_image | image_url: width: 400 | image_tag}}</div>
-        </div>
+        {% for block in section.blocks %}
+            <div class="faq__row">
+                <input type="checkbox" id="question-{{forloop.index}}" class="faq__toggle">
+                {% assign product = all_products[block.settings.product{{forloop.index}}] %}
+                <label for="question-{{forloop.index}}" class="faq__question">{{ product.title }}</label>
+                <div class="faq__answer">{{product.featured_image | image_url: width: 400 | image_tag}}</div>
+            </div>
+        {%endfor%}
     {%endfor%}
   
 </div>
@@ -34,7 +36,17 @@
                     {
                         "type": "product",
                         "label": "Product",
-                        "id": "myproduct"
+                        "id": "product1"
+                    },
+                    {
+                        "type": "product",
+                        "label": "Product",
+                        "id": "product2"
+                    },
+                    {
+                        "type": "product",
+                        "label": "Product",
+                        "id": "product3"
                     }
                 ]               
             }
