@@ -6,8 +6,9 @@
     {% for block in section.blocks %}
         <div class="faq__row">
             <input type="checkbox" id="question-{{forloop.index}}" class="faq__toggle">
-            <label for="question-{{forloop.index}}" class="faq__question">{{block.settings.question}}</label>
-            <div class="faq__answer">{{block.settings.answer}}</div>
+            {% assign product = all_products[{{blocks.settings.my-product}}] %}
+            <label for="question-{{forloop.index}}" class="faq__question">{{ product.title }}</label>
+            <div class="faq__answer">{{ product.featured_image}}</div>
         </div>
     {%endfor%}
   
@@ -17,7 +18,7 @@
 
 {% schema %}
     {
-        "name": "FAQ",
+        "name": "Kit-Builder",
         "settings": [
             {
                 "type": "text",
@@ -27,24 +28,19 @@
         ],
         "blocks":[
             {
-                "name": "Question",
-                "type": "question",
+                "name": "Kit Section",
+                "type": "Kit-Section",
                 "settings":[
                     {
-                        "type": "text",
-                        "label": "Question",
-                        "id": "question"
-                    },
-                    {
-                        "type": "text",
-                        "label": "Answer",
-                        "id": "answer"   
+                        "type": "product",
+                        "label": "Product",
+                        "id": "my-product"
                     }
                 ]               
             }
         ],
         "presets": [
-            {"name": "FAQ"}
+            {"name": "Kit-Builder"}
         ]
 
 
