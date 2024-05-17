@@ -5,24 +5,22 @@
     <h2 class="h1">{{ section.settings.headline }}</h2>
     {% for block in section.blocks %}
         <div class="faq__row">
-            <input type="checkbox" id="question-{{forloop.index}}" class="faq__toggle">
-            {% assign product1 = all_products[block.settings.product1] %}
+            <input type="checkbox" id="item1-{{forloop.index}}" class="faq__toggle">
+            {% assign product = all_products[block.settings.product] %}
             <label for="question-{{forloop.index}}" class="faq__question">{{ product.title }}</label>
-            <div class="faq__answer">{{product1.featured_image | image_url: width: 400 | image_tag}}</div>
+            <div class="faq__answer">{{product.featured_image | image_url: width: 400 | image_tag}}</div>
         </div>
-
         <div class="faq__row">
-            <input type="checkbox" id="question-{{forloop.index}}" class="faq__toggle">
-            {% assign product2 = all_products[block.settings.product2] %}
+            <input type="checkbox" id="item2-{{forloop.index}}" class="faq__toggle">
+            {% assign product = all_products[block.settings.product] %}
             <label for="question-{{forloop.index}}" class="faq__question">{{ product.title }}</label>
-            <div class="faq__answer">{{product2.featured_image | image_url: width: 400 | image_tag}}</div>
+            <div class="faq__answer">{{product.featured_image | image_url: width: 400 | image_tag}}</div>
         </div>
-
         <div class="faq__row">
-            <input type="checkbox" id="question-{{forloop.index}}" class="faq__toggle">
-            {% assign product3 = all_products[block.settings.product3] %}
+            <input type="checkbox" id="item3-{{forloop.index}}" class="faq__toggle">
+            {% assign product = all_products[block.settings.product] %}
             <label for="question-{{forloop.index}}" class="faq__question">{{ product.title }}</label>
-            <div class="faq__answer">{{product3.featured_image | image_url: width: 400 | image_tag}}</div>
+            <div class="faq__answer">{{product.featured_image | image_url: width: 400 | image_tag}}</div>
         </div>
     {%endfor%}
   
