@@ -18,7 +18,7 @@
     background-color: #eaeaea;
 }
 .faq__question::after {
-    content: '276F';
+    content: '>';
     transition: all .5s;
     float: right;
 }
