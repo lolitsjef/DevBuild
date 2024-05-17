@@ -6,7 +6,7 @@
     {% for block in section.blocks %}
         <div class="faq__row">
             <input type="checkbox" id="question-{{forloop.index}}" class="faq__toggle">
-            {% assign product = all_products[{{blocks.settings.my-product}}] %}
+            {% assign product = all_products[{{blocks.settings.myproduct}}] %}
             <label for="question-{{forloop.index}}" class="faq__question">{{ product.title }}</label>
             <div class="faq__answer">{{ product.featured_image}}</div>
         </div>
@@ -34,7 +34,7 @@
                     {
                         "type": "product",
                         "label": "Product",
-                        "id": "my-product"
+                        "id": "myproduct"
                     }
                 ]               
             }
