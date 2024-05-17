@@ -2,25 +2,15 @@
 
 
 <div class="page-width faq">
-    <h2 class="h1">Frequently Asked Questions</h2>
-    
-    <div class="faq__row">
-        <input type="checkbox" id="question-1" class="faq__toggle">
-        <label for="question-1" class="faq__question">What is your return policy?</label>
-        <div class="faq__answer">Items can be returned within 30 days in their original condition. Contact us to initiate a return.</div>
-    </div>
+    <h2 class="h1">{{ section.settings.headline }}</h2>
+    {% for block in section.blocks %}
+        <div class="faq__row">
+            <input type="checkbox" id="question-{{forloop.index}}" class="faq__toggle">
+            <label for="question-{{forloop.index}}" class="faq__question">{{block.settings.question}}</label>
+            <div class="faq__answer">{{block.settings.answer}}</div>
+        </div>
+    {%endfor%}
   
-    <div class="faq__row">
-        <input type="checkbox" id="question-2" class="faq__toggle">
-        <label for="question-2" class="faq__question">How long does shipping take?</label>
-        <div class="faq__answer">Standard shipping takes 3-5 business days. Expedited options are available.</div>
-    </div>
-
-   <div class="faq__row">
-        <input type="checkbox" id="question-3" class="faq__toggle">
-        <label for="question-3" class="faq__question">Do you offer international shipping?</label>
-        <div class="faq__answer">Yes, we ship internationally. Costs vary and are calculated at checkout.</div>
-    </div>
 </div>
 
 
