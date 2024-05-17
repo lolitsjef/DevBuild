@@ -6,23 +6,23 @@
     {% for block in section.blocks %}
         <div class="faq__row">
             <input type="checkbox" id="question-{{forloop.index}}" class="faq__toggle">
-            {% assign product = all_products[block.settings.product1] %}
+            {% assign product1 = all_products[block.settings.product1] %}
             <label for="question-{{forloop.index}}" class="faq__question">{{ product.title }}</label>
-            <div class="faq__answer">{{product.featured_image | image_url: width: 400 | image_tag}}</div>
+            <div class="faq__answer">{{product1.featured_image | image_url: width: 400 | image_tag}}</div>
         </div>
 
         <div class="faq__row">
             <input type="checkbox" id="question-{{forloop.index}}" class="faq__toggle">
-            {% assign product = all_products[block.settings.product2] %}
+            {% assign product2 = all_products[block.settings.product2] %}
             <label for="question-{{forloop.index}}" class="faq__question">{{ product.title }}</label>
-            <div class="faq__answer">{{product.featured_image | image_url: width: 400 | image_tag}}</div>
+            <div class="faq__answer">{{product2.featured_image | image_url: width: 400 | image_tag}}</div>
         </div>
 
         <div class="faq__row">
             <input type="checkbox" id="question-{{forloop.index}}" class="faq__toggle">
-            {% assign product = all_products[block.settings.product3] %}
+            {% assign product3 = all_products[block.settings.product3] %}
             <label for="question-{{forloop.index}}" class="faq__question">{{ product.title }}</label>
-            <div class="faq__answer">{{product.featured_image | image_url: width: 400 | image_tag}}</div>
+            <div class="faq__answer">{{product3.featured_image | image_url: width: 400 | image_tag}}</div>
         </div>
     {%endfor%}
   
