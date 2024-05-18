@@ -5,6 +5,7 @@
     {% for block in section.blocks %}
         <h2>{{ section.settings.SectionHeader }}</h2>
         <input type="checkbox" id="product1section{{forloop.index}}" class = "faq__toggle">
+        <label for="product1section{{forloop.index}}" class="faq__question">
             <div class = "faq__answer">
                 {% assign product1 = all_products[block.settings.product1] %}
                 <div>
@@ -12,6 +13,11 @@
                     <h3>{{ product1.title }}</h3>
                 </div>
             </div>
+        </label>
+
+        <div class="clickable-div" id="myDiv">
+        Click anywhere inside this div
+        </div>
 
     {%endfor%}
   
@@ -24,7 +30,29 @@
 .faq__toggle:checked ~ .faq__answer{
     background: green;
 }
+.clickable-div {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  color: white;
+  text-align: center;
+  line-height: 200px;
+  cursor: pointer;
+}
+.clickable-div.clicked {
+  background-color: red;
+}
 {%endstylesheet%}
+
+{%javascript%}
+document.addEventListener('DOMContentLoaded', function () {
+  var div = document.getElementById('myDiv');
+  
+  div.addEventListener('click', function () {
+    div.classList.toggle('clicked');
+  });
+});
+{%endjavascript%}
 
 {% schema %}
     {
