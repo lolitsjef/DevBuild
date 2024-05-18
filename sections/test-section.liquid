@@ -4,16 +4,17 @@
     <h1>{{ section.settings.headline }}</h1>
     {% for block in section.blocks %}
         <h2>{{ section.settings.SectionHeader }}</h2>
-        <div class = "productcard">
-            <input type="checkbox" id="product1section{{forloop.index}}" class = "selected">
-            {% assign product1 = all_products[block.settings.product1] %}
-            <label for="product1section-{{forloop.index}}">
+        <input type="checkbox" id="product1section{{forloop.index}}" class = "selected">
+        <label for="product1section-{{forloop.index}}">
+            <div class = "productcard">
+                {% assign product1 = all_products[block.settings.product1] %}
                 <div>
                     <div>{{product1.featured_image | image_url: width: 400 | image_tag}}</div>
                     <h3>{{ product1.title }}</h3>
                 </div>
-            </label>
-        </div>
+            </div>
+        </label>
+
     {%endfor%}
   
 </div>
