@@ -3,6 +3,15 @@
 <div class="faq">
     <h1>{{ section.settings.headline }}</h1>
     {% for block in section.blocks %}
+
+        <div class = "productcard2">
+            {% assign product2 = all_products[block.settings.product2] %}
+            <div class = "productinfo2"> 
+                <div>{{product2.featured_image | image_url: width: 400 | image_tag}}</div>
+                <h3>{{ product2.title }}</h3>
+            </div>
+        </div>
+
         <h2>{{ section.settings.SectionHeader }}</h2>
         <div class = "productcard">
             <input type="checkbox" id="product1section{{forloop.index}}" class = "selected">
@@ -15,13 +24,7 @@
             </div>
         </div>
 
-        <div class = "productcard2">
-            {% assign product1 = all_products[block.settings.product1] %}
-            <div class = "productinfo2"> 
-                <div>{{product1.featured_image | image_url: width: 400 | image_tag}}</div>
-                <h3>{{ product1.title }}</h3>
-            </div>
-        </div>
+
 
     {%endfor%}
   
