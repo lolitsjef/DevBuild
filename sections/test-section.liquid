@@ -5,7 +5,7 @@
     {% for block in section.blocks %}
 
         <h2>{{ section.settings.SectionHeader }}</h2>
-        <div classname = "section{{forloop.index}}">
+        <div id = "section{{forloop.index}}">
             <div class = "productcard section{{forloop.index}}" onclick=selected(this)>
                 {% assign product1 = all_products[block.settings.product1] %}
                 <div>{{product1.featured_image | image_url: width: 200 | image_tag}}</div>
