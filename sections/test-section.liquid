@@ -4,13 +4,31 @@
     <h1>{{ section.settings.headline }}</h1>
     {% for block in section.blocks %}
 
-        <div class="radiodiv" onclick=selected(this)>one</div>
-        <div class="radiodiv" onclick=selected(this)>two</div>
-        <div class="radiodiv" onclick=selected(this)>three</div>
-        <div class="radiodiv" onclick=selected(this)>four</div>
-        <div class="radiodiv" onclick=selected(this)>five</div>
-        <div class="radiodiv" onclick=selected(this)>six</div>
-        <div class="radiodiv" onclick=selected(this)>seven</div>
+        <h2>{{ section.settings.SectionHeader }}</h2>
+
+        <div class = "productcard section{{forloop.index}}" onclick=selected(this)>
+            {% assign product1 = all_products[block.settings.product1] %}
+            <div>{{product1.featured_image | image_url: width: 200 | image_tag}}</div>
+            <div class = "productinfo"> 
+                <h3>{{ product1.title }}</h3>
+            </div>
+        </div>
+
+        <div class = "productcard section{{forloop.index}}" onclick=selected(this)>
+            {% assign product2 = all_products[block.settings.product2] %}
+            <div>{{product2.featured_image | image_url: width: 200 | image_tag}}</div>
+            <div class = "productinfo"> 
+                <h3>{{ product2.title }}</h3>
+            </div>
+        </div>
+
+        <div class = "productcard section{{forloop.index}}" onclick=selected(this)>
+            {% assign product3 = all_products[block.settings.product3] %}
+            <div>{{product3.featured_image | image_url: width: 200 | image_tag}}</div>
+            <div class = "productinfo"> 
+                <h3>{{ product3.title }}</h3>
+            </div>
+        </div>
 
 
 
@@ -22,17 +40,10 @@
 {{ 'test-js.js' | asset_url | script_tag }}
 
 {%stylesheet%}
-.productinfo{
-    background: red;
-}
-.selected:checked ~ .productinfo{
-    background: green;
-}
-
-.productcard2 {
+.productcard {
   background-color: red;
 }
-.productcard2.clicked {
+.productcard.clicked {
   background-color: green;
 }
 {%endstylesheet%}

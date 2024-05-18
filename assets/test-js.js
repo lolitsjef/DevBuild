@@ -1,14 +1,14 @@
 
-var divItems = document.getElementsByClassName("radiodiv");
+var section1Items = document.getElementsByClassName("section1");
 
-function selected(item) {
+function selected(item) { //also pass in product here
     this.clear();
-    item.style.backgroundColor = 'red';
+    item.style.selected = 'true';
 }
 
 function clear() {
-    for(var i=0; i < divItems.length; i++) {
-        var item = divItems[i];
-        item.style.backgroundColor = 'white';
+    for(var i=0; i < section1Items.length; i++) {
+        var item = section1Items[i];
+        item.style.selected = 'false';
     }
 }
