@@ -4,13 +4,13 @@
     <h1>{{ section.settings.headline }}</h1>
     {% for block in section.blocks %}
 
-        <div class = "productcard2">
-            {% assign product2 = all_products[block.settings.product2] %}
-            <div class = "productinfo2"> 
-                <div>{{product2.featured_image | image_url: width: 400 | image_tag}}</div>
-                <h3>{{ product2.title }}</h3>
-            </div>
-        </div>
+        <div class="radiodiv" onclick=selected(this)>one</div>
+        <div class="radiodiv" onclick=selected(this)>two</div>
+        <div class="radiodiv" onclick=selected(this)>three</div>
+        <div class="radiodiv" onclick=selected(this)>four</div>
+        <div class="radiodiv" onclick=selected(this)>five</div>
+        <div class="radiodiv" onclick=selected(this)>six</div>
+        <div class="radiodiv" onclick=selected(this)>seven</div>
 
 
 
@@ -37,13 +37,19 @@
 {%endstylesheet%}
 
 {%javascript%}
-document.addEventListener('DOMContentLoaded', function () {
-  var div = document.getElementById('productcard2');
-  
-  div.addEventListener('click', function () {
-    div.classList.toggle('clicked');
-  });
-});
+var divItems = document.getElementsByClassName("radiodiv");
+
+function selected(item) {
+    this.clear();
+    item.style.backgroundColor = 'red';
+}
+
+function clear() {
+    for(var i=0; i < divItems.length; i++) {
+        var item = divItems[i];
+        item.style.backgroundColor = 'white';
+    }
+}
 {%endjavascript%}
 
 {% schema %}
