@@ -1,5 +1,5 @@
 
-var section1Items = document.getElementById('section1').getElementsByTagName('productcard');  //get all divs from div called container
+var section1Items = document.getElementById('section1').getElementsByClass('productcard');  //get all divs from div called container
 
 function selected(item) { //also pass in product here
     this.removeSelections();
