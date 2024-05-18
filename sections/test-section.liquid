@@ -4,13 +4,15 @@
     <h1>{{ section.settings.headline }}</h1>
     {% for block in section.blocks %}
         <h2>{{ section.settings.SectionHeader }}</h2>
-        <input type="checkbox" id="product1section{{forloop.index}}" class = "faq__toggle">
-        {% assign product1 = all_products[block.settings.product1] %}
-        <label for="product1section{{forloop.index}}" class="faq__question">
-            <div>{{product1.featured_image | image_url: width: 400 | image_tag}}</div>
-        </label>
-        <div class = "faq__answer"> 
-            <h3>{{ product1.title }}</h3>
+        <div class = "productcard">
+            <input type="checkbox" id="product1section{{forloop.index}}" class = "selected">
+            {% assign product1 = all_products[block.settings.product1] %}
+            <label for="product1section{{forloop.index}}" class="faq__question">
+                <div>{{product1.featured_image | image_url: width: 400 | image_tag}}</div>
+            </label>
+            <div class = "product-info"> 
+                <h3>{{ product1.title }}</h3>
+            </div>
         </div>
 
     {%endfor%}
@@ -18,16 +20,22 @@
 </div>
 
 {%stylesheet%}
-.faq__answer{
+.product-info{
     background: red;
 }
-.faq__toggle:checked ~ .faq__answer{
+.selected:checked ~ .product-info{
     background: green;
 }
 {%endstylesheet%}
 
 {%javascript%}
-
+document.addEventListener('DOMContentLoaded', function () {
+  var div = document.getElementById('productcard');
+  
+  div.addEventListener('click', function () {
+    div.classList.toggle('clicked');
+  });
+});
 {%endjavascript%}
 
 {% schema %}
