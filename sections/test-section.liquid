@@ -19,6 +19,7 @@
     {%endfor%}
   
 </div>
+{{ 'test-js.js' | asset_url | script_tag }}
 
 {%stylesheet%}
 .productinfo{
@@ -35,22 +36,6 @@
   background-color: green;
 }
 {%endstylesheet%}
-
-{%javascript%}
-var divItems = document.getElementsByClassName("radiodiv");
-
-function selected(item) {
-    this.clear();
-    item.style.backgroundColor = 'red';
-}
-
-function clear() {
-    for(var i=0; i < divItems.length; i++) {
-        var item = divItems[i];
-        item.style.backgroundColor = 'white';
-    }
-}
-{%endjavascript%}
 
 {% schema %}
     {
