@@ -1,32 +1,34 @@
-{{'section-faq.css' |  asset_url |  stylesheet_tag}}
 
 
-<div class="page-width faq">
-    <h2 class="h1">{{ section.settings.headline }}</h2>
+<div class="">
+    <h1>{{ section.settings.headline }}</h1>
     {% for block in section.blocks %}
-        <div class="faq__row">
-            <input type="checkbox" id="item1-{{forloop.index}}" class="faq__toggle">
+        <h2>{{ section.settings.SectionHeader }}</h2>
+        <div class = "productcard">
+            <input type="checkbox" id="product1section{{forloop.index}}" class = "selected">
             {% assign product1 = all_products[block.settings.product1] %}
-            <label for="item1-{{forloop.index}}" class="faq__question">{{ product1.title }}</label>
-            <div class="faq__answer">{{product1.featured_image | image_url: width: 400 | image_tag}}</div>
-        </div>
-        <div class="faq__row">
-            <input type="checkbox" id="item2-{{forloop.index}}" class="faq__toggle">
-            {% assign product2 = all_products[block.settings.product2] %}
-            <label for="item2-{{forloop.index}}" class="faq__question">{{ product2.title }}</label>
-            <div class="faq__answer">{{product2.featured_image | image_url: width: 400 | image_tag}}</div>
-        </div>
-        <div class="faq__row">
-            <input type="checkbox" id="item3-{{forloop.index}}" class="faq__toggle">
-            {% assign product3 = all_products[block.settings.product3] %}
-            <label for="item3-{{forloop.index}}" class="faq__question">{{ product3.title }}</label>
-            <div class="faq__answer">{{product3.featured_image | image_url: width: 400 | image_tag}}</div>
+            <label for="product1section-{{forloop.index}}">
+                <div>
+                    <div>{{product1.featured_image | image_url: width: 400 | image_tag}}</div>
+                    <h3>{{ product1.title }}</h3>
+                </div>
+            </label>
         </div>
     {%endfor%}
   
 </div>
 
+{%stylesheet%}
+.productcard{
 
+}
+.selected{
+    display: none;
+}
+.selected:checked ~ .productcard{
+    background: red;
+}
+{%endstylesheet%}
 
 {% schema %}
     {
@@ -38,11 +40,17 @@
                 "id": "headline"
             }
         ],
+        "max_blocks": 6,
         "blocks":[
             {
                 "name": "Kit Section",
                 "type": "Kit-Section",
                 "settings":[
+                    {
+                        "type": "text",
+                        "label": "Section Header",
+                        "id": "SectionHeader"
+                    },
                     {
                         "type": "product",
                         "label": "Product",
