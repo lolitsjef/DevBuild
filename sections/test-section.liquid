@@ -5,20 +5,13 @@
     {% for block in section.blocks %}
         <h2>{{ section.settings.SectionHeader }}</h2>
         <input type="checkbox" id="product1section{{forloop.index}}" class = "selected">
-        <label for="product1section-{{forloop.index}}">
+        <label for="product1section{{forloop.index}}">
             <div class = "productcard">
                 {% assign product1 = all_products[block.settings.product1] %}
                 <div>
                     <div>{{product1.featured_image | image_url: width: 400 | image_tag}}</div>
                     <h3>{{ product1.title }}</h3>
                 </div>
-            </div>
-        </label>
-
-        <input type="checkbox" id="toggle">
-        <label for="toggle">
-            <div class="clickable-div" id="myDiv">
-                Click anywhere inside this div
             </div>
         </label>
 
@@ -35,22 +28,6 @@
 }
 .selected:checked + .productcard{
     background: green;
-}
-
-.clickable-div {
-  width: 200px;
-  height: 200px;
-  background-color: lightblue;
-  color: white;
-  text-align: center;
-  line-height: 200px;
-  cursor: pointer;
-}
-#toggle {
-  display: none;
-}
-#toggle:checked + label .clickable-div {
-  background-color: tomato;
 }
 {%endstylesheet%}
 
