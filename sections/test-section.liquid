@@ -7,7 +7,7 @@
         <div class = "productcard">
             <input type="checkbox" id="product1section{{forloop.index}}" class = "selected">
             {% assign product1 = all_products[block.settings.product1] %}
-            <label for="product1section{{forloop.index}}" class="faq__question">
+            <label for="product1section{{forloop.index}}">
                 <div>{{product1.featured_image | image_url: width: 400 | image_tag}}</div>
             </label>
             <div class = "product-info"> 
@@ -20,10 +20,10 @@
 </div>
 
 {%stylesheet%}
-.product-info{
+.productinfo{
     background: red;
 }
-.selected:checked ~ .product-info{
+.selected:checked ~ .productinfo{
     background: green;
 }
 {%endstylesheet%}
