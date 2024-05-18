@@ -3,6 +3,8 @@ var section1Items = document.getElementsByClassName("section1");
 
 function selected(item) { //also pass in product here
     //this.removeSelections();
+    item.style.backgroundColor = 'green';
+
     item.classList.add('selected');
 }
 
