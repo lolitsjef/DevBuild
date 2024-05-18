@@ -15,6 +15,13 @@
             </div>
         </label>
 
+        <input type="checkbox" id="toggle">
+        <label for="toggle">
+            <div class="clickable-div" id="myDiv">
+                Click anywhere inside this div
+            </div>
+        </label>
+
     {%endfor%}
   
 </div>
@@ -28,6 +35,22 @@
 }
 .selected:checked + .productcard{
     background: green;
+}
+
+.clickable-div {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  color: white;
+  text-align: center;
+  line-height: 200px;
+  cursor: pointer;
+}
+#toggle {
+  display: none;
+}
+#toggle:checked + label .clickable-div {
+  background-color: tomato;
 }
 {%endstylesheet%}
 
