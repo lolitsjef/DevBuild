@@ -3,7 +3,7 @@ var section1Items =document.getElementById('section1').getElementsByTagName('pro
 
 function selected(item) { //also pass in product here
     //this.removeSelections();
-    item.style.backgroundColor = 'green';
+   //item.style.backgroundColor = 'green';
 
     item.classList.add('selected');
 }
