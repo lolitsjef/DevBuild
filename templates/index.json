@@ -2,8 +2,22 @@
   "sections": {
     "test_section_hJcgyQ": {
       "type": "test-section",
+      "blocks": {
+        "kit_section_TAzrDw": {
+          "type": "Kit-Section",
+          "settings": {
+            "SectionHeader": "",
+            "product1": "bmw-e30-washed-pigment-dyed-cotton-dad-hat",
+            "product2": "bmw-e30-two-tone-dad-hat",
+            "product3": "cable-spacer-for-immersionrc-powerplay"
+          }
+        }
+      },
+      "block_order": [
+        "kit_section_TAzrDw"
+      ],
       "settings": {
-        "text": "bmw-e30-two-tone-dad-hat"
+        "headline": "kit builder"
       }
     },
     "image-with-text": {
