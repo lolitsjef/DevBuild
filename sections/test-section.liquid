@@ -1,12 +1,12 @@
 
 
-<div class="kitsection">
+<div class="faq">
     <h1>{{ section.settings.headline }}</h1>
     {% for block in section.blocks %}
         <h2>{{ section.settings.SectionHeader }}</h2>
-        <input type="checkbox" id="product1section{{forloop.index}}" class = "selected">
+        <input type="checkbox" id="product1section{{forloop.index}}" class = "faq__toggle">
         <label for="product1section{{forloop.index}}">
-            <div class = "productcard">
+            <div class = "faq__answer">
                 {% assign product1 = all_products[block.settings.product1] %}
                 <div>
                     <div>{{product1.featured_image | image_url: width: 400 | image_tag}}</div>
@@ -20,13 +20,13 @@
 </div>
 
 {%stylesheet%}
-.productcard{
+.faq .faq__toggle {
+     display: none;
+}
+.faq__answer{
     background: red;
 }
-.kitsection .selected{
-    display: none;
-}
-.kitsection .selected:checked ~ .productcard{
+.faq__toggle:checked ~ .faq__answer{
     background: green;
 }
 {%endstylesheet%}
