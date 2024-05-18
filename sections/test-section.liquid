@@ -15,6 +15,14 @@
             </div>
         </div>
 
+        <div class = "productcard2">
+            {% assign product1 = all_products[block.settings.product1] %}
+            <div class = "productinfo2"> 
+                <div>{{product1.featured_image | image_url: width: 400 | image_tag}}</div>
+                <h3>{{ product1.title }}</h3>
+            </div>
+        </div>
+
     {%endfor%}
   
 </div>
@@ -26,11 +34,24 @@
 .selected:checked ~ .productinfo{
     background: green;
 }
+
+.productcard2 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  color: white;
+  text-align: center;
+  line-height: 200px;
+  cursor: pointer;
+}
+.productcard2.clicked {
+  background-color: green;
+}
 {%endstylesheet%}
 
 {%javascript%}
 document.addEventListener('DOMContentLoaded', function () {
-  var div = document.getElementById('productcard');
+  var div = document.getElementById('productcard2');
   
   div.addEventListener('click', function () {
     div.classList.toggle('clicked');
