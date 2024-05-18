@@ -20,13 +20,13 @@
 
 {%stylesheet%}
 .productcard{
-    background: green;
+    background: red;
 }
 .productcard.selected{
     display: none;
 }
-.selected:checked ~ .productcard{
-    background: red;
+.productcard.selected:checked ~ .productcard{
+    background: green;
 }
 {%endstylesheet%}
 
