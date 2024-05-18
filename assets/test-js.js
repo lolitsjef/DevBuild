@@ -2,7 +2,7 @@
 var section1Items =document.getElementById('section1').getElementsByTagName('productcard');  //get all divs from div called container
 
 function selected(item) { //also pass in product here
-    this.removeSelections();
+    //this.removeSelections();
 
     item.classList.add('selected');
 }
