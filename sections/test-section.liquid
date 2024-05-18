@@ -23,10 +23,10 @@
 .productcard{
     background: red;
 }
-.selected{
+.kitsection.selected{
     display: none;
 }
-.selected:checked + .productcard{
+.kitsection.selected:checked ~ .productcard{
     background: green;
 }
 {%endstylesheet%}
