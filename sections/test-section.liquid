@@ -5,7 +5,6 @@
     {% for block in section.blocks %}
         <h2>{{ section.settings.SectionHeader }}</h2>
         <input type="checkbox" id="product1section{{forloop.index}}" class = "faq__toggle">
-        <label for="product1section{{forloop.index}}">
             <div class = "faq__answer">
                 {% assign product1 = all_products[block.settings.product1] %}
                 <div>
@@ -13,7 +12,6 @@
                     <h3>{{ product1.title }}</h3>
                 </div>
             </div>
-        </label>
 
     {%endfor%}
   
@@ -21,7 +19,6 @@
 
 {%stylesheet%}
 .faq .faq__toggle {
-     display: none;
 }
 .faq__answer{
     background: red;
