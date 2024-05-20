@@ -1,6 +1,7 @@
 function selected(sectionIndex, item) {
     removeSelections(sectionIndex);
     item.classList.add('selected');
+    
 }
 
 function removeSelections(sectionIndex) {
@@ -9,4 +10,12 @@ function removeSelections(sectionIndex) {
         var item = sectionItems[i];
         item.classList.remove('selected');
     }
+
+function setFeaturedProduct(name, desc, price){
+
+    document.getElementById('featuredproductname').innerHTML = name;
+    document.getElementById('featuredproductdesc').innerHTML = desc;
+    document.getElementById('featuredproductprice').innerHTML = price;
+
+}
 }
