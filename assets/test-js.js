@@ -1,8 +1,8 @@
-function selected(sectionIndex, item, name, desc, price) {
+function selected(sectionIndex, item, id) {
     console.log("here");
     removeSelections(sectionIndex);
     item.classList.add('selected');
-    setFeaturedProduct(name, desc, price);
+    setFeaturedProduct(id);
 }
 
 function removeSelections(sectionIndex) {
@@ -13,10 +13,19 @@ function removeSelections(sectionIndex) {
     }
 }
 
-function setFeaturedProduct(name, desc, price){
-    
-    document.getElementById('featuredproductname').innerHTML = name;
-    document.getElementById('featuredproductdesc').innerHTML = desc;
-    document.getElementById('featuredproductprice').innerHTML = price;
+async function setFeaturedProduct(id){
+    const product = await getProductById(id);
+    document.getElementById('featuredproductname').innerHTML = product.title;
+    document.getElementById('featuredproductdesc').innerHTML = product.description;
+    document.getElementById('featuredproductprice').innerHTML = product.price;
 
 }
+
+async function getProductById(id) {
+	const handle = (await fetch(`/search/suggest.json?q=id:${id}&resources[type]=product&limit=1`)
+		.then(response => response.json())
+		.then(response => response.resources.results.products.shift())).handle;
+
+	return await fetch(`/products/${handle}.js`).then(response => response.json());
+}
+
