@@ -10,6 +10,7 @@ function removeSelections(sectionIndex) {
         var item = sectionItems[i];
         item.classList.remove('selected');
     }
+}
 
 function setFeaturedProduct(name, desc, price){
 
@@ -17,5 +18,4 @@ function setFeaturedProduct(name, desc, price){
     document.getElementById('featuredproductdesc').innerHTML = desc;
     document.getElementById('featuredproductprice').innerHTML = price;
 
-}
 }
