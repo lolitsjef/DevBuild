@@ -7,14 +7,13 @@
         <h3 id="featuredproductname"></h3>
         <h4 id="featuredproductdesc"></h4>
         <h3 id="featuredproductprice"></h3>
-
     </div>
     {% for block in section.blocks %}
 
         <h2>{{ block.settings.SectionHeader }}</h2>
         <div id = "section{{forloop.index}}">
             {% assign product1 = all_products[block.settings.product1] %}
-            <div class = "productcard" onclick="selected({{ forloop.index }}, this); setFeaturedProduct({{product1.title}}, {{product1.description}}, {{product1.price}})">
+            <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product1.title}}, {{product1.description}}, {{product1.price}})">
                 <div>{{product1.featured_image | image_url: width: 200 | image_tag}}</div>
                 <div class = "productinfo"> 
                     <h3>{{ product1.title }}</h3>

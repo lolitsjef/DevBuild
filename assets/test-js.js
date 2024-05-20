@@ -1,7 +1,7 @@
-function selected(sectionIndex, item) {
+function selected(sectionIndex, item, name, desc, price) {
     removeSelections(sectionIndex);
     item.classList.add('selected');
-    
+    setFeaturedProduct(name, desc, price);
 }
 
 function removeSelections(sectionIndex) {
