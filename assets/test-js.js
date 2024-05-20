@@ -15,6 +15,7 @@ function removeSelections(sectionIndex) {
 
 async function setFeaturedProduct(id){
     const product = await getProductById(id);
+    document.getElementById("featuredproductimage").src=product.featured_image;
     document.getElementById('featuredproductname').innerHTML = product.title;
     document.getElementById('featuredproductdesc').innerHTML = product.description;
     document.getElementById('featuredproductprice').innerHTML = product.price;
