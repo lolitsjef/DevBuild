@@ -1,4 +1,5 @@
 function selected(sectionIndex, item, name, desc, price) {
+    console.log("here");
     removeSelections(sectionIndex);
     item.classList.add('selected');
     setFeaturedProduct(name, desc, price);
@@ -13,7 +14,7 @@ function removeSelections(sectionIndex) {
 }
 
 function setFeaturedProduct(name, desc, price){
-
+    
     document.getElementById('featuredproductname').innerHTML = name;
     document.getElementById('featuredproductdesc').innerHTML = desc;
     document.getElementById('featuredproductprice').innerHTML = price;
