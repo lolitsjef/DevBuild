@@ -14,7 +14,7 @@
         <div id = "section{{forloop.index}}">
 
             {% assign product1 = all_products[block.settings.product1] %}
-            <div class = "productcard" onclick="selected({{ forloop.index }}, this, '{{product1.title}}', '{{product1.description}}', '{{product1.price}}')">
+            <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product1.title | escape}}, {{product1.description | escape}}, {{product1.price | escape}})">
                 <div>{{product1.featured_image | image_url: width: 200 | image_tag}}</div>
                 <div class = "productinfo"> 
                     <h3>{{ product1.title }}</h3>
@@ -22,7 +22,7 @@
             </div>
 
             {% assign product2 = all_products[block.settings.product2] %}
-            <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product2.title}}, {{product2.description}}, {{product2.price}})">
+            <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product2.title | escape}}, {{product2.description | escape}}, {{product2.price | escape}})">
                 <div>{{product2.featured_image | image_url: width: 200 | image_tag}}</div>
                 <div class = "productinfo"> 
                     <h3>{{ product2.title }}</h3>
@@ -30,7 +30,7 @@
             </div>
 
             {% assign product3 = all_products[block.settings.product3] %}
-            <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product3.title}}, {{product3.description}}, {{product3.price}})">
+            <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product3.title | escape}}, {{product3.description | escape}}, {{product3.price | escape}})">
                 <div>{{product3.featured_image | image_url: width: 200 | image_tag}}</div>
                 <div class = "productinfo"> 
                     <h3>{{ product3.title }}</h3>
@@ -38,7 +38,7 @@
             </div>
 
             {% assign product4 = all_products[block.settings.product4] %} 
-            <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product4.title}}, {{product4.description}}, {{product4.price}})">
+            <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product4.title | escape}}, {{product4.description | escape}}, {{product4.price | escape}})">
                 <div>{{product4.featured_image | image_url: width: 200 | image_tag}}</div>
                 <div class = "productinfo"> 
                     <h3>{{ product4.title }}</h3>
