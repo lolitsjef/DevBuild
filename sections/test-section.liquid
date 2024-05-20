@@ -14,7 +14,7 @@
         <div id = "section{{forloop.index}}">
 
             {% assign product1 = all_products[block.settings.product1] %}
-            <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product1.title}}, {{product1.description}}, {{product1.price}})">
+            <div class = "productcard" onclick="selected({{ forloop.index }}, this, '{{product1.title}}', '{{product1.description}}', '{{product1.price}}')">
                 <div>{{product1.featured_image | image_url: width: 200 | image_tag}}</div>
                 <div class = "productinfo"> 
                     <h3>{{ product1.title }}</h3>
