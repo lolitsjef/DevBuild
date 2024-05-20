@@ -6,15 +6,35 @@
         "kit_section_TAzrDw": {
           "type": "Kit-Section",
           "settings": {
-            "SectionHeader": "",
+            "SectionHeader": "first thing",
             "product1": "bmw-e30-washed-pigment-dyed-cotton-dad-hat",
             "product2": "bmw-e30-two-tone-dad-hat",
             "product3": "cable-spacer-for-immersionrc-powerplay"
           }
+        },
+        "kit_section_e3cd6t": {
+          "type": "Kit-Section",
+          "settings": {
+            "SectionHeader": "new",
+            "product1": "camcorder-a-v-cable-for-immersionrc-powerplay",
+            "product2": "devbuild-box-logo-five-panel-hat",
+            "product3": "sony-handycam-intelligent-accessory-shoe-to-cold-shoe-adapter"
+          }
+        },
+        "kit_section_Mf37Hd": {
+          "type": "Kit-Section",
+          "settings": {
+            "SectionHeader": "other thing",
+            "product1": "camcorder-a-v-cable-for-immersionrc-powerplay",
+            "product2": "immersionrc-powerplay-mounting-kit-for-sony-handycam-hot-shoe",
+            "product3": "steering-wheel-wall-mount"
+          }
         }
       },
       "block_order": [
-        "kit_section_TAzrDw"
+        "kit_section_TAzrDw",
+        "kit_section_e3cd6t",
+        "kit_section_Mf37Hd"
       ],
       "settings": {
         "headline": "kit builder"
