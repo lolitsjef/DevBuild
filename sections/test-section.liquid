@@ -16,6 +16,8 @@
 
         <h2>{{ block.settings.SectionHeader }}</h2>
         <div id = "section{{forloop.index}}">
+
+            {% if block.settings.product1.id != blank %}
             {% assign product1 = all_products[block.settings.product1] %}
             <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product1.id}})">
                 <div>{{product1.featured_image | image_url: width: 200 | image_tag}}</div>
@@ -23,7 +25,10 @@
                     <h3>{{ product1.title }}</h3>
                 </div>
             </div>
+            {% endif %}
 
+
+            {% if block.settings.product2.id != blank %}
             {% assign product2 = all_products[block.settings.product2] %}
             <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product2.id}})">
                 <div>{{product2.featured_image | image_url: width: 200 | image_tag}}</div>
@@ -31,7 +36,10 @@
                     <h3>{{ product2.title }}</h3>
                 </div>
             </div>
+            {% endif %}
 
+
+            {% if block.settings.product3.id != blank %}
             {% assign product3 = all_products[block.settings.product3] %}
             <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product3.id}})">
                 <div>{{product3.featured_image | image_url: width: 200 | image_tag}}</div>
@@ -39,6 +47,8 @@
                     <h3>{{ product3.title }}</h3>
                 </div>
             </div>
+            {% endif %}
+
 
             {% if block.settings.product4.id != blank %}
             {% assign product4 = all_products[block.settings.product4] %} 
