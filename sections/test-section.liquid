@@ -3,11 +3,12 @@
 <div class="faq">
     <h1>{{ section.settings.headline }}</h1>
     <h2>current product</h2>
+    {% assign defaultProduct = all_products[block.settings.product1] %}
     <div>
-        <img src = "" id = "featuredproductimage" height="100px" width="100px">
-        <h3 id="featuredproductname"></h3>
-        <h4 id="featuredproductdesc"></h4>
-        <h3 id="featuredproductprice"></h3>
+        <img src = {{defaultProduct.featured_image}} id = "featuredproductimage" height="100px" width="100px">
+        <h3 id="featuredproductname">{{defaultProduct.title}}</h3>
+        <h4 id="featuredproductdesc">{{defaultProduct.description}}</h4>
+        <h3 id="featuredproductprice">{{defaultProduct.price}}</h3>
     </div>
     {% for block in section.blocks %}
 
