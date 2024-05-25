@@ -1,6 +1,14 @@
 
 {{ 'test-js.js' | asset_url | script_tag }}
 
+{% javascript %}
+    function showAlert() {
+      alert('listen to shopify theme editor re-render');
+    }
+    
+    document.addEventListener("shopify:section:load", showAlert);
+    {% endjavascript %}
+
 <div class="faq">
     <h1>{{ section.settings.headline }}</h1>
     <h2>current product</h2>
