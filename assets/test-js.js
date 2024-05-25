@@ -1,7 +1,10 @@
-function selected(sectionIndex, item, id) {
+var a = [];
+
+function selected(sectionIndex, item, id, image) {
     removeSelections(sectionIndex);
     item.classList.add('selected');
-    setFeaturedProduct(id);
+    setFeaturedProduct(id, image);
+    a
 }
 
 function removeSelections(sectionIndex) {
@@ -12,10 +15,10 @@ function removeSelections(sectionIndex) {
     }
 }
 
-async function setFeaturedProduct(id){
+async function setFeaturedProduct(id, image){
     console.log("here");
-    const product = await getProductById(id);
-    document.getElementById("featuredproductimage").src=product.featured_image;
+    //const product = await getProductById(id);
+    document.getElementById("featuredproductimage").src=image;
     document.getElementById('featuredproductname').innerHTML = product.title;
     document.getElementById('featuredproductdesc').innerHTML = product.description;
     document.getElementById('featuredproductprice').innerHTML = product.price;
@@ -30,47 +33,4 @@ async function getProductById(id) {
 	return await fetch(`/products/${handle}.js`).then(response => response.json());
 }
 
-function addAllToCart() {
-    var selectedProductIds = [];
 
-    // Loop through each section
-    var sectionCount = document.getElementsByClassName('KitBuilder').length;
-    for (var sectionIndex = 0; sectionIndex < sectionCount; sectionIndex++) {
-        var selectedProduct = document.getElementById('section' + (sectionIndex + 1)).getElementsByClassName('selected')[0];
-        if (selectedProduct) {
-            var productId = selectedProduct.dataset.productId;
-            selectedProductIds.push(productId);
-        }
-    }
-    console.log(selectedProductIds)
-    // Use AJAX to add products to cart
-    if (selectedProductIds.length > 0) {
-        addToCart(selectedProductIds);
-    } else {
-        alert("Please select at least one product.");
-    }
-}
-
-async function addToCart(productIds) {
-    var formData = new FormData();
-    formData.append('items', JSON.stringify(productIds));
-
-    try {
-        const response = await fetch('/cart/add.js', {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
-
-        if (response.ok) {
-            alert("Products added to cart successfully!");
-        } else {
-            throw new Error('Failed to add products to cart.');
-        }
-    } catch (error) {
-        console.error('Error adding products to cart:', error);
-        alert("Failed to add products to cart. Please try again.");
-    }
-}
