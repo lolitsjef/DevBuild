@@ -53,15 +53,16 @@
             </div>
         </div>
     {%endfor%}
+    {% javascript %}
+        function showAlert() {
+          alert('listen to shopify theme editor re-render');
+        }
+        
+        document.addEventListener("shopify:section:load", showAlert);
+    {% endjavascript %}
 </div>
 
-{% javascript %}
-    function showAlert() {
-      alert('listen to shopify theme editor re-render');
-    }
-    
-    document.addEventListener("shopify:section:load", showAlert);
-{% endjavascript %}
+
 
 {%stylesheet%}
 .productcard {
