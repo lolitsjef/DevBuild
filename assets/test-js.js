@@ -19,9 +19,9 @@ async function setFeaturedProduct(id, image){
     console.log("here");
     //const product = await getProductById(id);
     document.getElementById("featuredproductimage").src=image;
-    document.getElementById('featuredproductname').innerHTML = product.title;
-    document.getElementById('featuredproductdesc').innerHTML = product.description;
-    document.getElementById('featuredproductprice').innerHTML = product.price;
+    //document.getElementById('featuredproductname').innerHTML = product.title;
+    //document.getElementById('featuredproductdesc').innerHTML = product.description;
+    //document.getElementById('featuredproductprice').innerHTML = product.price;
 
 }
 
