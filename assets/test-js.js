@@ -30,3 +30,48 @@ async function getProductById(id) {
 	return await fetch(`/products/${handle}.js`).then(response => response.json());
 }
 
+function addAllToCart() {
+    var selectedProducts = [];
+    var selectedProductIds = [];
+
+    // Loop through each section
+    var sectionCount = document.getElementsByClassName('faq').length;
+    for (var sectionIndex = 0; sectionIndex < sectionCount; sectionIndex++) {
+        var selectedProduct = document.getElementById('section' + (sectionIndex + 1)).getElementsByClassName('selected')[0];
+        if (selectedProduct) {
+            var productId = selectedProduct.dataset.productId;
+            selectedProductIds.push(productId);
+        }
+    }
+
+    // Use AJAX to add products to cart
+    if (selectedProductIds.length > 0) {
+        addToCart(selectedProductIds);
+    } else {
+        alert("Please select at least one product.");
+    }
+}
+
+async function addToCart(productIds) {
+    var formData = new FormData();
+    formData.append('items', JSON.stringify(productIds));
+
+    try {
+        const response = await fetch('/cart/add.js', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            alert("Products added to cart successfully!");
+        } else {
+            throw new Error('Failed to add products to cart.');
+        }
+    } catch (error) {
+        console.error('Error adding products to cart:', error);
+        alert("Failed to add products to cart. Please try again.");
+    }
+}

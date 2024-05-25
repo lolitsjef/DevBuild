@@ -1,8 +1,7 @@
 
 {{ 'test-js.js' | asset_url | script_tag }}
 
-
-<div class="faq">
+<div class="KitBuilder">
     <h1>{{ section.settings.headline }}</h1>
     <h2>current product</h2>
     {% assign defaultProduct = all_products[section.blocks[0].settings.product1] %}
@@ -51,13 +50,8 @@
             </div>
         </div>
     {%endfor%}
-    {% javascript %}
-        function showAlert() {
-          alert('listen to shopify theme editor re-render');
-        }
-        
-        document.addEventListener("shopify:section:load", showAlert);
-    {% endjavascript %}
+    <button onclick="addAllToCart()">Add All to Cart</button>
+
 </div>
 
 
