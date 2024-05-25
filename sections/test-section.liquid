@@ -3,8 +3,8 @@
 <div class="faq">
     <h1>{{ section.settings.headline }}</h1>
     <h2>current product</h2>
-    {% assign defaultProduct = all_products[block.settings.product1] %}
-    <div>
+    {% assign defaultProduct = all_products[section.blocks.settings.product1] %}
+    <div onload="setFeaturedProduct({{defaultProduct.id}})">
         <img src = "" id = "featuredproductimage" height="100px" width="100px">
         <h3 id="featuredproductname"></h3>
         <h4 id="featuredproductdesc"></h4>
