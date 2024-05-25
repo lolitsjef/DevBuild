@@ -1,5 +1,4 @@
 function selected(sectionIndex, item, id) {
-    console.log("here");
     removeSelections(sectionIndex);
     item.classList.add('selected');
     setFeaturedProduct(id);
@@ -14,6 +13,7 @@ function removeSelections(sectionIndex) {
 }
 
 async function setFeaturedProduct(id){
+    console.log("here");
     const product = await getProductById(id);
     document.getElementById("featuredproductimage").src=product.featured_image;
     document.getElementById('featuredproductname').innerHTML = product.title;
