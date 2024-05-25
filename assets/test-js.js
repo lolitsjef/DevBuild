@@ -1,10 +1,10 @@
-var a = [];
+var a = [6];
 
 function selected(sectionIndex, item, id) {
     removeSelections(sectionIndex);
     item.classList.add('selected');
     setFeaturedProduct(id);
-    a
+    a[sectionIndex-1] = id;
 }
 
 function removeSelections(sectionIndex) {
@@ -31,6 +31,10 @@ async function getProductById(id) {
 		.then(response => response.resources.results.products.shift())).handle;
 
 	return await fetch(`/products/${handle}.js`).then(response => response.json());
+}
+
+function checkout(){
+    console.log(a);
 }
 
 
