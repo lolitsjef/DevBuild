@@ -1,10 +1,10 @@
-var a = [6];
+var selectedProducts = [6];
 
 function selected(sectionIndex, item, id) {
     removeSelections(sectionIndex);
     item.classList.add('selected');
     setFeaturedProduct(id);
-    a[sectionIndex-1] = id;
+    selectedProducts[sectionIndex-1] = id;
 }
 
 function removeSelections(sectionIndex) {
@@ -34,7 +34,26 @@ async function getProductById(id) {
 }
 
 function checkout(){
-    console.log(a);
+    foreach(product in selectedProducts){
+        
+    }
+    let formData = {
+        'items': [6]
+    };
+       
+    fetch(window.Shopify.routes.root + 'cart/add.js', {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => {
+        return response.json();
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
 }
 
 
