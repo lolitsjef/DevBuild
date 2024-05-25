@@ -1,9 +1,9 @@
 var a = [];
 
-function selected(sectionIndex, item, id, image) {
+function selected(sectionIndex, item, id) {
     removeSelections(sectionIndex);
     item.classList.add('selected');
-    setFeaturedProduct(id, image);
+    setFeaturedProduct(id);
     a
 }
 
@@ -15,13 +15,13 @@ function removeSelections(sectionIndex) {
     }
 }
 
-async function setFeaturedProduct(id, image){
+async function setFeaturedProduct(id){
     console.log("here");
-    //const product = await getProductById(id);
-    document.getElementById("featuredproductimage").src=image;
-    //document.getElementById('featuredproductname').innerHTML = product.title;
-    //document.getElementById('featuredproductdesc').innerHTML = product.description;
-    //document.getElementById('featuredproductprice').innerHTML = product.price;
+    const product = await getProductById(id);
+    document.getElementById("featuredproductimage").src=product.featured_image;
+    document.getElementById('featuredproductname').innerHTML = product.title;
+    document.getElementById('featuredproductdesc').innerHTML = product.description;
+    document.getElementById('featuredproductprice').innerHTML = product.price;
 
 }
 
