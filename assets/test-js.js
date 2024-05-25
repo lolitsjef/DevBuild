@@ -35,7 +35,7 @@ function addAllToCart() {
     var selectedProductIds = [];
 
     // Loop through each section
-    var sectionCount = document.getElementsByClassName('faq').length;
+    var sectionCount = document.getElementsByClassName('KitBuilder').length;
     for (var sectionIndex = 0; sectionIndex < sectionCount; sectionIndex++) {
         var selectedProduct = document.getElementById('section' + (sectionIndex + 1)).getElementsByClassName('selected')[0];
         if (selectedProduct) {
