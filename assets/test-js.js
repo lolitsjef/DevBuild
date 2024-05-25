@@ -31,7 +31,6 @@ async function getProductById(id) {
 }
 
 function addAllToCart() {
-    var selectedProducts = [];
     var selectedProductIds = [];
 
     // Loop through each section
@@ -43,7 +42,7 @@ function addAllToCart() {
             selectedProductIds.push(productId);
         }
     }
-
+    console.log(selectedProductIds)
     // Use AJAX to add products to cart
     if (selectedProductIds.length > 0) {
         addToCart(selectedProductIds);
