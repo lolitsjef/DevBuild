@@ -59,7 +59,7 @@
 
             <div class = "productcard" onclick="selected({{ forloop.index }}, this, 0)">
                 {% if section.settings.noProductImage != blank %}
-                    <div>{{block.settings.noProductImage | image_url: width: 200 | image_tag}}</div>
+                    <div>{{section.settings.noProductImage | image_url: width: 200 | image_tag}}</div>
                 {% else %}
                     <div class = "noImage">a</div>
                 {% endif %}
