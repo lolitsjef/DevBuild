@@ -40,22 +40,21 @@ async function getProductById(id) {
 }
 
 function checkout(){
-    var prodcutsJson = [];
-    for (var i = 0; i < selectedProducts.length; i++) {
+        let formData = {
+        'items': []
+        };
+            
+        for (var i = 0; i < selectedProducts.length; i++) {
         if (selectedProducts[i] != 0){
             var temp =
             {
                 'id': selectedProducts[i],
                 'quantity': 1
             }
-            prodcutsJson.push(temp); 
+            formData.items.push(temp); 
         }
     }
-    console.log(prodcutsJson);
-    
-    let formData = {
-    'items': prodcutsJson
-    };
+    console.log(formData.items); 
        
     fetch(window.Shopify.routes.root + 'cart/add.js', {
         method: 'POST',
