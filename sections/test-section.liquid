@@ -61,7 +61,7 @@
                 {% if section.settings.noProductImage != blank %}
                     <div>{{section.settings.noProductImage | image_url: width: 200 | image_tag}}</div>
                 {% else %}
-                    <div class = "noImage">a</div>
+                    <div class = "noImage"></div>
                 {% endif %}
                 <div class = "productinfo"> 
                     <h3>No {{block.settings.SectionHeader}}</h3>

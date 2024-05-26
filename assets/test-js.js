@@ -33,5 +33,36 @@ async function getProductById(id) {
 	return await fetch(`/products/${handle}.js`).then(response => response.json());
 }
 
+function checkout(){
+    var prodcutsJson = [];
+    for (var i = 0; i < selectedProducts.length; i++) {
+        if (selectedProducts[i] != 0){
+            var temp =
+            {
+                'id': selectedProducts[i],
+                'quantity': 1
+            }
+            prodcutsJson.push(temp); 
+        }
+    }
+
+    let formData = {
+    'items': prodcutsJson
+    };
+       
+    fetch(window.Shopify.routes.root + 'cart/add.js', {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => {
+        return response.json();
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
 
 
