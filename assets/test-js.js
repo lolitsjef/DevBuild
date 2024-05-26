@@ -44,12 +44,8 @@ function checkout(){
         'items': [{
          'id': 8117072101617,
          'quantity': 2
-         },{
-         'id': 8117072625905,
-         'quantity': 1
          }]
        };
-       
        fetch(window.Shopify.routes.root + 'cart/add.js', {
          method: 'POST',
          headers: {
@@ -64,7 +60,6 @@ function checkout(){
          console.error('Error:', error);
        });
 }
-
 
 
 
