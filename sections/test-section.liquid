@@ -63,7 +63,6 @@
                 {% else %}
                     <div class = "noImage"></div>
                 {% endif %}
-
                 <div class = "productinfo"> 
                     <h3>No {{block.settings.SectionHeader}}</h3>
                 </div>
@@ -78,15 +77,15 @@
 
 {%stylesheet%}
 .noImage{
-    background-color: grey;
+    background-color: white;
     width: 200px;
     height: 200px;
 }
 .productcard {
-  background-color: white;
+  background-color: red;
 }
 .productcard.selected {
-  background-color: grey;
+  background-color: green;
 }
 {%endstylesheet%}
 
