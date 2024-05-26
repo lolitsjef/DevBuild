@@ -40,6 +40,7 @@ async function getProductById(id) {
 }
 
 function checkout(){
+    console.log("api request");
     let formData = {
         'items': [{
          'id': 8117072101617,
