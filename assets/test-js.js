@@ -43,7 +43,7 @@ function checkout(){
     let formData = {
         'items': [{
          'id': 8117072101617,
-         'quantity': 2
+         'quantity': 1
          }]
        };
        fetch(window.Shopify.routes.root + 'cart/add.js', {
