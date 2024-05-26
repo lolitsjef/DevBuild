@@ -33,27 +33,5 @@ async function getProductById(id) {
 	return await fetch(`/products/${handle}.js`).then(response => response.json());
 }
 
-function checkout(){
-    foreach(product in selectedProducts){
-        
-    }
-    let formData = {
-        'items': [6]
-    };
-       
-    fetch(window.Shopify.routes.root + 'cart/add.js', {
-        method: 'POST',
-        headers: {
-        'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-    })
-    .then(response => {
-        return response.json();
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
-}
 
 
