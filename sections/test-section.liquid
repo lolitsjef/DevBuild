@@ -27,7 +27,6 @@
             </div>
             {% endif %}
 
-
             {% if block.settings.product2.id != blank %}
             {% assign product2 = all_products[block.settings.product2] %}
             <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product2.id}})">
@@ -38,7 +37,6 @@
             </div>
             {% endif %}
 
-
             {% if block.settings.product3.id != blank %}
             {% assign product3 = all_products[block.settings.product3] %}
             <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product3.id}})">
@@ -48,7 +46,6 @@
                 </div>
             </div>
             {% endif %}
-
 
             {% if block.settings.product4.id != blank %}
             {% assign product4 = all_products[block.settings.product4] %} 
@@ -61,7 +58,12 @@
             {% endif %}
 
             <div class = "productcard" onclick="selected({{ forloop.index }}, this, 0)">
-                <div>{{block.settings.noProductImage | image_url: width: 200 | image_tag}}</div>
+                {% if section.settings.noProductImage != blank %}
+                    <div>{{block.settings.noProductImage | image_url: width: 200 | image_tag}}</div>
+                {% else %}
+                    <div class = "noImage"></div>
+                {% endif %}
+
                 <div class = "productinfo"> 
                     <h3>No {{block.settings.SectionHeader}}</h3>
                 </div>
@@ -75,13 +77,20 @@
 
 
 {%stylesheet%}
+.noImage{
+    background-color: grey;
+    width: 200px;
+    height: 200px;
+}
 .productcard {
-  background-color: red;
+  background-color: white;
 }
 .productcard.selected {
-  background-color: green;
+  background-color: grey;
 }
 {%endstylesheet%}
+
+
 
 {% schema %}
     {
@@ -91,6 +100,11 @@
                 "type": "text",
                 "label": "Headline",
                 "id": "headline"
+            },
+            {
+                "type": "image_picker",
+                "label": "No Product Image",
+                "id": "noProductImage"
             }
         ],
         "max_blocks": 6,
@@ -123,11 +137,6 @@
                         "type": "product",
                         "label": "Product",
                         "id": "product4"
-                    },
-                    {
-                        "type": "image_picker",
-                        "label": "No Product Image",
-                        "id": "noProductImage"
                     }
                 ]                            
             }
