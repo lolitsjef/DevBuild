@@ -40,35 +40,31 @@ async function getProductById(id) {
 }
 
 function checkout(){
-        let formData = {
-        'items': []
-        };
-            
-        for (var i = 0; i < selectedProducts.length; i++) {
-        if (selectedProducts[i] != 0){
-            var temp =
-            {
-                'id': selectedProducts[i],
-                'quantity': 1
-            }
-            formData.items.push(temp); 
-        }
-    }
-    console.log(formData.items); 
+    let formData = {
+        'items': [{
+         'id': 8117072101617,
+         'quantity': 2
+         },{
+         'id': 8117072625905,
+         'quantity': 1
+         }]
+       };
        
-    fetch(window.Shopify.routes.root + 'cart/add.js', {
-        method: 'POST',
-        headers: {
-        'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-    })
-    .then(response => {
-        return response.json();
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
+       fetch(window.Shopify.routes.root + 'cart/add.js', {
+         method: 'POST',
+         headers: {
+           'Content-Type': 'application/json'
+         },
+         body: JSON.stringify(formData)
+       })
+       .then(response => {
+         return response.json();
+       })
+       .catch((error) => {
+         console.error('Error:', error);
+       });
 }
+
+
 
 
