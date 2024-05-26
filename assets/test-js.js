@@ -17,11 +17,17 @@ function removeSelections(sectionIndex) {
 
 async function setFeaturedProduct(id){
     console.log("here");
-    const product = await getProductById(id);
-    document.getElementById("featuredproductimage").src=product.featured_image;
-    document.getElementById('featuredproductname').innerHTML = product.title;
-    document.getElementById('featuredproductdesc').innerHTML = product.description;
-    document.getElementById('featuredproductprice').innerHTML = product.price;
+    if(id == 0) {
+
+    }
+    else {
+        const product = await getProductById(id);
+        document.getElementById("featuredproductimage").src=product.featured_image;
+        document.getElementById('featuredproductname').innerHTML = product.title;
+        document.getElementById('featuredproductdesc').innerHTML = product.description;
+        document.getElementById('featuredproductprice').innerHTML = product.price;
+    }
+
 
 }
 
@@ -45,7 +51,8 @@ function checkout(){
             prodcutsJson.push(temp); 
         }
     }
-
+    console.log(prodcutsJson);
+    
     let formData = {
     'items': prodcutsJson
     };
