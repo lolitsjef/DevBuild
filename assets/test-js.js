@@ -44,7 +44,8 @@ function checkout(){
     let formData = {
         'items': [{
          'id': 8117072101617,
-         'quantity': 1
+         'quantity': 1,
+         'variantID': 1
          }]
        };
     console.log(formData);
