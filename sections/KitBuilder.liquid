@@ -6,12 +6,13 @@
     <h2>current product</h2>
     {% assign defaultProduct = all_products[section.blocks[0].settings.product1] %}
     {% assign defaultProductImage = defaultProduct.featured_image %}
-    <div>
+    <div class = main>
         <img src = "{{defaultProductImage.src | image_url: width: 200}}" id = "featuredproductimage" height="100px" width="100px">
         <h3 id="featuredproductname">{{defaultProduct.title}}</h3>
         <h4 id="featuredproductdesc">{{defaultProduct.description}}</h4>
         <h3 id="featuredproductprice">{{defaultProduct.price}}</h3>
     </div>
+    <div class = kits></div>
     {% for block in section.blocks %}
 
         <h2>{{ block.settings.SectionHeader }}</h2>
@@ -73,10 +74,16 @@
 </div>
 
 {%stylesheet%}
-.kitsection{
-    width: 50%
+.KitBuilder{
     display: flex;
-    margin: 10px;
+}
+.main{
+    width: 50%;
+    background: red;
+}
+.kits{
+    width: 50%;
+    background: blue
 }
 .productcard {
     background-color: grey;
