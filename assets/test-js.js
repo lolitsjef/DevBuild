@@ -57,7 +57,7 @@ async function checkout(){
                 }
             }
         } 
-        addToCart(FormData);
+        addToCart(formData);
     });
 }
 
