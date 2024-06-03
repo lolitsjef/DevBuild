@@ -61,7 +61,7 @@ async function checkout(){
                         quantity = currentCart.items[k].quantity + 1;
                     }
                 }
-                formData.append("updates[" + selectedProducts[i] + "]", 1);
+                formData.append("updates[" + selectedProducts[i] + "]", quantity);
             }
         }
     }
