@@ -39,8 +39,8 @@ async function getProductById(id) {
 	return await fetch(`/products/${handle}.js`).then(response => response.json());
 }
 
-function getCurrentCart(){
-    var cartContents = fetch(window.Shopify.routes.root + 'cart.js')
+async function getCurrentCart(){
+    var cartContents = await fetch(window.Shopify.routes.root + 'cart.js')
     .then(response => response.json())
     .then(data => { console.log(data); return data });
 }
@@ -49,7 +49,7 @@ async function checkout(){
     console.log(selectedProducts);
     console.log("api request");
 
-    var currentCart = getCurrentCart();
+    var currentCart = await getCurrentCart();
     console.log(currentCart);
     console.log(currentCart.items);
 
