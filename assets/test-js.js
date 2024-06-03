@@ -43,9 +43,7 @@ async function checkout(){
     console.log(selectedProducts);
     console.log("api request");
 
-    let formData = {
-        'updates' : []
-    };
+    var formData = new FormData();
     for(let i = 0; i < selectedProducts.length; i++){
         if(selectedProducts[i] != 0 && selectedProducts[i]){
             if(selectedProducts[i] != 0){
@@ -56,7 +54,7 @@ async function checkout(){
 
 
     console.log(formData);
-    fetch(window.Shopify.routes.root + 'cart/add.js', {
+    fetch(window.Shopify.routes.root + 'cart/update.js', {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json'
