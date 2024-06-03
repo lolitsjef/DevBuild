@@ -41,8 +41,8 @@ async function getProductById(id) {
 
 function getCurrentCart(){
     var cartContents = fetch(window.Shopify.routes.root + 'cart.js')
-  .then(response => response.json())
-  .then(data => { return data });
+    .then(response => response.json())
+    .then(data => { console.log(data); return data });
 }
 
 async function checkout(){
@@ -52,6 +52,7 @@ async function checkout(){
     var currentCart = getCurrentCart();
     console.log(currentCart);
     console.log(currentCart.items);
+
     var formData = new FormData();
     for(let i = 0; i < selectedProducts.length; i++){
         if(selectedProducts[i] != 0 && selectedProducts[i]){
