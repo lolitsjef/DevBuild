@@ -43,19 +43,18 @@ async function checkout(){
     console.log(selectedProducts);
     console.log("api request");
 
-    var items = [];
+    let formData = {
+        'updates' : []
+    };
     for(let i = 0; i < selectedProducts.length; i++){
         if(selectedProducts[i] != 0 && selectedProducts[i]){
-        var temp = {
-            'id': selectedProducts[i],
-            'quantity': 1
+            if(selectedProducts[i] != 0){
+                formData.append("updates[" + selectedProducts[i] + "]", 1);
             }
         }
-        items.push(temp);
     }
-    let formData = {
-        'items' : items
-    };
+
+
     console.log(formData);
     fetch(window.Shopify.routes.root + 'cart/add.js', {
         method: 'POST',
