@@ -65,20 +65,14 @@ async function checkout(){
         body: JSON.stringify(formData)
     })
     .then(response => {
-
+        document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
+            bubbles: true
+          }));
     })
     .catch((error) => {
         console.error('Error:', error);
     });
 
-    //update cart
-    const res = await fetch("/cart.json");
-    const cart = await res.json();
-    document.querySelector('.header__cart-count').textContent = cart.item_count;
-
-    document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
-        bubbles: true
-      }));
 
 }
 
