@@ -77,6 +77,13 @@ async function checkout(){
     document.querySelectorAll(".cart-count").forEach((el) => {
         el.textContent = cart.item_count;
     });
+
+    jQuery.getJSON('/cart.js', function (cart, textStatus) {
+        //the cart info is in the callback. the item_count is available as part of the callback
+        //below I set my cartcount div with the current cart item_count
+        var carttext=cart.item_count;
+        jQuery("#cartcount").text(carttext);
+    });
 }
 
 
