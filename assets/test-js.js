@@ -48,11 +48,11 @@ async function checkout(){
             if(selectedProducts[i] != 0 && selectedProducts[i]){
                 if(selectedProducts[i] != 0){
                     let quantity = 1;
-                    for(let k = 0; k < data.items.length; k++){
-                        if(data.items[k].id == selectedProducts[i]){
-                            quantity = data.items[k].quantity + 1;
-                        }
-                    }
+                    //for(let k = 0; k < data.items.length; k++){
+                    //    if(data.items[k].id == selectedProducts[i]){
+                    //        quantity = data.items[k].quantity + 1;
+                    //    }
+                    //}
                     formData.append("updates[" + selectedProducts[i] + "]", quantity);
                 }
             }
