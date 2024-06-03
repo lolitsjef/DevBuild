@@ -58,11 +58,6 @@ async function checkout(){
         method: 'POST',
         body: formData
     })
-    .then(response => {
-        document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
-            bubbles: true
-          }));
-    })
     .then(response => response.json())
     .then(data => console.log(data))
     .catch((error) => {
