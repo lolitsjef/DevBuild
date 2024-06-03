@@ -63,7 +63,8 @@ async function checkout(){
     .catch((error) => {
         console.error('Error:', error);
     });
-    location.reload();
+//Force a hard reload to clear the cache if supported by the browser
+window.location.reload(true);
     window.open("/cart");
 
 }
