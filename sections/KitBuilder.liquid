@@ -7,7 +7,7 @@
         <h2>current product</h2>
         {% assign defaultProduct = all_products[section.blocks[0].settings.product1] %}
         {% assign defaultProductImage = defaultProduct.featured_image %}
-        <img src = "{{defaultProductImage.src | image_url: width: 200}}" id = "featuredproductimage" height="200px" width="200px">
+        <img src = "{{defaultProductImage.src | image_url: width: 200}}" id = "featuredproductimage"height="200px" width="200px">
         <h3 id="featuredproductname">{{defaultProduct.title}}</h3>
         <h4 id="featuredproductdesc">{{defaultProduct.description}}</h4>
         <h3 id="featuredproductprice">{{defaultProduct.price}}</h3>
@@ -21,7 +21,7 @@
                     {% if block.settings.product1.id != blank %}
                     {% assign product1 = all_products[block.settings.product1] %}
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product1.id}}, {{product1.variants.first.id}} )">
-                        <div class = "productimage">{{product1.featured_image | image_url: width: 100 | image_tag}}</div>
+                        <div class = "productimage">{{product1.featured_image | image_url: width: 200 | image_tag}}</div>
                         <div class = "productinfo"> 
                             <span>{{ product1.title }}</span>
                         </div>
@@ -31,7 +31,7 @@
                     {% if block.settings.product2.id != blank %}
                     {% assign product2 = all_products[block.settings.product2] %}
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product2.id}}, {{product2.variants.first.id}})">
-                        <div class = "productimage">{{product2.featured_image | image_url: width: 100 | image_tag}}</div>
+                        <div class = "productimage">{{product2.featured_image | image_url: width: 200 | image_tag}}</div>
                         <div class = "productinfo"> 
                             <span>{{ product2.title }}</span>
                         </div>
@@ -41,7 +41,7 @@
                     {% if block.settings.product3.id != blank %}
                     {% assign product3 = all_products[block.settings.product3] %}
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product3.id}}, {{product3.variants.first.id}})">
-                        <div class = "productimage">{{product3.featured_image | image_url: width: 100 | image_tag}}</div>
+                        <div class = "productimage">{{product3.featured_image | image_url: width: 200 | image_tag}}</div>
                         <div class = "productinfo"> 
                             <span>{{ product3.title }}</span>
                         </div>
@@ -51,7 +51,7 @@
                     {% if block.settings.product4.id != blank %}
                     {% assign product4 = all_products[block.settings.product4] %} 
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product4.id}}, {{product4.variants.first.id}})">
-                        <div class = "productimage">{{product4.featured_image | image_url: width: 100 | image_tag}}</div>
+                        <div class = "productimage">{{product4.featured_image | image_url: width: 200 | image_tag}}</div>
                         <div class = "productinfo"> 
                             <span>{{ product4.title }}</span>
                         </div>
@@ -60,7 +60,7 @@
 
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, 0, 0)">
                         {% if section.settings.noProductImage != blank %}
-                            <div class = "productimage" >{{section.settings.noProductImage | image_url: width: 100 | image_tag}}</div>
+                            <div class = "productimage" >{{section.settings.noProductImage | image_url: width: 200 | image_tag}}</div>
                         {% else %}
                             <div class = "noImage"></div>
                         {% endif %}
@@ -91,8 +91,8 @@
 }
 .productcard {
     background-color: grey;
-    width: 100px;
-    height: 150px;
+    width: 200px;
+    height: 300px;
     margin: 10px;
 }
 .productinfo{
@@ -101,16 +101,16 @@
     height: 100%;
 }
 .productimage{
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
 }
 .productcard.selected {
     background-color: white;
 }
 .noImage{
     background-color: black;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
 }
 {%endstylesheet%}
 
