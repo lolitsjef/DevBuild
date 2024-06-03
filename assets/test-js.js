@@ -26,6 +26,7 @@ async function setFeaturedProduct(id){
         document.getElementById('featuredproductname').innerHTML = product.title;
         document.getElementById('featuredproductdesc').innerHTML = product.description;
         document.getElementById('featuredproductprice').innerHTML = product.price;
+        console.log(product.variants);
         return product;
     }
 
