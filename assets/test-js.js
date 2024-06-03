@@ -45,7 +45,7 @@ function checkout(){
     console.log("api request");
     let formData = {
         'items': [{
-         'id': 8117069185265,
+         'id': 44301655146737,
          'quantity': 1
          }]
        };
