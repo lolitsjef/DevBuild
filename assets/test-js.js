@@ -63,9 +63,6 @@ async function checkout(){
     .catch((error) => {
         console.error('Error:', error);
     });
-    //Force a hard reload to clear the cache if supported by the browser
-    window.open("/cart");
-    window.location.reload(true);
 
 }
 
