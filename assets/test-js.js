@@ -1,10 +1,10 @@
 var selectedProducts = [6];
 
-function selected(sectionIndex, item, id) {
+function selected(sectionIndex, item, id, idvariant) {
     removeSelections(sectionIndex);
     item.classList.add('selected');
     setFeaturedProduct(id);
-    selectedProducts[sectionIndex-1] = id;
+    selectedProducts[sectionIndex-1] = idvariant;
 }
 
 function removeSelections(sectionIndex) {
@@ -16,9 +16,8 @@ function removeSelections(sectionIndex) {
 }
 
 async function setFeaturedProduct(id){
-    console.log("here");
     if(id == 0) {
-
+        //set blank product
     }
     else {
         const product = await getProductById(id);
@@ -26,7 +25,6 @@ async function setFeaturedProduct(id){
         document.getElementById('featuredproductname').innerHTML = product.title;
         document.getElementById('featuredproductdesc').innerHTML = product.description;
         document.getElementById('featuredproductprice').innerHTML = product.price;
-        console.log(product.variants);
         return product;
     }
 
@@ -44,12 +42,18 @@ async function getProductById(id) {
 function checkout(){
     console.log(selectedProducts);
     console.log("api request");
+
+    var items = [];
+    for(let i = 0; i < selectedProducts.length; i++){
+        var temp = {
+            'id': selectedProducts[i],
+            'quantity': 1
+            }
+        items.add(temp);
+    }
     let formData = {
-        'items': [{
-         'id': 44301655146737,
-         'quantity': 1
-         }]
-       };
+        'items' : items
+    };
     console.log(formData);
     fetch(window.Shopify.routes.root + 'cart/add.js', {
         method: 'POST',
