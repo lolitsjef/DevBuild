@@ -63,7 +63,7 @@ async function checkout(){
     .catch((error) => {
         console.error('Error:', error);
     });
-
+    location.reload();
     window.open("/cart");
 
 }
