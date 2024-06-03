@@ -74,7 +74,7 @@ async function addToCart(formData){
     .catch((error) => {
         console.error('Error:', error);
     });
-
+    
 }
 
 
