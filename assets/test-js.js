@@ -65,7 +65,8 @@ function checkout(){
         body: JSON.stringify(formData)
     })
     .then(response => {
-        document.querySelector('.cart-count').forEach(el => {
+        console.log(response);
+        document.querySelectorAll('.cart-count').forEach(el => {
             el.textContent = response.item_count;
         })
         return response.json();
