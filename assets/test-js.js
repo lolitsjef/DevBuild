@@ -39,7 +39,7 @@ async function getProductById(id) {
 	return await fetch(`/products/${handle}.js`).then(response => response.json());
 }
 
-function getCurrentCar {
+function getCurrentCart(){
     var cartContents = fetch(window.Shopify.routes.root + 'cart.js')
   .then(response => response.json())
   .then(data => { return data });
@@ -49,7 +49,7 @@ async function checkout(){
     console.log(selectedProducts);
     console.log("api request");
 
-    var currentCart = getCurrentCar();
+    var currentCart = getCurrentCart();
     console.log(currentCart);
 
     var formData = new FormData();
