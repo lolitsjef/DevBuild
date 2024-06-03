@@ -39,7 +39,7 @@ async function getProductById(id) {
 	return await fetch(`/products/${handle}.js`).then(response => response.json());
 }
 
-function checkout(){
+async function checkout(){
     console.log(selectedProducts);
     console.log("api request");
 
@@ -65,15 +65,17 @@ function checkout(){
         body: JSON.stringify(formData)
     })
     .then(response => {
-        console.log(response);
-        document.querySelectorAll('.cart-count').forEach(el => {
-            el.textContent = response.item_count;
-        })
-        return response.json();
 
     })
     .catch((error) => {
         console.error('Error:', error);
+    });
+
+    //update cart
+    const res = await fetch("/cart.json");
+    const cart = await res.json();
+    document.querySelectorAll(".cart-count").forEach((el) => {
+        el.textContent = cart.item_count;
     });
 }
 
