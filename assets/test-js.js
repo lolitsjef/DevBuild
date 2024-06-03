@@ -42,9 +42,7 @@ async function getProductById(id) {
 async function checkout(){
     var cartContents = await fetch(window.Shopify.routes.root + 'cart.js')
     .then(response => response.json())
-    .then(data => {     
-        console.log(data);
-    
+    .then(data => {         
         var formData = new FormData();
         for(let i = 0; i < selectedProducts.length; i++){
             if(selectedProducts[i] != 0 && selectedProducts[i]){
@@ -65,7 +63,6 @@ async function checkout(){
 
 async function addToCart(formData){
     console.log(selectedProducts);
-    console.log("api request");
 
     console.log(formData);
     fetch(window.Shopify.routes.root + 'cart/update.js', {
