@@ -1,43 +1,25 @@
 {
   "sections": {
-    "test_section_hJcgyQ": {
-      "type": "test-section",
+    "kit_builder_PfKE9Q": {
+      "type": "KitBuilder",
       "blocks": {
-        "kit_section_TAzrDw": {
+        "kit_section_x7xbEJ": {
           "type": "Kit-Section",
           "settings": {
-            "SectionHeader": "first thing",
-            "product1": "bmw-e30-washed-pigment-dyed-cotton-dad-hat",
-            "product2": "bmw-e30-two-tone-dad-hat",
-            "product3": "cable-spacer-for-immersionrc-powerplay"
-          }
-        },
-        "kit_section_e3cd6t": {
-          "type": "Kit-Section",
-          "settings": {
-            "SectionHeader": "new",
-            "product1": "camcorder-a-v-cable-for-immersionrc-powerplay",
-            "product2": "devbuild-box-logo-five-panel-hat",
-            "product3": "sony-handycam-intelligent-accessory-shoe-to-cold-shoe-adapter"
-          }
-        },
-        "kit_section_Mf37Hd": {
-          "type": "Kit-Section",
-          "settings": {
-            "SectionHeader": "other thing",
-            "product1": "camcorder-a-v-cable-for-immersionrc-powerplay",
+            "SectionHeader": "First Product",
+            "product1": "cold-shoe-mounting-bracket",
             "product2": "immersionrc-powerplay-mounting-kit-for-sony-handycam-hot-shoe",
-            "product3": "steering-wheel-wall-mount"
+            "product3": "sony-handycam-intelligent-accessory-shoe-to-cold-shoe-adapter",
+            "product4": "steering-wheel-wall-mount"
           }
         }
       },
       "block_order": [
-        "kit_section_TAzrDw",
-        "kit_section_e3cd6t",
-        "kit_section_Mf37Hd"
+        "kit_section_x7xbEJ"
       ],
       "settings": {
-        "headline": "kit builder"
+        "headline": "",
+        "noProductImage": "shopify:\/\/shop_images\/Devbuild_Block_Tilt_3D_Logo_Vector_White.png"
       }
     },
     "image-with-text": {
@@ -108,7 +90,7 @@
     }
   },
   "order": [
-    "test_section_hJcgyQ",
+    "kit_builder_PfKE9Q",
     "image-with-text",
     "featured_collection"
   ]
