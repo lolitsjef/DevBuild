@@ -19,7 +19,7 @@
 
             {% if block.settings.product1.id != blank %}
             {% assign product1 = all_products[block.settings.product1] %}
-            <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product1.variants.first}})">
+            <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product1.id}})">
                 <div>{{product1.featured_image | image_url: width: 200 | image_tag}}</div>
                 <div class = "productinfo"> 
                     <h3>{{ product1.title }}</h3>
