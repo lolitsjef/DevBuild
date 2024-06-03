@@ -79,13 +79,23 @@
     height: 300px;
     margin: 40px;
 }
-.productinfo{
-    color: red !important;
-    overflow: hidden; 
-    text-overflow: ellipsis !important; 
-    white-space: nowrap;
-    width: 100%;
-    height: 100%;
+
+.productinfo {
+margin: 5px 0;
+padding: 0;
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+width: 180px;
+display: block;
+
+@include media-query($medium-up) {
+padding: 0;
+white-space: normal;
+overflow: hidden;
+width: 100%;
+}
+
 }
 .productimage{
     width: 200px;
