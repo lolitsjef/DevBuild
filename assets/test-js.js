@@ -49,7 +49,7 @@ function checkout(){
             'id': selectedProducts[i],
             'quantity': 1
             }
-        items.add(temp);
+        items.push(temp);
     }
     let formData = {
         'items' : items
