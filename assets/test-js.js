@@ -64,6 +64,7 @@ async function checkout(){
         console.error('Error:', error);
     });
 
+    window.open("/cart");
 
 }
 
