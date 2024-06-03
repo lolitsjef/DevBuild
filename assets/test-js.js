@@ -56,16 +56,15 @@ async function checkout(){
     console.log(formData);
     fetch(window.Shopify.routes.root + 'cart/update.js', {
         method: 'POST',
-        headers: {
-        'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
+        body: formData
     })
     .then(response => {
         document.documentElement.dispatchEvent(new CustomEvent('cart:refresh', {
             bubbles: true
           }));
     })
+    .then(response => response.json())
+    .then(data => console.log(data))
     .catch((error) => {
         console.error('Error:', error);
     });
