@@ -1,4 +1,4 @@
-var selectedProducts = [6];
+var selectedProducts = [];
 
 function selected(sectionIndex, item, id, idvariant) {
     removeSelections(sectionIndex);
@@ -45,10 +45,12 @@ function checkout(){
 
     var items = [];
     for(let i = 0; i < selectedProducts.length; i++){
+        if(selectedProducts[i] != 0){
         var temp = {
             'id': selectedProducts[i],
             'quantity': 1
             }
+        }
         items.push(temp);
     }
     let formData = {
