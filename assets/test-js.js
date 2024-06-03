@@ -39,35 +39,33 @@ async function getProductById(id) {
 	return await fetch(`/products/${handle}.js`).then(response => response.json());
 }
 
-async function getCurrentCart(){
+async function checkout(){
     var cartContents = await fetch(window.Shopify.routes.root + 'cart.js')
     .then(response => response.json())
-    .then(data => { console.log(data); return data });
+    .then(data => {     
+        console.log(data);
+    
+        var formData = new FormData();
+        for(let i = 0; i < selectedProducts.length; i++){
+            if(selectedProducts[i] != 0 && selectedProducts[i]){
+                if(selectedProducts[i] != 0){
+                    let quantity = 1;
+                    for(let k = 0; k < data.items.length; k++){
+                        if(data.items[k].id == selectedProducts[i]){
+                            quantity = data.items[k].quantity + 1;
+                        }
+                    }
+                    formData.append("updates[" + selectedProducts[i] + "]", quantity);
+                }
+            }
+        } 
+        addToCart(FormData);
+    });
 }
 
-async function checkout(){
+async function addToCart(formData){
     console.log(selectedProducts);
     console.log("api request");
-
-    var currentCart = await getCurrentCart();
-    console.log(currentCart);
-    console.log(currentCart.items);
-
-    var formData = new FormData();
-    for(let i = 0; i < selectedProducts.length; i++){
-        if(selectedProducts[i] != 0 && selectedProducts[i]){
-            if(selectedProducts[i] != 0){
-                let quantity = 1;
-                for(let k = 0; k < currentCart.items.length; k++){
-                    if(currentCart.items[k].id == selectedProducts[i]){
-                        quantity = currentCart.items[k].quantity + 1;
-                    }
-                }
-                formData.append("updates[" + selectedProducts[i] + "]", quantity);
-            }
-        }
-    }
-
 
     console.log(formData);
     fetch(window.Shopify.routes.root + 'cart/update.js', {
