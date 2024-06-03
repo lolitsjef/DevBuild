@@ -1,4 +1,4 @@
-var selectedProducts = [];
+var selectedProducts = [0,0,0,0,0,0];
 
 function selected(sectionIndex, item, id, idvariant) {
     removeSelections(sectionIndex);
@@ -45,7 +45,7 @@ async function checkout(){
 
     var items = [];
     for(let i = 0; i < selectedProducts.length; i++){
-        if(selectedProducts[i] != 0){
+        if(selectedProducts[i] != 0 && selectedProducts[i]){
         var temp = {
             'id': selectedProducts[i],
             'quantity': 1
