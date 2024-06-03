@@ -50,12 +50,17 @@ async function checkout(){
     console.log("api request");
 
     var currentCart = getCurrentCart();
-    console.log(currentCart);
 
     var formData = new FormData();
     for(let i = 0; i < selectedProducts.length; i++){
         if(selectedProducts[i] != 0 && selectedProducts[i]){
             if(selectedProducts[i] != 0){
+                let quantity = 1;
+                for(let k = 0; k < currentCart.items.length; k++){
+                    if(currentCart.items[k].id == selectedProducts[i]){
+                        quantity = currentCart.items[k].quantity + 1;
+                    }
+                }
                 formData.append("updates[" + selectedProducts[i] + "]", 1);
             }
         }
