@@ -65,7 +65,11 @@ function checkout(){
         body: JSON.stringify(formData)
     })
     .then(response => {
+        document.querySelectorALL('.cart-count').forEach(el => {
+            el.textContent = response.item_count;
+        })
         return response.json();
+
     })
     .catch((error) => {
         console.error('Error:', error);
