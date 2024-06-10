@@ -49,16 +49,6 @@
                     </div>
                     {% endif %}
 
-                    {% if block.settings.product4.id != blank %}
-                    {% assign product4 = all_products[block.settings.product4] %} 
-                    <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product4.id}}, {{product4.variants.first.id}})">
-                        <img class = "productimage" height="200px" width="200px" src = {{product4.featured_image | image_url: width: 200}}>
-                        <div class = "productinfo"> 
-                            {{ product4.title }}
-                        </div>
-                    </div>
-                    {% endif %}
-
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, 0, 0)">
                         {% if section.settings.noProductImage != blank %}
                             <img class = "productimage" height="200px" width="200px" src = {{section.settings.noProductImage  | image_url: width: 200}}>
@@ -178,11 +168,6 @@
                         "type": "product",
                         "label": "Product",
                         "id": "product3"
-                    },
-                    {
-                        "type": "product",
-                        "label": "Product",
-                        "id": "product4"
                     }
                 ]                            
             }
