@@ -71,6 +71,7 @@ async function addToCart(formData){
     })
     .then(response => response.json())
     .then(data => console.log(data))
+    .then(window.open("/cart"))
     .catch((error) => {
         console.error('Error:', error);
     });
