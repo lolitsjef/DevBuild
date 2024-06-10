@@ -23,7 +23,7 @@
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product1.id}}, {{product1.variants.first.id}} )">
                         <img class = "productimage" style="width:8em; height:8em;" height="200px" width="200px" src = {{product1.featured_image | image_url: width: 200}}>
                         <div class = "productinfo"> 
-                            <div>{{ product1.title }}</div>
+                            {{ product1.title }}
                         </div>
                     </div>
                     {% endif %}
@@ -34,7 +34,7 @@
                         <img class = "productimage" style="width:8em; height:8em;"  height="200px" width="200px" src = {{product2.featured_image | image_url: width: 200}}>
 
                         <div class = "productinfo"> 
-                            <div>{{ product2.title }}</div>
+                            {{ product2.title }}
                         </div>
                     </div>
                     {% endif %}
@@ -44,7 +44,7 @@
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product3.id}}, {{product3.variants.first.id}})">
                         <img class = "productimage" style="width:8em; height:8em;"  height="200px" width="200px" src = {{product3.featured_image | image_url: width: 200}}>
                         <div class = "productinfo"> 
-                            <div>{{ product3.title }}</div>
+                            {{ product3.title }}
                         </div>
                     </div>
                     {% endif %}
@@ -54,7 +54,7 @@
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product4.id}}, {{product4.variants.first.id}})">
                         <img class = "productimage" style="width:8em; height:8em;"  height="200px" width="200px" src = {{product4.featured_image | image_url: width: 200}}>
                         <div class = "productinfo"> 
-                            <div>{{ product4.title }}</div>
+                            {{ product4.title }}
                         </div>
                     </div>
                     {% endif %}
@@ -66,7 +66,7 @@
                             <div class = "noImage"></div>
                         {% endif %}
                         <div class = "productinfo"> 
-                            <div>No {{block.settings.SectionHeader}}</div>
+                            No {{block.settings.SectionHeader}}
                         </div>
                     </div>
                 </div>
