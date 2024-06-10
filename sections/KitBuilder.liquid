@@ -16,7 +16,7 @@
     <div class = kits>
         {% for block in section.blocks %}
             <div id = "section{{forloop.index}}">
-                <h2>{{ block.settings.SectionHeader }}</h2>
+                <div class = kitsectiontitle>{{ block.settings.SectionHeader }}</div>
                 <div class = kitsection> 
                     {% if block.settings.product1.id != blank %}
                     {% assign product1 = all_products[block.settings.product1] %}
@@ -90,10 +90,9 @@
 .kitsection{
     display: flex;
     float: right;
-    text-align: right;
 }
 .kitsectiontitle{
-
+    text-align: right;
 }
 .productcard {
     background-color: grey;
