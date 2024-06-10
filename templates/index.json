@@ -9,13 +9,22 @@
             "SectionHeader": "First Product",
             "product1": "cold-shoe-mounting-bracket",
             "product2": "immersionrc-powerplay-mounting-kit-for-sony-handycam-hot-shoe",
-            "product3": "sony-handycam-intelligent-accessory-shoe-to-cold-shoe-adapter",
-            "product4": "steering-wheel-wall-mount"
+            "product3": "sony-handycam-intelligent-accessory-shoe-to-cold-shoe-adapter"
+          }
+        },
+        "kit_section_kaiNjN": {
+          "type": "Kit-Section",
+          "settings": {
+            "SectionHeader": "other product",
+            "product1": "cable-spacer-for-immersionrc-powerplay",
+            "product2": "immersionrc-powerplay-mounting-kit-cold-shoe-bracket",
+            "product3": ""
           }
         }
       },
       "block_order": [
-        "kit_section_x7xbEJ"
+        "kit_section_x7xbEJ",
+        "kit_section_kaiNjN"
       ],
       "settings": {
         "headline": "",
