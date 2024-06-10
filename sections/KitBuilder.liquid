@@ -21,7 +21,7 @@
                     {% if block.settings.product1.id != blank %}
                     {% assign product1 = all_products[block.settings.product1] %}
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product1.id}}, {{product1.variants.first.id}} )">
-                        <img class = "productimage" style="width:8em; height:8em;" height="200px" width="200px" src = {{product1.featured_image | image_url: width: 200}}>
+                        <img class = "productimage" height="200px" width="200px" src = {{product1.featured_image | image_url: width: 200}}>
                         <div class = "productinfo"> 
                             {{ product1.title }}
                         </div>
@@ -98,14 +98,18 @@
 .productcard {
     background-color: grey;
     width: 10em;
-    height: 12em;
+    height: 13em;
     margin: 0 1em;
 }
 .productinfo{
     font-size: 0.8em;
-    line-height: 0.8em;
+    line-height: 1em;
     text-overflow: ellipsis;
     overflow: hidden;
+}
+.productimage{
+    width:10em; 
+    height:10em;
 }
 .productcard.selected {
     background-color: white;
