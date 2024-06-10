@@ -20,11 +20,21 @@
             "product2": "immersionrc-powerplay-mounting-kit-cold-shoe-bracket",
             "product3": ""
           }
+        },
+        "kit_section_K6KCiy": {
+          "type": "Kit-Section",
+          "settings": {
+            "SectionHeader": "3rd section",
+            "product1": "bmw-e30-two-tone-dad-hat",
+            "product2": "bmw-e30-washed-pigment-dyed-cotton-dad-hat",
+            "product3": ""
+          }
         }
       },
       "block_order": [
         "kit_section_x7xbEJ",
-        "kit_section_kaiNjN"
+        "kit_section_kaiNjN",
+        "kit_section_K6KCiy"
       ],
       "settings": {
         "headline": "",
