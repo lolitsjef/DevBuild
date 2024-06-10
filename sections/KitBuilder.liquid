@@ -13,6 +13,7 @@
         <h3 id="featuredproductprice">{{defaultProduct.price}}</h3>
         <button onclick="checkout()">Add All to Cart</button>
     </div>
+
     <div class = kits>
         {% for block in section.blocks %}
             <div id = "section{{forloop.index}}" class = kitsection>
@@ -94,12 +95,14 @@
     border-radius: 0.25em;
     border-style: solid;
     height: auto;
+    background: red;
 }
 .kitsectiontitle{
     text-align: right;
     font-size: 2em;
 }
 .components{
+    display: flex;
     float: right;
     align: center;
     margin-bottom: 1em;
