@@ -21,7 +21,7 @@
                     {% if block.settings.product1.id != blank %}
                     {% assign product1 = all_products[block.settings.product1] %}
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product1.id}}, {{product1.variants.first.id}} )">
-                        <div class = "productimage">{{product1.featured_image | image_url: width: 10em | image_tag}}</div>
+                        <div class = "productimage">{{product1.featured_image | image_url: width: 200 | image_tag}}</div>
                         <div class = "productinfo"> 
                             <span>{{ product1.title }}</span>
                         </div>
@@ -31,7 +31,7 @@
                     {% if block.settings.product2.id != blank %}
                     {% assign product2 = all_products[block.settings.product2] %}
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product2.id}}, {{product2.variants.first.id}})">
-                        <div class = "productimage">{{product2.featured_image | image_url: width: 10em | image_tag}}</div>
+                        <div class = "productimage">{{product2.featured_image | image_url: width: 200 | image_tag}}</div>
                         <div class = "productinfo"> 
                             <span>{{ product2.title }}</span>
                         </div>
@@ -92,9 +92,9 @@
 }
 .productcard {
     background-color: grey;
-    width: 200px;
-    height: 300px;
-    margin: 0 10px;
+    width: 20em;
+    height: 30em;
+    margin: 0 1em;
 }
 .productinfo{
     size: small;
