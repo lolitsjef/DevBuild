@@ -16,47 +16,49 @@
     <div class = kits>
         {% for block in section.blocks %}
             <div id = "section{{forloop.index}}">
-                <div class = kitsection> 
-                <div class = kitsectiontitle>{{ block.settings.SectionHeader }}</div>
-                    {% if block.settings.product1.id != blank %}
-                    {% assign product1 = all_products[block.settings.product1] %}
-                    <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product1.id}}, {{product1.variants.first.id}} )">
-                        <img class = "productimage" height="200px" width="200px" src = {{product1.featured_image | image_url: width: 200}}>
-                        <div class = "productinfo"> 
-                            {{ product1.title }}
+                <div class = kitsection>
+                    <div class = kitsectiontitle>{{ block.settings.SectionHeader }}</div>
+                    <div class = components> 
+                        {% if block.settings.product1.id != blank %}
+                        {% assign product1 = all_products[block.settings.product1] %}
+                        <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product1.id}}, {{product1.variants.first.id}} )">
+                            <img class = "productimage" height="200px" width="200px" src = {{product1.featured_image | image_url: width: 200}}>
+                            <div class = "productinfo"> 
+                                {{ product1.title }}
+                            </div>
                         </div>
-                    </div>
-                    {% endif %}
-
-                    {% if block.settings.product2.id != blank %}
-                    {% assign product2 = all_products[block.settings.product2] %}
-                    <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product2.id}}, {{product2.variants.first.id}})">
-                        <img class = "productimage" height="200px" width="200px" src = {{product2.featured_image | image_url: width: 200}}>
-
-                        <div class = "productinfo"> 
-                            {{ product2.title }}
-                        </div>
-                    </div>
-                    {% endif %}
-
-                    {% if block.settings.product3.id != blank %}
-                    {% assign product3 = all_products[block.settings.product3] %}
-                    <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product3.id}}, {{product3.variants.first.id}})">
-                        <img class = "productimage" height="200px" width="200px" src = {{product3.featured_image | image_url: width: 200}}>
-                        <div class = "productinfo"> 
-                            {{ product3.title }}
-                        </div>
-                    </div>
-                    {% endif %}
-
-                    <div class = "productcard" onclick="selected({{ forloop.index }}, this, 0, 0)">
-                        {% if section.settings.noProductImage != blank %}
-                            <img class = "productimage" height="200px" width="200px" src = {{section.settings.noProductImage  | image_url: width: 200}}>
-                        {% else %}
-                            <div class = "noImage"></div>
                         {% endif %}
-                        <div class = "productinfo"> 
-                            No {{block.settings.SectionHeader}}
+
+                        {% if block.settings.product2.id != blank %}
+                        {% assign product2 = all_products[block.settings.product2] %}
+                        <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product2.id}}, {{product2.variants.first.id}})">
+                            <img class = "productimage" height="200px" width="200px" src = {{product2.featured_image | image_url: width: 200}}>
+
+                            <div class = "productinfo"> 
+                                {{ product2.title }}
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        {% if block.settings.product3.id != blank %}
+                        {% assign product3 = all_products[block.settings.product3] %}
+                        <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product3.id}}, {{product3.variants.first.id}})">
+                            <img class = "productimage" height="200px" width="200px" src = {{product3.featured_image | image_url: width: 200}}>
+                            <div class = "productinfo"> 
+                                {{ product3.title }}
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        <div class = "productcard" onclick="selected({{ forloop.index }}, this, 0, 0)">
+                            {% if section.settings.noProductImage != blank %}
+                                <img class = "productimage" height="200px" width="200px" src = {{section.settings.noProductImage  | image_url: width: 200}}>
+                            {% else %}
+                                <div class = "noImage"></div>
+                            {% endif %}
+                            <div class = "productinfo"> 
+                                No {{block.settings.SectionHeader}}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -88,11 +90,13 @@
     border-style: solid;
 }
 .kitsection{
+    margin-top: 2em;
+}
+.components{
     display: flex;
     float: right;
     align: center;
     margin-right: 2em;
-    margin-top: 2em;
 }
 .kitsectiontitle{
     text-align: right;
