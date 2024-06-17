@@ -29,9 +29,13 @@ async function setFeaturedProduct(id){
         console.log(product.price);
         console.log(dollar);
         console.log(cents);
-        cents = (Math.round(cents * 100) / 100).toFixed(2);
-        console.log(cents);
-        let price = "$".concat(dollar.toString(), ".",cents.toString());
+        if (cents = 0){
+            cents = "00"
+        }
+        else{
+            cents = cents.toString();
+        }
+        let price = "$".concat(dollar.toString(), ".", cents);
         console.log(price);
         document.getElementById('featuredproductprice').innerHTML = price;
         return product;
