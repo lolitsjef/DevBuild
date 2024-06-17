@@ -9,7 +9,7 @@
             <div class = "featuredproductheader" id="featuredproductname">{{defaultProduct.title}}</div>
             <div class = "feautedproductinfo">
                 {% assign defaultProductImage = defaultProduct.featured_image %}
-                <div class = "featuredproductimage"><img src = "{{defaultProductImage.src | image_url: width: 200}}" id = "featuredproductimage"height="15em" width="15em"></div>
+                <div class = "featuredproductimage"><img src = "{{defaultProductImage.src | image_url: width: 200}}" id = "featuredproductimage"height="200px" width="200px"></div>
                 <div class = "featuredproductdesc" id="featuredproductdesc">{{defaultProduct.description}}</div>
             </div>
 
@@ -89,6 +89,8 @@
 }
 .featuredproductimage{
     margin: 1em;
+    width:15em; 
+    height:15em;
 }
 .checkout{
 }
