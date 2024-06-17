@@ -6,10 +6,13 @@
     <div class = main>
         <div class = "featured">
             {% assign defaultProduct = all_products[section.blocks[0].settings.product1] %}
-            <div class = "mainproductheader" id="featuredproductname">{{defaultProduct.title}}</div>
-            {% assign defaultProductImage = defaultProduct.featured_image %}
-            <img src = "{{defaultProductImage.src | image_url: width: 200}}" id = "featuredproductimage"height="200px" width="200px">
-            <h4 id="featuredproductdesc">{{defaultProduct.description}}</h4>
+            <div class = "featuredproductheader" id="featuredproductname">{{defaultProduct.title}}</div>
+            <div class = "feautedproductinfo">
+                {% assign defaultProductImage = defaultProduct.featured_image %}
+                <img src = "{{defaultProductImage.src | image_url: width: 200}}" id = "featuredproductimage"height="200px" width="200px">
+                <h4 id="featuredproductdesc">{{defaultProduct.description}}</h4>
+            </div>
+
             {% assign price_in_cents = defaultProduct.price %} 
             {% assign price_in_dollars = price_in_cents | divided_by: 100 %}
             {% assign price_remainder = price_in_cents | modulo: 100 %}
@@ -75,13 +78,16 @@
 
 
 {%stylesheet%}
+.feautedproductinfo{
+    display: flex;
+}
 .checkout{
 }
 .KitBuilder{
     display: flex;
     margin: 2em;
 }
-.mainproductheader{
+.featuredproductheader{
     font-size: 2em;
 }
 .main{
