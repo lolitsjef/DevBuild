@@ -24,7 +24,10 @@ async function setFeaturedProduct(id){
         document.getElementById("featuredproductimage").src=product.featured_image;
         document.getElementById('featuredproductname').innerHTML = product.title;
         document.getElementById('featuredproductdesc').innerHTML = product.description;
-        document.getElementById('featuredproductprice').innerHTML = product.price;
+        var num = product.price;
+        num /= 100; 
+        num.toLocaleString("en-US", {style:"currency", currency:"USD"});
+        document.getElementById('featuredproductprice').innerHTML = num;
         return product;
     }
 
