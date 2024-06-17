@@ -24,10 +24,13 @@ async function setFeaturedProduct(id){
         document.getElementById("featuredproductimage").src=product.featured_image;
         document.getElementById('featuredproductname').innerHTML = product.title;
         document.getElementById('featuredproductdesc').innerHTML = product.description;
-        var num = product.price;
-        num /= 100; 
-        num.toLocaleString("en-US", {style:"currency", currency:"USD"});
-        document.getElementById('featuredproductprice').innerHTML = "$" + num;
+        var formatCentsToDollars = function(product.price) {
+            value = (value + '').replace(/[^\d.-]/g, '');
+            value = parseFloat(value);
+            return value ? value / 100 : 0;
+          }
+
+        document.getElementById('featuredproductprice').innerHTML = "$" + formatCentsToDollars;
         return product;
     }
 
