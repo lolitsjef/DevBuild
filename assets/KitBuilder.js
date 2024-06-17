@@ -25,8 +25,8 @@ async function setFeaturedProduct(id){
         document.getElementById('featuredproductname').innerHTML = product.title;
         document.getElementById('featuredproductdesc').innerHTML = product.description;
         var dollar = product.price / 100;
-        var cents = prodcut.price % 100;
-
+        var cents = product.price % 100;
+        cents = (Math.round(cents * 100) / 100).toFixed(2);
 
         document.getElementById('featuredproductprice').innerHTML = "$" + dollar + "." + cents;
         return product;
