@@ -15,7 +15,9 @@
                     {% assign price_in_cents = defaultProduct.price %} 
                     {% assign price_in_dollars = price_in_cents | divided_by: 100 %}
                     {% assign price_remainder = price_in_cents | modulo: 100 %}
-                    <h3 id="featuredproductprice">${{ price_in_dollars }}.{{ price_remainder | append: "00" | slice: 0, 2 }}</h3>
+                    {% assign total_Price =  $ + price_in_dollars + . + price_remainder | append: "00" | slice: 0, 2 %}
+                    
+                    <h3 id="featuredproductprice"></h3>
                 </div>
             </div>
 
