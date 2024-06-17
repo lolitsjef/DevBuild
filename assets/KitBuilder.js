@@ -29,7 +29,7 @@ async function setFeaturedProduct(id){
         console.log(product.price);
         console.log(dollar);
         console.log(cents);
-        if (cents = 0){
+        if (cents == 0){
             cents = "00"
         }
         else{
