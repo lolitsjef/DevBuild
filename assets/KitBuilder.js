@@ -27,7 +27,7 @@ async function setFeaturedProduct(id){
         var num = product.price;
         num /= 100; 
         num.toLocaleString("en-US", {style:"currency", currency:"USD"});
-        document.getElementById('featuredproductprice').innerHTML = num;
+        document.getElementById('featuredproductprice').innerHTML = "$" + num;
         return product;
     }
 
