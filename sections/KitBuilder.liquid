@@ -9,7 +9,7 @@
             <div class = "featuredproductheader" id="featuredproductname">{{defaultProduct.title}}</div>
             <div class = "feautedproductinfo">
                 {% assign defaultProductImage = defaultProduct.featured_image %}
-                <div class = "featuredproductimage"><img src = "{{defaultProductImage.src | image_url: width: 200}}" id = "featuredproductimage"height="200px" width="200px"></div>
+                <img class = "featuredproductimage" src = "{{defaultProductImage.src | image_url: width: 200}}" id = "featuredproductimage"height="200px" width="200px">
                 <div class = "featuredproductdesc" id="featuredproductdesc">{{defaultProduct.description}}</div>
             </div>
 
