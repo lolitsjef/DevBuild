@@ -5,7 +5,7 @@
     <h1>{{ section.settings.headline }}</h1>
     <div class = main>
         {% assign defaultProduct = all_products[section.blocks[0].settings.product1] %}
-        <h3 id="featuredproductname">{{defaultProduct.title}}</h3>
+        <div class = "mainproductheader" id="featuredproductname">{{defaultProduct.title}}</div>
         {% assign defaultProductImage = defaultProduct.featured_image %}
         <img src = "{{defaultProductImage.src | image_url: width: 200}}" id = "featuredproductimage"height="200px" width="200px">
         <h4 id="featuredproductdesc">{{defaultProduct.description}}</h4>
@@ -79,6 +79,9 @@
 .KitBuilder{
     display: flex;
     margin: 2em;
+}
+.mainproductheader{
+    font-size: 2em;
 }
 .main{
     width: auto;
