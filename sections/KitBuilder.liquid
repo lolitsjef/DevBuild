@@ -10,7 +10,12 @@
         <img src = "{{defaultProductImage.src | image_url: width: 200}}" id = "featuredproductimage"height="200px" width="200px">
         <h3 id="featuredproductname">{{defaultProduct.title}}</h3>
         <h4 id="featuredproductdesc">{{defaultProduct.description}}</h4>
-        <h3 id="featuredproductprice">{{defaultProduct.price}}</h3>
+
+        {% assign price_in_cents = defaultProduct.price %} 
+        {% assign price_in_dollars = price_in_cents | divided_by: 100 %}
+        {% assign price_remainder = price_in_cents | modulo: 100 %}
+        {{ price_in_dollars }}.{{ price_remainder | append: "00" | slice: 0, 2 }}
+        <h3 id="featuredproductprice">{{ price_in_dollars }}.{{ price_remainder | append: "00" | slice: 0, 2 }}</h3>
         <button onclick="checkout()">Add All to Cart</button>
     </div>
 
