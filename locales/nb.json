@@ -13,11 +13,11 @@
     "social": {
       "alt_text": {
         "share_on_facebook": "Del på Facebook",
-        "share_on_twitter": "Del på X",
+        "share_on_twitter": "Tweet på Twitter",
         "share_on_pinterest": "Pin på Pinterest"
       },
       "links": {
-        "twitter": "X (Twitter)",
+        "twitter": "Twitter",
         "facebook": "Facebook",
         "pinterest": "Pinterest",
         "instagram": "Instagram",
@@ -118,9 +118,7 @@
         "maximum_of": "Maksimum på {{ quantity }}",
         "multiples_of": "Økninger på {{ quantity }}",
         "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> i handlekurven",
-        "note": "Vis antallsregler",
-        "min_of": "Minimum {{ quantity }}",
-        "max_of": "Maksimum {{ quantity }}"
+        "note": "Vis antallsregler"
       },
       "price": {
         "from_price_html": "Fra {{ price }}",
@@ -361,10 +359,7 @@
       "remove_all_items_confirmation": "Vil du fjerne alle {{ quantity }} varer fra handlekurven?",
       "remove_all": "Fjern alle",
       "cancel": "Avbryt",
-      "remove_all_single_item_confirmation": "Vil du fjerne én vare fra handlekurven?",
-      "min_error": "Denne varen har et minimumsantall på {{ min }}",
-      "max_error": "Denne varen har et maksimumsantall på {{ max }}",
-      "step_error": "Du kan bare legge til denne varen i multipler av {{ step }}"
+      "remove_all_single_item_confirmation": "Vil du fjerne én vare fra handlekurven?"
     }
   },
   "localization": {
@@ -427,8 +422,7 @@
       "password": "Passord",
       "title": "Logg på",
       "sign_in": "Logg inn",
-      "submit": "Send inn",
-      "alternate_provider_separator": "eller"
+      "submit": "Send inn"
     },
     "order": {
       "title": "Bestilling {{ name }}",

@@ -13,11 +13,11 @@
     "social": {
       "alt_text": {
         "share_on_facebook": "Delen op Facebook",
-        "share_on_twitter": "Delen op X",
+        "share_on_twitter": "Twitteren op Twitter",
         "share_on_pinterest": "Pinnen op Pinterest"
       },
       "links": {
-        "twitter": "X (voorheen Twitter)",
+        "twitter": "Twitter",
         "facebook": "Facebook",
         "pinterest": "Pinterest",
         "instagram": "Instagram",
@@ -118,9 +118,7 @@
         "maximum_of": "Maximum van {{ quantity }}",
         "multiples_of": "Stappen van {{ quantity }}",
         "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> in winkelwagen",
-        "note": "Hoeveelheidsregels bekijken",
-        "min_of": "Min. {{ quantity }}",
-        "max_of": "Max. {{ quantity }}"
+        "note": "Hoeveelheidsregels bekijken"
       },
       "price": {
         "from_price_html": "Vanaf {{ price }}",
@@ -361,10 +359,7 @@
       "remove_all_items_confirmation": "Alle {{ quantity }} artikelen uit je winkelwagen verwijderen?",
       "remove_all": "Alles verwijderen",
       "cancel": "Annuleren",
-      "remove_all_single_item_confirmation": "1 artikel uit je winkelwagen verwijderen?",
-      "min_error": "Voor dit artikel geldt een minimum van {{ min }}.",
-      "max_error": "Voor dit artikel geldt een maximum van {{ max }}.",
-      "step_error": "Je kunt dit artikel alleen toevoegen in stappen van {{ step }}"
+      "remove_all_single_item_confirmation": "1 artikel uit je winkelwagen verwijderen?"
     }
   },
   "localization": {
@@ -427,8 +422,7 @@
       "password": "Wachtwoord",
       "title": "Inloggegevens",
       "sign_in": "Inloggen",
-      "submit": "Verzenden",
-      "alternate_provider_separator": "of"
+      "submit": "Verzenden"
     },
     "orders": {
       "title": "Besteloverzicht",

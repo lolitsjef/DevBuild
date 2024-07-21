@@ -13,11 +13,11 @@
     "social": {
       "alt_text": {
         "share_on_facebook": "Jaa Facebookissa",
-        "share_on_twitter": "Jaa X:ssä",
+        "share_on_twitter": "Twiittaa Twitterissä",
         "share_on_pinterest": "Pinnaa Pinterestissä"
       },
       "links": {
-        "twitter": "X (Twitter)",
+        "twitter": "Twitter",
         "facebook": "Facebook",
         "pinterest": "Pinterest",
         "instagram": "Instagram",
@@ -118,9 +118,7 @@
         "maximum_of": "Enimmäismäärä {{ quantity }}",
         "multiples_of": "Lisäysten koko: {{ quantity }}",
         "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> ostoskorissa",
-        "note": "Katso määräsäännöt",
-        "min_of": "Väh. {{ quantity }}",
-        "max_of": "Enint. {{ quantity }}"
+        "note": "Katso määräsäännöt"
       },
       "price": {
         "from_price_html": "Alkaen {{ price }}",
@@ -361,10 +359,7 @@
       "remove_all_items_confirmation": "Poistetaanko kaikki {{ quantity }} tuotetta ostoskorista?",
       "remove_all": "Poista kaikki",
       "cancel": "Peruuta",
-      "remove_all_single_item_confirmation": "Poistetaanko 1 tuote ostoskorista?",
-      "min_error": "Tämän tuotteen vähimmäisarvo on {{ min }}",
-      "max_error": "Tämän tuotteen enimmäisarvo on {{ max }}",
-      "step_error": "Voit lisätä tätä tuotetta vain {{ step }}:n lisäyksinä"
+      "remove_all_single_item_confirmation": "Poistetaanko 1 tuote ostoskorista?"
     }
   },
   "localization": {
@@ -427,8 +422,7 @@
       "password": "Salasana",
       "title": "Kirjautuminen",
       "sign_in": "Kirjaudu sisään",
-      "submit": "Lähetä",
-      "alternate_provider_separator": "tai"
+      "submit": "Lähetä"
     },
     "orders": {
       "title": "Tilaushistoria",

@@ -250,8 +250,8 @@
           "content": "Social accounts"
         },
         "social_twitter_link": {
-          "label": "X / Twitter",
-          "info": "https://x.com/shopify"
+          "label": "Twitter",
+          "info": "https://twitter.com/shopify"
         },
         "social_facebook_link": {
           "label": "Facebook",
@@ -1828,14 +1828,9 @@
           "label": "Enable filtering",
           "info": "Customize filters with the Search & Discovery app. [Learn more](https://help.shopify.com/manual/online-store/search-and-discovery/filters)"
         },
-        "quick_add": {
-          "label": "Quick add",
-          "info": "Bulk is optimized for items purchased in higher quantities.",
-          "options": {
-            "option_1": "None",
-            "option_2": "Standard",
-            "option_3": "Bulk"
-          }
+        "enable_quick_buy": {
+          "label": "Enable quick add button",
+          "info": "Optimal with popup or drawer cart type."
         },
         "header_mobile": {
           "content": "Mobile Layout"
@@ -1909,10 +1904,7 @@
       }
     },
     "main-login": {
-      "name": "Login",
-      "shop_login_button": {
-        "enable": "Enable Sign in with Shop"
-      }
+      "name": "Login"
     },
     "main-order": {
       "name": "Order"

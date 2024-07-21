@@ -56,8 +56,8 @@
       "name": "Sosiaalinen media",
       "settings": {
         "social_twitter_link": {
-          "label": "X (Twitter)",
-          "info": "https://x.com/shopify"
+          "label": "Twitter",
+          "info": "https://twitter.com/shopify"
         },
         "social_facebook_link": {
           "label": "Facebook",
@@ -1511,6 +1511,10 @@
             "label": "2 saraketta"
           }
         },
+        "enable_quick_buy": {
+          "label": "Ota pikalisäyspainike käyttöön",
+          "info": "Ihanteellinen ponnahdusikkuna- tai laatikkotyyppisten ostokorien kanssa."
+        },
         "filter_type": {
           "label": "Suodatinasettelu tietokoneella",
           "options__1": {
@@ -1523,15 +1527,6 @@
             "label": "Laatikko"
           },
           "info": "Laatikko on oletusarvoinen asettelu mobiilissa."
-        },
-        "quick_add": {
-          "label": "Pikalisäys",
-          "info": "Erä on optimoitu tuotteille, joita ostetaan suuria määriä.",
-          "options": {
-            "option_1": "Ei ole",
-            "option_2": "Vakio",
-            "option_3": "Erä"
-          }
         }
       }
     },
@@ -1544,10 +1539,10 @@
         "sort": {
           "label": "Lajittele kokoelmat seuraavasti:",
           "options__1": {
-            "label": "Aakkosjärjestyksessä A–Ö"
+            "label": "Aakkosjärjestyksessä A–Z"
           },
           "options__2": {
-            "label": "Aakkosjärjestyksessä Ö–A"
+            "label": "Aakkosjärjestyksessä Z–A"
           },
           "options__3": {
             "label": "Päivämäärä uusimmasta vanhimpaan"
@@ -3123,10 +3118,7 @@
       "name": "Osoitteet"
     },
     "main-login": {
-      "name": "Kirjautuminen",
-      "shop_login_button": {
-        "enable": "Ota käyttöön kirjautuminen Shopilla"
-      }
+      "name": "Kirjautuminen"
     },
     "main-order": {
       "name": "Tilaus"

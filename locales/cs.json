@@ -13,11 +13,11 @@
     "social": {
       "alt_text": {
         "share_on_facebook": "Sdílet na Facebooku",
-        "share_on_twitter": "Sdílení přes X",
+        "share_on_twitter": "Tweetnout na Twitteru",
         "share_on_pinterest": "Připnout na Pinterestu"
       },
       "links": {
-        "twitter": "X (Twitter)",
+        "twitter": "Twitter",
         "facebook": "Facebook",
         "pinterest": "Pinterest",
         "instagram": "Instagram",
@@ -66,7 +66,7 @@
     "skip_to_text": "Přejít k obsahu",
     "close": "Zavřít",
     "unit_price_separator": "za",
-    "vendor": "Vendor:",
+    "vendor": "Dodavatel:",
     "error": "Chyba",
     "refresh_page": "Po volbě výběru se obnoví celá stránka.",
     "loading": "Načítání...",
@@ -114,7 +114,7 @@
       "share": "Sdílet tento produkt",
       "sold_out": "Vyprodáno",
       "unavailable": "Není k dispozici",
-      "vendor": "Vendor",
+      "vendor": "Dodavatel",
       "video_exit_message": "{{ title }} otevře ve stejném okně video na celé obrazovce.",
       "xr_button": "Zobrazit ve vašem prostoru",
       "xr_button_label": "Zobrazit ve vašem prostoru: Umožňuje načíst položku v okně rozšířené reality",
@@ -127,9 +127,7 @@
         "maximum_of": "Maximum: {{ quantity }}",
         "multiples_of": "Přírůstky: {{ quantity }}",
         "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> v košíku",
-        "note": "Zobrazit pravidla množství",
-        "min_of": "Minimum {{ quantity }}",
-        "max_of": "Maximum {{ quantity }}"
+        "note": "Zobrazit pravidla množství"
       },
       "price": {
         "from_price_html": "Od {{ price }}",
@@ -385,10 +383,7 @@
       "remove_all_items_confirmation": "Chcete z košíku odebrat všechny položky ({{ quantity }})?",
       "remove_all": "Odebrat vše",
       "cancel": "Zrušit",
-      "remove_all_single_item_confirmation": "Chcete odebrat 1 položku z košíku?",
-      "min_error": "Tato položka vyžaduje minimum: {{ min }}",
-      "max_error": "Tato položka vyžaduje maximum: {{ max }}",
-      "step_error": "Tuto položku můžete přidat jen v přírůstcích hodnoty: {{ step }}"
+      "remove_all_single_item_confirmation": "Chcete odebrat 1 položku z košíku?"
     }
   },
   "localization": {
@@ -451,8 +446,7 @@
       "password": "Heslo",
       "title": "Přihlášení",
       "sign_in": "Přihlásit se",
-      "submit": "Odeslat",
-      "alternate_provider_separator": "nebo"
+      "submit": "Odeslat"
     },
     "orders": {
       "title": "Historie objednávek",

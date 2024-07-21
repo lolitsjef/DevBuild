@@ -11,10 +11,6 @@ quick-order-list .quantity__button {
   width: calc(3.5rem / var(--font-body-scale));
 }
 
-.quick-order-list__contents {
-  position: relative;
-}
-
 .quick-order-list__container {
   padding-bottom: 4rem;
 }
@@ -48,7 +44,7 @@ quick-order-list .quantity__button {
   .quick-order-list__total {
     position: sticky;
     bottom: 0;
-    z-index: 2;
+    z-index: 1;
     background-color: rgb(var(--color-background));
   }
 
@@ -521,7 +517,6 @@ quick-order-list-remove-button:hover .icon-remove {
 }
 
 @media screen and (min-width: 990px) {
-
   .quick-order-list__table thead th:first-child,
   .quick-order-list-total__column {
     width: 37%;

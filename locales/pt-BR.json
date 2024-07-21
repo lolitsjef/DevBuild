@@ -13,11 +13,11 @@
     "social": {
       "alt_text": {
         "share_on_facebook": "Compartilhar no Facebook",
-        "share_on_twitter": "Compartilhar no X",
+        "share_on_twitter": "Tuitar",
         "share_on_pinterest": "Incluir como pin no Pinterest"
       },
       "links": {
-        "twitter": "X (Twitter)",
+        "twitter": "Twitter",
         "facebook": "Facebook",
         "pinterest": "Pinterest",
         "instagram": "Instagram",
@@ -119,9 +119,7 @@
         "maximum_of": "Máximo de {{ quantity }}",
         "multiples_of": "Pacote com {{ quantity }}",
         "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> no carrinho",
-        "note": "Ver regras de quantidade",
-        "min_of": "Mínimo de {{ quantity }}",
-        "max_of": "Máximo de {{ quantity }}"
+        "note": "Ver regras de quantidade"
       },
       "price": {
         "from_price_html": "De {{ price }}",
@@ -373,10 +371,7 @@
       "remove_all_items_confirmation": "Remover todos os {{ quantity }} itens do carrinho?",
       "remove_all": "Remover tudo",
       "cancel": "Cancelar",
-      "remove_all_single_item_confirmation": "Remover 1 item do carrinho?",
-      "min_error": "Este item apresenta um mínimo de {{ min }}",
-      "max_error": "Este item apresenta um máximo de {{ max }}",
-      "step_error": "Só é possível adicionar este item em incrementos de {{ step }}"
+      "remove_all_single_item_confirmation": "Remover 1 item do carrinho?"
     }
   },
   "localization": {
@@ -439,8 +434,7 @@
       "password": "Senha",
       "title": "Fazer login",
       "sign_in": "Fazer login",
-      "submit": "Enviar",
-      "alternate_provider_separator": "ou"
+      "submit": "Enviar"
     },
     "orders": {
       "title": "Histórico de pedidos",

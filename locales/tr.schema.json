@@ -56,8 +56,8 @@
       "name": "Sosyal medya",
       "settings": {
         "social_twitter_link": {
-          "label": "X/Twitter",
-          "info": "https://x.com/shopify"
+          "label": "Twitter",
+          "info": "https://twitter.com/shopify"
         },
         "social_facebook_link": {
           "label": "Facebook",
@@ -1511,6 +1511,10 @@
             "label": "2 sütun"
           }
         },
+        "enable_quick_buy": {
+          "label": "Hızlı ekleme düğmesini etkinleştir",
+          "info": "Açılır pencere ve çekmece sepet türü için optimumdur."
+        },
         "filter_type": {
           "label": "Masaüstü filtre düzeni",
           "options__1": {
@@ -1523,15 +1527,6 @@
             "label": "Çekmece"
           },
           "info": "Çekmece, varsayılan mobil düzendir."
-        },
-        "quick_add": {
-          "label": "Hızlı ekleme",
-          "info": "Toplu seçeneği, daha yüksek miktarlarda satın alınan ürünler için optimize edilmiştir.",
-          "options": {
-            "option_1": "Yok",
-            "option_2": "Standart",
-            "option_3": "Toplu"
-          }
         }
       }
     },
@@ -3123,10 +3118,7 @@
       "name": "Adresler"
     },
     "main-login": {
-      "name": "Giriş bilgileri",
-      "shop_login_button": {
-        "enable": "Shop ile giriş yapmayı etkinleştirin"
-      }
+      "name": "Giriş bilgileri"
     },
     "main-order": {
       "name": "Sipariş"

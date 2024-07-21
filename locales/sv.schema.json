@@ -56,8 +56,8 @@
       "name": "Sociala medier",
       "settings": {
         "social_twitter_link": {
-          "label": "X / Twitter",
-          "info": "https://x.com/shopify"
+          "label": "Twitter",
+          "info": "https://twitter.com/shopify"
         },
         "social_facebook_link": {
           "label": "Facebook",
@@ -1496,6 +1496,10 @@
           "label": "Visa produktbetyg",
           "info": "Lägg till en produktbedömningsapp för att visa ett betyg. [Mer information](https://help.shopify.com/manual/online-store/themes/theme-structure/page-types#product-grid-section-settings)"
         },
+        "enable_quick_buy": {
+          "label": "Aktivera knapp för snabb tilläggning",
+          "info": "Optimal med varukorg av popup- eller lådtyp."
+        },
         "columns_desktop": {
           "label": "Antalet kolumner på skrivbordet"
         },
@@ -1523,15 +1527,6 @@
             "label": "Låda"
           },
           "info": "Låda är standardlayouten för mobil."
-        },
-        "quick_add": {
-          "label": "Lägg till direkt",
-          "info": "Bulk är optimerat för artiklar som köps i större volymer.",
-          "options": {
-            "option_1": "Ingen",
-            "option_2": "Standard",
-            "option_3": "Bulk"
-          }
         }
       }
     },
@@ -3123,10 +3118,7 @@
       "name": "Adresser"
     },
     "main-login": {
-      "name": "Inloggning",
-      "shop_login_button": {
-        "enable": "Aktivera inloggning med Shop"
-      }
+      "name": "Inloggning"
     },
     "main-order": {
       "name": "Order"

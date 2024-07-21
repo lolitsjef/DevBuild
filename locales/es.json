@@ -13,11 +13,11 @@
     "social": {
       "alt_text": {
         "share_on_facebook": "Compartir en Facebook",
-        "share_on_twitter": "Compartir en X",
+        "share_on_twitter": "Compartir en Twitter",
         "share_on_pinterest": "Guardar en Pinterest"
       },
       "links": {
-        "twitter": "X (Twitter)",
+        "twitter": "Twitter",
         "facebook": "Facebook",
         "pinterest": "Pinterest",
         "instagram": "Instagram",
@@ -119,9 +119,7 @@
         "maximum_of": "Máximo de {{ quantity }}",
         "multiples_of": "Incrementos de {{ quantity }}",
         "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> en el carrito",
-        "note": "Ver reglas de cantidad",
-        "min_of": "Mín.: {{ quantity }}",
-        "max_of": "Máx.: {{ quantity }}"
+        "note": "Ver reglas de cantidad"
       },
       "price": {
         "from_price_html": "A partir de {{ price }}",
@@ -373,10 +371,7 @@
       "remove_all_items_confirmation": "¿Eliminar los {{ quantity }} artículos del carrito?",
       "remove_all": "Eliminar todos",
       "cancel": "Cancelar",
-      "remove_all_single_item_confirmation": "¿Eliminar 1 artículo de tu carrito?",
-      "min_error": "Este artículo tiene un mínimo de {{ min }}.",
-      "max_error": "Este artículo tiene un máximo de {{ max }}.",
-      "step_error": "Solo puedes agregar este artículo en incrementos de {{ step }}."
+      "remove_all_single_item_confirmation": "¿Eliminar 1 artículo de tu carrito?"
     }
   },
   "localization": {
@@ -439,8 +434,7 @@
       "password": "Contraseña",
       "title": "Inicio de sesión",
       "sign_in": "Iniciar sesión",
-      "submit": "Enviar",
-      "alternate_provider_separator": "o"
+      "submit": "Enviar"
     },
     "orders": {
       "title": "Historial de pedidos",
