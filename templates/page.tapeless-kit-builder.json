@@ -15,9 +15,50 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "kit_builder_dU9gDy": {
+      "type": "KitBuilder",
+      "blocks": {
+        "kit_section_3ThagF": {
+          "type": "Kit-Section",
+          "settings": {
+            "SectionHeader": "Hat",
+            "product1": "bmw-e30-washed-pigment-dyed-cotton-dad-hat",
+            "product2": "bmw-e30-two-tone-dad-hat",
+            "product3": ""
+          }
+        },
+        "kit_section_a8XYgq": {
+          "type": "Kit-Section",
+          "settings": {
+            "SectionHeader": "Mount",
+            "product1": "immersionrc-powerplay-mounting-kit-cold-shoe-bracket",
+            "product2": "immersionrc-powerplay-mounting-kit-for-sony-handycam-hot-shoe",
+            "product3": "immersionrc-powerplay-hot-shoe-mount"
+          }
+        },
+        "kit_section_9BeNek": {
+          "type": "Kit-Section",
+          "settings": {
+            "SectionHeader": "Steering Wheel",
+            "product1": "steering-wheel-wall-mount",
+            "product2": "",
+            "product3": ""
+          }
+        }
+      },
+      "block_order": [
+        "kit_section_3ThagF",
+        "kit_section_a8XYgq",
+        "kit_section_9BeNek"
+      ],
+      "settings": {
+        "headline": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "kit_builder_dU9gDy"
   ]
 }
