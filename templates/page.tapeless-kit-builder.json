@@ -70,10 +70,22 @@
           "settings": {
             "SectionHeader": "Mount",
             "product1": "immersionrc-powerplay-mounting-kit-cold-shoe-bracket",
-            "product1name": "",
+            "product1name": "Cold Shoe Bracket",
             "product2": "immersionrc-powerplay-mounting-kit-for-sony-handycam-hot-shoe",
             "product2name": "",
             "product3": "immersionrc-powerplay-hot-shoe-mount",
+            "product3name": ""
+          }
+        },
+        "kit_section_pBgJRi": {
+          "type": "Kit-Section",
+          "settings": {
+            "SectionHeader": "",
+            "product1": "",
+            "product1name": "",
+            "product2": "",
+            "product2name": "",
+            "product3": "",
             "product3name": ""
           }
         },
@@ -93,6 +105,7 @@
       "block_order": [
         "kit_section_3ThagF",
         "kit_section_a8XYgq",
+        "kit_section_pBgJRi",
         "kit_section_9BeNek"
       ],
       "settings": {
