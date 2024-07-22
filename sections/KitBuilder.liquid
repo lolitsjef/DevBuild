@@ -179,7 +179,10 @@
 .productimage{
     width:10em; 
     height:10em;
-    transition: transform var(--duration-long) ease, filter var(--duration-long) ease;}
+}
+.productimage:hover{
+    transform: scale(1.05); 
+}
 .productcard.selected {
     background-color: red;
 }
