@@ -31,7 +31,7 @@
     <div class = kits>
         {% for block in section.blocks %}
             <div id = "section{{forloop.index}}" class = kitsection>
-                <div class = kitsectiontitle>{{ block.settings.SectionHeader }}</div>
+                <div class = kitsectiontitle><h2>{{ block.settings.SectionHeader }}</h2></div>
                 <div class = components> 
                     {% if block.settings.product1.id != blank %}
                     {% assign product1 = all_products[block.settings.product1] %}
