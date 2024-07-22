@@ -34,7 +34,7 @@
 
                 <div class = kitsectiontitle>
                     <h1>{{ block.settings.SectionHeader }}</h1>
-                    <div class = "noItem" opacity = 0.33 onclick = "selected({{ forloop.index }}, this, 0, 0)"> No {{ block.settings.SectionHeader }} </div>
+                    <div class = "noItem" opacity = 0.33 onclick = "selected({{ forloop.index }}, this, 0, 0)"> No {{ block.settings.SectionHeader }}  X</div>
                 </div>
                 <div class = components> 
                     {% if block.settings.product1.id != blank %}
@@ -151,6 +151,7 @@
 }
 .noItem{
     margin-top: -1em;
+    cursor: pointer;
 }
 .components{
     display: flex;
