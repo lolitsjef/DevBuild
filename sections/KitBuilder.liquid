@@ -157,6 +157,11 @@
     height: 15em;
     margin: 0 1em;
 }
+.productcard:hover {
+    transform: scale(1.05);
+    transition-duration: 400ms;
+
+ }
 .productinfo{
     font-size: 0.8em;
     line-height: 1em;
@@ -167,15 +172,9 @@
 .productimage{
     width:10em; 
     height:10em;
-    transition: transform 400ms;
-    background-size: 100%;
-    background-position: center center;
     overflow: hidden;
 }
-.productimage:hover img {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
- }
+
 .item img {
     -webkit-transition: 0.6s ease;
     transition: 0.6s ease;
