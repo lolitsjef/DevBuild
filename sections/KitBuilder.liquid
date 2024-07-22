@@ -32,8 +32,10 @@
         {% for block in section.blocks %}
             <div id = "section{{forloop.index}}" class = kitsection>
 
-                <div class = kitsectiontitle><h1>{{ block.settings.SectionHeader }}</h1></div>
-                <div class = "noItem" opacity = 0.33 onclick = "selected({{ forloop.index }}, this, 0, 0)"> X </div>
+                <div class = kitsectiontitle>
+                    <h1>{{ block.settings.SectionHeader }}</h1>
+                    <div class = "noItem" opacity = 0.33 onclick = "selected({{ forloop.index }}, this, 0, 0)"> X </div>
+                </div>
                 <div class = components> 
                     {% if block.settings.product1.id != blank %}
                     {% assign product1 = all_products[block.settings.product1] %}
