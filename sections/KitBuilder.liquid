@@ -83,18 +83,6 @@
 
 
 {%stylesheet%}
-:root {
-  --duration-short: 100ms;
-  --duration-default: 200ms;
-  --duration-announcement-bar: 250ms;
-  --duration-medium: 300ms;
-  --duration-long: 500ms;
-  --duration-extra-long: 600ms;
-  --duration-extended: 3s;
-  --ease-out-slow: cubic-bezier(0, 0, 0.3, 1);
-  --animation-slide-in: slideIn var(--duration-extra-long) var(--ease-out-slow) forwards;
-  --animation-fade-in: fadeIn var(--duration-extra-long) var(--ease-out-slow);
-}
 
 .featured{
     border-color: black;
@@ -182,6 +170,7 @@
 }
 .productimage:hover{
     transform: scale(1.05); 
+    transition-duration: 300ms;
 }
 .productcard.selected {
     background-color: red;
