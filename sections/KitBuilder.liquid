@@ -70,7 +70,7 @@
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product3.id}}, {{product3.variants.first.id}})">
                         <img class = "productimage" height="400px" width="400px" src = {{product3.featured_image | image_url: width: 400}}>
                         <div class = "productinfo"> 
-                            {{ block.settings.product3name }}
+                            <h3>{{ block.settings.product3name }}</h3>
                             {% assign p3_price_in_cents = product1.price %} 
                             {% assign p3_price_in_dollars = price_in_cents | divided_by: 100 %}
                             {% assign p3_price_remainder = price_in_cents | modulo: 100 %}
@@ -156,7 +156,7 @@ onclick="selected({{ forloop.index }}, this, 0, 0)
 .productcard {
     width: 16em;
     height: 20em;
-    margin: 0 1em;
+    margin: -1em; 1em;
 }
 .productinfo{
     font-size: 0.8em;
