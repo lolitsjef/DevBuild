@@ -54,7 +54,10 @@
 
                         <div class = "productinfo"> 
                             <h3>{{ product2.title }}</h3>
-                            <h4>{{ product3.price }}</h4>
+                            {% assign p2_price_in_cents = product1.price %} 
+                            {% assign p2_price_in_dollars = price_in_cents | divided_by: 100 %}
+                            {% assign p2_price_remainder = price_in_cents | modulo: 100 %}
+                            ${{ p2_price_in_dollars }}.{{ p2_price_remainder | append: "00" | slice: 0, 2 }}
 
                         </div>
                     </div>
@@ -66,8 +69,10 @@
                         <img class = "productimage" height="400px" width="400px" src = {{product3.featured_image | image_url: width: 400}}>
                         <div class = "productinfo"> 
                             <h3>{{ product3.title }}</h3>
-                            <h4>{{ product3.price }}</h4>
-                        </div>
+                            {% assign p3_price_in_cents = product1.price %} 
+                            {% assign p3_price_in_dollars = price_in_cents | divided_by: 100 %}
+                            {% assign p3_price_remainder = price_in_cents | modulo: 100 %}
+                            ${{ p3_price_in_dollars }}.{{ p3_price_remainder | append: "00" | slice: 0, 2 }}                        </div>
                     </div>
                     {% endif %}
 
