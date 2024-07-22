@@ -58,8 +58,11 @@
           "settings": {
             "SectionHeader": "Hat",
             "product1": "bmw-e30-washed-pigment-dyed-cotton-dad-hat",
+            "product1name": "Dad Hat 1",
             "product2": "bmw-e30-two-tone-dad-hat",
-            "product3": ""
+            "product2name": "Dad Hat 2",
+            "product3": "",
+            "product3name": ""
           }
         },
         "kit_section_a8XYgq": {
@@ -67,8 +70,11 @@
           "settings": {
             "SectionHeader": "Mount",
             "product1": "immersionrc-powerplay-mounting-kit-cold-shoe-bracket",
+            "product1name": "",
             "product2": "immersionrc-powerplay-mounting-kit-for-sony-handycam-hot-shoe",
-            "product3": "immersionrc-powerplay-hot-shoe-mount"
+            "product2name": "",
+            "product3": "immersionrc-powerplay-hot-shoe-mount",
+            "product3name": ""
           }
         },
         "kit_section_9BeNek": {
@@ -76,8 +82,11 @@
           "settings": {
             "SectionHeader": "Steering Wheel",
             "product1": "steering-wheel-wall-mount",
+            "product1name": "",
             "product2": "",
-            "product3": ""
+            "product2name": "",
+            "product3": "",
+            "product3name": ""
           }
         }
       },
@@ -87,8 +96,6 @@
         "kit_section_9BeNek"
       ],
       "settings": {
-        "headline": "",
-        "noProductImage": "shopify:\/\/shop_images\/Devbuild_Box_Logo_White.png"
       }
     }
   },
