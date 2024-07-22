@@ -23,7 +23,7 @@
           "type": "Kit-Section",
           "settings": {
             "SectionHeader": "Hat",
-            "product1": "bmw-e30-washed-pigment-dyed-cotton-dad-hat",
+            "product1": "",
             "product2": "bmw-e30-two-tone-dad-hat",
             "product3": ""
           }
@@ -33,8 +33,8 @@
           "settings": {
             "SectionHeader": "Mount",
             "product1": "immersionrc-powerplay-mounting-kit-cold-shoe-bracket",
-            "product2": "immersionrc-powerplay-mounting-kit-for-sony-handycam-hot-shoe",
-            "product3": "immersionrc-powerplay-hot-shoe-mount"
+            "product2": "",
+            "product3": ""
           }
         },
         "kit_section_9BeNek": {
