@@ -32,6 +32,7 @@
         {% for block in section.blocks %}
             <div id = "section{{forloop.index}}" class = kitsection>
                 <div class = kitsectiontitle><h1>{{ block.settings.SectionHeader }}</h1></div>
+                <div opacity = 0.33 onclick = "selected({{ forloop.index }}, this, 0, 0)"> X </div>
                 <div class = components> 
                     {% if block.settings.product1.id != blank %}
                     {% assign product1 = all_products[block.settings.product1] %}
@@ -74,24 +75,14 @@
                             {% assign p3_price_remainder = price_in_cents | modulo: 100 %}
                             ${{ p3_price_in_dollars }}.{{ p3_price_remainder | append: "00" | slice: 0, 2 }}                        </div>
                     </div>
-                    {% endif %}
-
-                    <div class = "productcard" onclick="selected({{ forloop.index }}, this, 0, 0)">
-                        {% if section.settings.noProductImage != blank %}
-                            <img class = "productimage" height="400px" width="400px" background-color= "grey" src = {{section.settings.noProductImage  | image_url: width: 400}}>
-                        {% else %}
-                            <div class = "noImage"></div>
-                        {% endif %}
-                        <div class = "productinfo"> 
-                            <h3>No {{block.settings.SectionHeader}}</h3>
-                        </div>
-                    </div>
+                    {% endif %}                    
                 </div>
             </div>
         {%endfor%}
     </div>
 </div>
 
+onclick="selected({{ forloop.index }}, this, 0, 0)
 
 
 {%stylesheet%}
