@@ -72,9 +72,9 @@
             "product1": "immersionrc-powerplay-mounting-kit-cold-shoe-bracket",
             "product1name": "Cold Shoe Bracket",
             "product2": "immersionrc-powerplay-mounting-kit-for-sony-handycam-hot-shoe",
-            "product2name": "",
+            "product2name": "Sony Handycam Accessory Shoe",
             "product3": "immersionrc-powerplay-hot-shoe-mount",
-            "product3name": ""
+            "product3name": "Traditional Hot Shoe"
           }
         },
         "kit_section_9BeNek": {
@@ -82,7 +82,7 @@
           "settings": {
             "SectionHeader": "Steering Wheel",
             "product1": "steering-wheel-wall-mount",
-            "product1name": "",
+            "product1name": "Steering Wheel Mount",
             "product2": "",
             "product2name": "",
             "product3": "",
