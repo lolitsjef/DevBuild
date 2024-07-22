@@ -83,6 +83,19 @@
 
 
 {%stylesheet%}
+:root {
+  --duration-short: 100ms;
+  --duration-default: 200ms;
+  --duration-announcement-bar: 250ms;
+  --duration-medium: 300ms;
+  --duration-long: 500ms;
+  --duration-extra-long: 600ms;
+  --duration-extended: 3s;
+  --ease-out-slow: cubic-bezier(0, 0, 0.3, 1);
+  --animation-slide-in: slideIn var(--duration-extra-long) var(--ease-out-slow) forwards;
+  --animation-fade-in: fadeIn var(--duration-extra-long) var(--ease-out-slow);
+}
+
 .featured{
     border-color: black;
     border-width: 0.1em;
@@ -166,6 +179,8 @@
 .productimage{
     width:10em; 
     height:10em;
+    transition: transform calc(2 * var(--duration-extended)) ease, filter var(--duration-long) ease; 
+    filter: drop-shadow(0rem 2rem 2rem rgba(0, 0, 0, 0.15)) drop-shadow(0rem 1rem 1rem rgba(0, 0, 0, 0.15));
 }
 .productcard.selected {
     background-color: red;
