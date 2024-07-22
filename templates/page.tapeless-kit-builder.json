@@ -77,18 +77,6 @@
             "product3name": ""
           }
         },
-        "kit_section_pBgJRi": {
-          "type": "Kit-Section",
-          "settings": {
-            "SectionHeader": "",
-            "product1": "",
-            "product1name": "",
-            "product2": "",
-            "product2name": "",
-            "product3": "",
-            "product3name": ""
-          }
-        },
         "kit_section_9BeNek": {
           "type": "Kit-Section",
           "settings": {
@@ -105,7 +93,6 @@
       "block_order": [
         "kit_section_3ThagF",
         "kit_section_a8XYgq",
-        "kit_section_pBgJRi",
         "kit_section_9BeNek"
       ],
       "settings": {
