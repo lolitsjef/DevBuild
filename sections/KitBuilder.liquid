@@ -6,7 +6,7 @@
     <div class = main>
         <div class = "featured">
             {% assign defaultProduct = all_products[section.blocks[0].settings.product1] %}
-            <div class = "featuredproductheader" id="featuredproductname">{{defaultProduct.title}}</div>
+            <div class = "featuredproductheader" id="featuredproductname"><h1>{{defaultProduct.title}}</h1></div>
             <div class = "feautedproductinfo">
                 {% assign defaultProductImage = defaultProduct.featured_image %}
                 <img class = "featuredproductimage" src = "{{defaultProductImage.src | image_url: width: 400}}" id = "featuredproductimage"height="400px" width="400px">
