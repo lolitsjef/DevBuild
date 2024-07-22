@@ -11,9 +11,43 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+
+      ],
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
+      }
+    },
+    "rich_text_YeMQqr": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_6dHDXP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Tapeless Kit Builder",
+            "heading_size": "h0"
+          }
+        },
+        "text_WXAGy6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Build your tapeless kit... devin type stuff here<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6dHDXP",
+        "text_WXAGy6"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "kit_builder_dU9gDy": {
@@ -60,6 +94,7 @@
   },
   "order": [
     "main",
+    "rich_text_YeMQqr",
     "kit_builder_dU9gDy"
   ]
 }
