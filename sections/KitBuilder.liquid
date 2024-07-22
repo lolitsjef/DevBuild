@@ -9,7 +9,7 @@
             <div class = "featuredproductheader" id="featuredproductname">{{defaultProduct.title}}</div>
             <div class = "feautedproductinfo">
                 {% assign defaultProductImage = defaultProduct.featured_image %}
-                <img class = "featuredproductimage" src = "{{defaultProductImage.src | image_url: width: 200}}" id = "featuredproductimage"height="200px" width="200px">
+                <img class = "featuredproductimage" src = "{{defaultProductImage.src | image_url: width: 400}}" id = "featuredproductimage"height="400px" width="400px">
                 <div class = "featuredproductdesc">
                     <div id="featuredproductdesc">
                         {{defaultProduct.description}}
@@ -36,7 +36,7 @@
                     {% if block.settings.product1.id != blank %}
                     {% assign product1 = all_products[block.settings.product1] %}
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product1.id}}, {{product1.variants.first.id}} )">
-                        <img class = "productimage" height="200px" width="200px" src = {{product1.featured_image | image_url: width: 200}}>
+                        <img class = "productimage" height="400px" width="400px" src = {{product1.featured_image | image_url: width: 400}}>
                         <div class = "productinfo"> 
                             {{ product1.title }}
                         </div>
@@ -46,7 +46,7 @@
                     {% if block.settings.product2.id != blank %}
                     {% assign product2 = all_products[block.settings.product2] %}
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product2.id}}, {{product2.variants.first.id}})">
-                        <img class = "productimage" height="200px" width="200px" src = {{product2.featured_image | image_url: width: 200}}>
+                        <img class = "productimage" height="400px" width="400px" src = {{product2.featured_image | image_url: width: 400}}>
 
                         <div class = "productinfo"> 
                             {{ product2.title }}
@@ -57,7 +57,7 @@
                     {% if block.settings.product3.id != blank %}
                     {% assign product3 = all_products[block.settings.product3] %}
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product3.id}}, {{product3.variants.first.id}})">
-                        <img class = "productimage" height="200px" width="200px" src = {{product3.featured_image | image_url: width: 200}}>
+                        <img class = "productimage" height="400px" width="400px" src = {{product3.featured_image | image_url: width: 400}}>
                         <div class = "productinfo"> 
                             {{ product3.title }}
                         </div>
@@ -66,7 +66,7 @@
 
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, 0, 0)">
                         {% if section.settings.noProductImage != blank %}
-                            <img class = "productimage" height="200px" width="200px" src = {{section.settings.noProductImage  | image_url: width: 200}}>
+                            <img class = "productimage" height="400px" width="400px" src = {{section.settings.noProductImage  | image_url: width: 400}}>
                         {% else %}
                             <div class = "noImage"></div>
                         {% endif %}
