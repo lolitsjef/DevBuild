@@ -167,10 +167,12 @@
 .productimage{
     width:10em; 
     height:10em;
+    transition: background-size 4s ease;
+    background-size: 100%;
+    background-position: center center;
 }
 .productimage:hover{
-    transform: scale(1.05); 
-    transition-duration: 300ms;
+    background-size: 120%;
 }
 .productcard.selected {
     background-color: red;
