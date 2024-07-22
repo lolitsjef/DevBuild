@@ -38,7 +38,7 @@
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product1.id}}, {{product1.variants.first.id}} )">
                         <img class = "productimage" height="400px" width="400px" src = {{product1.featured_image | image_url: width: 400}}>
                         <div class = "productinfo"> 
-                            {{ product1.title }}
+                            <h3>{{ product1.title }}</h3>
                         </div>
                     </div>
                     {% endif %}
@@ -49,7 +49,7 @@
                         <img class = "productimage" height="400px" width="400px" src = {{product2.featured_image | image_url: width: 400}}>
 
                         <div class = "productinfo"> 
-                            {{ product2.title }}
+                            <h3>{{ product2.title }}</h3>
                         </div>
                     </div>
                     {% endif %}
@@ -59,7 +59,7 @@
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product3.id}}, {{product3.variants.first.id}})">
                         <img class = "productimage" height="400px" width="400px" src = {{product3.featured_image | image_url: width: 400}}>
                         <div class = "productinfo"> 
-                            {{ product3.title }}
+                            <h3>{{ product3.title }}</h3>
                         </div>
                     </div>
                     {% endif %}
@@ -71,7 +71,7 @@
                             <div class = "noImage"></div>
                         {% endif %}
                         <div class = "productinfo"> 
-                            No {{block.settings.SectionHeader}}
+                            <h3>No {{block.settings.SectionHeader}}</h3>
                         </div>
                     </div>
                 </div>
