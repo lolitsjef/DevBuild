@@ -39,10 +39,12 @@
                         <img class = "productimage" height="400px" width="400px" src = {{product1.featured_image | image_url: width: 400}}>
                         <div class = "productinfo"> 
                             <h3>{{ product1.title }}</h3>
-                            {% assign p1_price_in_cents = product1.price %} 
-                            {% assign p1_price_in_dollars = price_in_cents | divided_by: 100 %}
-                            {% assign p1_price_remainder = price_in_cents | modulo: 100 %}
-                            <h4 id="product1price">${{ p1_price_in_dollars }}.{{ p1_price_remainder | append: "00" | slice: 0, 2 }}</h4>
+                            <div class = "price">
+                                {% assign p1_price_in_cents = product1.price %} 
+                                {% assign p1_price_in_dollars = price_in_cents | divided_by: 100 %}
+                                {% assign p1_price_remainder = price_in_cents | modulo: 100 %}
+                                ${{ p1_price_in_dollars }}.{{ p1_price_remainder | append: "00" | slice: 0, 2 }}
+                            </div>
 
                         </div>
                     </div>
