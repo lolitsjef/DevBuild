@@ -7,6 +7,32 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
 
+    <script>
+      const open = window.XMLHttpRequest.prototype.open;
+
+      function openReplacement() {
+      this.addEventListener("load", function () {
+      if (
+      [
+      "/cart/add.js"
+      ].includes(this._url)
+      ) {
+      calculateShipping(this.response,this._url);
+      }
+      });
+      return open.apply(this, arguments);
+      }
+
+      window.XMLHttpRequest.prototype.open = openReplacement;
+
+      function calculateShipping(cartJson,url) {
+      console.log("calculate new shipping");
+      $('#cart-drawer').load(location.href + " #cart-drawer");
+      $('#cart-icon-bubble').load(location.href + " #cart-icon-bubble");
+      return false;
+      }
+      </script>
+
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
