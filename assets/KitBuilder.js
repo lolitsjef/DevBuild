@@ -84,11 +84,25 @@ async function addToCart(formData){
     })
     .then(response => response.json())
     .then(data => console.log(data))
+    .then(updateCart())
     .catch((error) => {
         console.error('Error:', error);
     });
-    
 }
+
+async function updateCart(){
+    fetch('/cart.js')
+      .then(response => response.text())
+      .then((responseText) => {
+        data = JSON.parse(responseText);
+        var counterEl = document.querySelectorAll('.js-cart-item-count');
+
+        counterEl.forEach((element) => {
+          element.innerHTML = data.item_count
+        })
+      })
+    }
+
 
 
 
