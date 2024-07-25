@@ -180,6 +180,7 @@ class CartItems extends HTMLElement {
   }
 
   updateLiveRegions(line, message) {
+    window.location.reload();
     const lineItemError =
       document.getElementById(`Line-item-error-${line}`) || document.getElementById(`CartDrawer-LineItemError-${line}`);
     if (lineItemError) lineItemError.querySelector('.cart-item__error-text').innerHTML = message;
