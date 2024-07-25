@@ -23,8 +23,11 @@
             </div>
         </div>
         <div class = "checkout">
-            <button onclick="checkout()">Add All to Cart</button>
+            <button id = "checkoutButton" onclick ="checkout()">Add All to Cart</button>
+            <span class = "" id = "checkoutMessage">Your items have been added to cart, refresh or</span>
+            <a href= "/cart">view cart</a> to see updated cart.
         </div>
+        
 
     </div>
 
@@ -198,6 +201,9 @@
 
 .productcard.selected {
     background-color: red;
+}
+.hide{
+    display: none;
 }
 .noImage{
     background-color: black;
