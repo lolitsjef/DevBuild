@@ -42,7 +42,7 @@
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product1.id}}, {{product1.variants.first.id}} )">
                         <img class = "productimage" height="400px" width="400px" src = {{product1.featured_image | image_url: width: 400}}>
                         <div class = "productinfo"> 
-                            <h3>{{ block.settings.product1name }}</h3>
+                            {{ block.settings.product1name }}
                             {% assign p1_price_in_cents = product1.price %} 
                             {% assign p1_price_in_dollars = price_in_cents | divided_by: 100 %}
                             {% assign p1_price_remainder = price_in_cents | modulo: 100 %}
@@ -57,7 +57,7 @@
                         <img class = "productimage" height="400px" width="400px" src = {{product2.featured_image | image_url: width: 400}}>
 
                         <div class = "productinfo"> 
-                            <h3>{{ block.settings.product2name }}</h3>
+                            {{ block.settings.product2name }}
                             {% assign p2_price_in_cents = product1.price %} 
                             {% assign p2_price_in_dollars = price_in_cents | divided_by: 100 %}
                             {% assign p2_price_remainder = price_in_cents | modulo: 100 %}
@@ -72,7 +72,7 @@
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product3.id}}, {{product3.variants.first.id}})">
                         <img class = "productimage" height="400px" width="400px" src = {{product3.featured_image | image_url: width: 400}}>
                         <div class = "productinfo"> 
-                            <h3>{{ block.settings.product3name }}</h3>
+                            {{ block.settings.product3name }}
                             {% assign p3_price_in_cents = product1.price %} 
                             {% assign p3_price_in_dollars = price_in_cents | divided_by: 100 %}
                             {% assign p3_price_remainder = price_in_cents | modulo: 100 %}
