@@ -95,8 +95,7 @@ async function updateCart(){
       .then(response => response.text())
       .then((responseText) => {
         data = JSON.parse(responseText);
-        var counterEl = document.querySelectorAll('.js-cart-item-count');
-
+        var counterEl = document.querySelectorAll('cart-count-bubble');
         counterEl.forEach((element) => {
           element.innerHTML = data.item_count
         })
