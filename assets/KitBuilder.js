@@ -86,7 +86,7 @@ async function addToCart(formData){
         .then((responseText) => {
         data = JSON.parse(responseText);
         console.log(data.item_count + count);
-        var counterEl = document.querySelectorAll('cart-count-bubble');
+        var counterEl = document.getElementById('cart-icon-bubble');
         counterEl.forEach((element) => {
             element.innerHTML = data.item_count + count;
             console.log(element);
