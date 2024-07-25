@@ -42,12 +42,14 @@
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product1.id}}, {{product1.variants.first.id}} )">
                         <img class = "productimage" height="400px" width="400px" src = {{product1.featured_image | image_url: width: 400}}>
                         <div class = "productinfo"> 
-                            <h4>{{ block.settings.product1name }}</h4>
+                            <h4 position = "absolute" top= "1em">{{ block.settings.product1name }}</h4>
+                        </div>
+                        <div class = "productprice">
                             {% assign p1_price_in_cents = product1.price %} 
                             {% assign p1_price_in_dollars = price_in_cents | divided_by: 100 %}
                             {% assign p1_price_remainder = price_in_cents | modulo: 100 %}
+                            ${{ p1_price_in_dollars }}.{{ p1_price_remainder | append: "00" | slice: 0, 2 }}
                         </div>
-                        <div class = "productprice">${{ p1_price_in_dollars }}.{{ p1_price_remainder | append: "00" | slice: 0, 2 }}</div>
                     </div>
                     {% endif %}
 
@@ -57,12 +59,14 @@
                         <img class = "productimage" height="400px" width="400px" src = {{product2.featured_image | image_url: width: 400}}>
 
                         <div class = "productinfo"> 
-                            <h4>{{ block.settings.product2name }}</h4>
+                            <h4 position = "absolute" top= "1em">{{ block.settings.product2name }}</h4>
+                        </div>
+                        <div class = "productprice">
                             {% assign p2_price_in_cents = product1.price %} 
                             {% assign p2_price_in_dollars = price_in_cents | divided_by: 100 %}
                             {% assign p2_price_remainder = price_in_cents | modulo: 100 %}
+                            ${{ p2_price_in_dollars }}.{{ p2_price_remainder | append: "00" | slice: 0, 2 }}
                         </div>
-                        <div class = "productprice">${{ p2_price_in_dollars }}.{{ p2_price_remainder | append: "00" | slice: 0, 2 }} </div>
 
                     </div>
                     {% endif %}
@@ -72,12 +76,14 @@
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product3.id}}, {{product3.variants.first.id}})">
                         <img class = "productimage" height="400px" width="400px" src = {{product3.featured_image | image_url: width: 400}}>
                         <div class = "productinfo"> 
-                            <h4>{{ block.settings.product3name }}</h4>
+                            <h4 position = "absolute" top= "1em">{{ block.settings.product3name }}</h4>
+                        </div>
+                        <div class = "productprice">
                             {% assign p3_price_in_cents = product1.price %} 
                             {% assign p3_price_in_dollars = price_in_cents | divided_by: 100 %}
                             {% assign p3_price_remainder = price_in_cents | modulo: 100 %}
-                        </div>
-                        <div class = "productprice">${{ p3_price_in_dollars }}.{{ p3_price_remainder | append: "00" | slice: 0, 2 }}</div>  
+                            ${{ p3_price_in_dollars }}.{{ p3_price_remainder | append: "00" | slice: 0, 2 }}
+                        </div>  
 
                     </div>
                     {% endif %}                    
@@ -173,10 +179,7 @@
     padding: 0 0.5em;
     color: black;
     margin-top: -1em;
-    margin-bottom: -1em;
-    position:relative;
-    top:-5px;
-    
+    margin-bottom: -1em;    
 }
 .productprice{
     padding: 0 0.5em;
