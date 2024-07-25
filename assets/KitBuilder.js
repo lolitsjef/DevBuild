@@ -91,15 +91,16 @@ async function addToCart(formData){
 }
 
 async function updateCart(){
+    console.log(here);
     fetch('/cart.js')
       .then(response => response.text())
       .then((responseText) => {
         data = JSON.parse(responseText);
+        console.log(data.item_count);
         var counterEl = document.querySelectorAll('cart-count-bubble');
         counterEl.forEach((element) => {
           element.innerHTML = data.item_count;
           console.log(element);
-          console.log(data.item_count);
         })
       })
     }
