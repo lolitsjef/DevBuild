@@ -76,7 +76,11 @@ async function checkout(){
 
 async function addToCart(formData){
     let count = 0;
-    selectedProducts.foreach((element) => {if (element != 0) {count ++}});
+    for (var i = 0; i < selectedProducts.length; i++) {
+        if(selectedProducts[i] != 0){
+            count ++;
+        }
+    }
     fetch('/cart.js')
         .then(response => response.text())
         .then((responseText) => {
