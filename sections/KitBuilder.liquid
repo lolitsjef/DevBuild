@@ -42,7 +42,7 @@
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product1.id}}, {{product1.variants.first.id}} )">
                         <img class = "productimage" height="400px" width="400px" src = {{product1.featured_image | image_url: width: 400}}>
                         <div class = "productinfo"> 
-                            <p>{{ block.settings.product1name }}</p>
+                            <h4>{{ block.settings.product1name }}</h4>
                         </div>
                         <div class = "productprice">
                             {% assign p1_price_in_cents = product1.price %} 
@@ -59,7 +59,7 @@
                         <img class = "productimage" height="400px" width="400px" src = {{product2.featured_image | image_url: width: 400}}>
 
                         <div class = "productinfo"> 
-                            <p>{{ block.settings.product2name }}</p>
+                            <h4>{{ block.settings.product2name }}</h4>
                         </div>
                         <div class = "productprice">
                             {% assign p2_price_in_cents = product1.price %} 
@@ -76,7 +76,7 @@
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product3.id}}, {{product3.variants.first.id}})">
                         <img class = "productimage" height="400px" width="400px" src = {{product3.featured_image | image_url: width: 400}}>
                         <div class = "productinfo"> 
-                            <p>{{ block.settings.product3name }}</p>
+                            <h4>{{ block.settings.product3name }}</h4>
                         </div>
                         <div class = "productprice">
                             {% assign p3_price_in_cents = product1.price %} 
@@ -179,7 +179,6 @@
     padding: 0 0.5em;
     color: black;
     vertical-align: top;
-    text-align: top;
     margin-top: -1em;
     margin-bottom: -1em;    
 }
