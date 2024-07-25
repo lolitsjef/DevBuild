@@ -98,6 +98,7 @@ async function updateCart(){
         var counterEl = document.querySelectorAll('cart-count-bubble');
         counterEl.forEach((element) => {
           element.innerHTML = data.item_count;
+          console.log(element);
           console.log(data.item_count);
         })
       })
