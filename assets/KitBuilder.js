@@ -73,7 +73,7 @@ async function checkout(){
         addToCart(formData);
     });
     document.getElementById("checkoutButton").classList.add("hide");
-    document.getElementById(checkoutMessage).classList.remove("hide");
+    document.getElementById("checkoutMessage").classList.remove("hide");
 }
 
 async function addToCart(formData){
