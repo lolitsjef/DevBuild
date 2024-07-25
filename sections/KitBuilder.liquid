@@ -46,8 +46,8 @@
                             {% assign p1_price_in_cents = product1.price %} 
                             {% assign p1_price_in_dollars = price_in_cents | divided_by: 100 %}
                             {% assign p1_price_remainder = price_in_cents | modulo: 100 %}
-                            <div class = "productprice">${{ p1_price_in_dollars }}.{{ p1_price_remainder | append: "00" | slice: 0, 2 }}</div>
                         </div>
+                        <div class = "productprice">${{ p1_price_in_dollars }}.{{ p1_price_remainder | append: "00" | slice: 0, 2 }}</div>
                     </div>
                     {% endif %}
 
@@ -61,9 +61,9 @@
                             {% assign p2_price_in_cents = product1.price %} 
                             {% assign p2_price_in_dollars = price_in_cents | divided_by: 100 %}
                             {% assign p2_price_remainder = price_in_cents | modulo: 100 %}
-                            <div class = "productprice">${{ p2_price_in_dollars }}.{{ p2_price_remainder | append: "00" | slice: 0, 2 }} </div>
-
                         </div>
+                        <div class = "productprice">${{ p2_price_in_dollars }}.{{ p2_price_remainder | append: "00" | slice: 0, 2 }} </div>
+
                     </div>
                     {% endif %}
 
@@ -76,8 +76,9 @@
                             {% assign p3_price_in_cents = product1.price %} 
                             {% assign p3_price_in_dollars = price_in_cents | divided_by: 100 %}
                             {% assign p3_price_remainder = price_in_cents | modulo: 100 %}
-                            <div class = "productprice">${{ p3_price_in_dollars }}.{{ p3_price_remainder | append: "00" | slice: 0, 2 }}</div>  
                         </div>
+                        <div class = "productprice">${{ p3_price_in_dollars }}.{{ p3_price_remainder | append: "00" | slice: 0, 2 }}</div>  
+
                     </div>
                     {% endif %}                    
                 </div>
@@ -166,6 +167,8 @@
     margin: 1em;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+
 }
 .productinfo{
     font-size: 0.8em;
@@ -173,7 +176,6 @@
     padding: 0 0.5em;
     color: black;
     margin-top: -1em;
-    justify-content: space-between;
     
 }
 .productprice{
