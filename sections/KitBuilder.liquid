@@ -32,12 +32,15 @@
                 </ul>
 
             </div>
-            <div id = "checkoutButton">
-                <button onclick ="checkout()">Add All to Cart</button>
+            <div class = "checkoutButton">
+                <div id = "checkoutButton">
+                    <button onclick ="checkout()">Add All to Cart</button>
+                </div>
+                <div id = checkoutMessage class = "hide">
+                    Your items have been added to cart, refresh or <a href= "/cart">view cart</a> to see updated cart.
+                </div>
             </div>
-            <div id = checkoutMessage class = "hide">
-                Your items have been added to cart, refresh or <a href= "/cart">view cart</a> to see updated cart.
-            </div>
+           
         </div>
         
 
@@ -137,6 +140,10 @@
     margin-top: 1em;
     flex-grow: 1;
     justify-content: space-between;
+}
+.checkoutButton{
+    position: absolute; 
+    bottom: 0;
 }
 .KitBuilder{
     display: flex;
