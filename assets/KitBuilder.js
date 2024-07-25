@@ -72,28 +72,11 @@ async function checkout(){
         } 
         addToCart(formData);
     });
+    document.getElementById("checkoutButton").classList.add("hide");
+    document.getElementById(checkoutMessage).classList.remove("hide");
 }
 
 async function addToCart(formData){
-    let count = 0;
-    for (var i = 0; i < selectedProducts.length; i++) {
-        if(selectedProducts[i] != 0){
-            count ++;
-        }
-    }
-    fetch('/cart.js')
-        .then(response => response.text())
-        .then((responseText) => {
-        data = JSON.parse(responseText);
-        console.log(data.item_count + count);
-        var counterEl = document.getElementById('cart-icon-bubble');
-        counterEl.forEach((element) => {
-            element.innerHTML = data.item_count + count;
-            console.log(element);
-        })
-    })
-    
-
     console.log(formData);
     fetch(window.Shopify.routes.root + 'cart/update.js', {
         method: 'POST',
@@ -105,6 +88,7 @@ async function addToCart(formData){
         console.error('Error:', error);
     });
 }
+
 
 
 
