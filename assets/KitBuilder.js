@@ -97,7 +97,8 @@ async function updateCart(){
         data = JSON.parse(responseText);
         var counterEl = document.querySelectorAll('cart-count-bubble');
         counterEl.forEach((element) => {
-          element.innerHTML = data.item_count
+          element.innerHTML = data.item_count;
+          console.log(data.item_count);
         })
       })
     }
