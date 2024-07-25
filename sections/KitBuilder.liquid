@@ -7,7 +7,7 @@
         <div class = "featured">
             {% assign defaultProduct = all_products[section.blocks[0].settings.product1] %}
             <div class = "feautedproductinfo">
-                <h1 id="featuredproductname">{{defaultProduct.title}}</h1>
+                <div class = "featuredproductheader" id="featuredproductname"><h1>{{defaultProduct.title}}</h1></div>
                 {% assign defaultProductImage = defaultProduct.featured_image %}
                 <img class = "featuredproductimage" src = "{{defaultProductImage.src | image_url: width: 400}}" id = "featuredproductimage"height="400px" width="400px">
                 <div class = "featuredproductdesc">
@@ -105,18 +105,16 @@
     margin-bottom: 1em;
 }
 .feautedproductinfo{
-    margin: 1em;
-}
-
-.featuredproductheader{
-}
-.featuredproductimage{
-    width: 25em; 
-    height: 25em;
 }
 .featuredproductdesc{
+    margin: 0 1em;
     max width: 80%;
 
+}
+.featuredproductimage{
+    margin: 1em;
+    width: 25em; 
+    height: 25em;
 }
 .checkout{
     border-color: black;
@@ -133,7 +131,9 @@
     margin-right: 15%;
     justify-content: center;
 }
-
+.featuredproductheader{
+    font-size: 2em;
+}
 .main{
     width: auto;
     height: auto%;
