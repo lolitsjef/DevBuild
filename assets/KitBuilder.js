@@ -91,7 +91,7 @@ async function addToCart(formData){
 }
 
 async function updateCart(){
-    console.log(here);
+    console.log("here");
     fetch('/cart.js')
       .then(response => response.text())
       .then((responseText) => {
