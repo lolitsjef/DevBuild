@@ -75,7 +75,20 @@ async function checkout(){
 }
 
 async function addToCart(formData){
-    console.log(selectedProducts);
+    let count = 0;
+    selectedProducts.foreach((element) => {if (element != 0) {count ++}});
+    fetch('/cart.js')
+        .then(response => response.text())
+        .then((responseText) => {
+        data = JSON.parse(responseText);
+        console.log(data.item_count + count);
+        var counterEl = document.querySelectorAll('cart-count-bubble');
+        counterEl.forEach((element) => {
+            element.innerHTML = data.item_count + count;
+            console.log(element);
+        })
+    })
+    
 
     console.log(formData);
     fetch(window.Shopify.routes.root + 'cart/update.js', {
