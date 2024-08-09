@@ -57,6 +57,7 @@
           "type": "Kit-Section",
           "settings": {
             "SectionHeader": "Hat",
+            "SectionDesc": "This is a dad hat you can wear",
             "product1": "bmw-e30-washed-pigment-dyed-cotton-dad-hat",
             "product1name": "Dad Hat 1",
             "product2": "bmw-e30-two-tone-dad-hat",
@@ -69,6 +70,7 @@
           "type": "Kit-Section",
           "settings": {
             "SectionHeader": "Mount",
+            "SectionDesc": "This mouuint will hold your amazing camera",
             "product1": "immersionrc-powerplay-mounting-kit-cold-shoe-bracket",
             "product1name": "Cold Shoe Bracket",
             "product2": "immersionrc-powerplay-mounting-kit-for-sony-handycam-hot-shoe",
@@ -81,6 +83,7 @@
           "type": "Kit-Section",
           "settings": {
             "SectionHeader": "Steering Wheel",
+            "SectionDesc": "I love steering wheels",
             "product1": "steering-wheel-wall-mount",
             "product1name": "Steering Wheel Mount",
             "product2": "",
