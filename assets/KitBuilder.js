@@ -4,6 +4,7 @@ function selected(sectionIndex, item, id, idvariant) {
     setFeaturedProduct(id);
     removeSelections(sectionIndex);
     if(idvariant == selectedProducts[sectionIndex-1]){
+        selectedProducts[sectionIndex-1] = 0;
         return;
     }
     item.classList.add('selected');
