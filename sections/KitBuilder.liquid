@@ -51,7 +51,7 @@
 
                 <div class = kitsectiontitle>
                     <h1>{{ block.settings.SectionHeader }}</h1>
-                    <div class = "noItem" opacity = 0.33 onclick = "selected({{ forloop.index }}, this, 0, 0)"> No {{ block.settings.SectionHeader }}  X</div>
+                    <h4>{{ block.settings.SectionDesc }}</h4>
                 </div>
                 <div class = components> 
                     {% if block.settings.product1.id != blank %}
@@ -255,6 +255,11 @@
                         "type": "text",
                         "label": "Section Header",
                         "id": "SectionHeader"
+                    },
+                    {
+                        "type": "text",
+                        "label": "Section Description",
+                        "id": "SectionDesc"
                     },
                     {
                         "type": "product",
