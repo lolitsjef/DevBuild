@@ -51,7 +51,7 @@
 
                 <div class = kitsectiontitle>
                     <h1>{{ block.settings.SectionHeader }}</h1>
-                    <h4>{{ block.settings.SectionDesc }}</h4>
+                    <span class = simpletext>{{ block.settings.SectionDesc }}</span>
                 </div>
                 <div class = components> 
                     {% if block.settings.product1.id != blank %}
@@ -112,7 +112,122 @@
 
 
 {%stylesheet%}
-
+:root {
+    --font-body-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    --font-body-style: normal;
+    --font-body-weight: 400;
+    --font-body-weight-bold: 700;
+    --font-heading-family: "Neue Plak", sans-serif;
+    --font-heading-style: normal;
+    --font-heading-weight: 400;
+    --font-body-scale: 1.0;
+    --font-heading-scale: 1.0;
+    --media-padding: px;
+    --media-border-opacity: 0.05;
+    --media-border-width: 1px;
+    --media-radius: 0px;
+    --media-shadow-opacity: 0.0;
+    --media-shadow-horizontal-offset: 0px;
+    --media-shadow-vertical-offset: 4px;
+    --media-shadow-blur-radius: 5px;
+    --media-shadow-visible: 0;
+    --page-width: 120rem;
+    --page-width-margin: 0rem;
+    --product-card-image-padding: 0.0rem;
+    --product-card-corner-radius: 0.0rem;
+    --product-card-text-alignment: left;
+    --product-card-border-width: 0.0rem;
+    --product-card-border-opacity: 0.1;
+    --product-card-shadow-opacity: 0.0;
+    --product-card-shadow-visible: 0;
+    --product-card-shadow-horizontal-offset: 0.0rem;
+    --product-card-shadow-vertical-offset: 0.4rem;
+    --product-card-shadow-blur-radius: 0.5rem;
+    --collection-card-image-padding: 0.0rem;
+    --collection-card-corner-radius: 0.0rem;
+    --collection-card-text-alignment: left;
+    --collection-card-border-width: 0.0rem;
+    --collection-card-border-opacity: 0.1;
+    --collection-card-shadow-opacity: 0.0;
+    --collection-card-shadow-visible: 0;
+    --collection-card-shadow-horizontal-offset: 0.0rem;
+    --collection-card-shadow-vertical-offset: 0.4rem;
+    --collection-card-shadow-blur-radius: 0.5rem;
+    --blog-card-image-padding: 0.0rem;
+    --blog-card-corner-radius: 0.0rem;
+    --blog-card-text-alignment: left;
+    --blog-card-border-width: 0.0rem;
+    --blog-card-border-opacity: 0.1;
+    --blog-card-shadow-opacity: 0.0;
+    --blog-card-shadow-visible: 0;
+    --blog-card-shadow-horizontal-offset: 0.0rem;
+    --blog-card-shadow-vertical-offset: 0.4rem;
+    --blog-card-shadow-blur-radius: 0.5rem;
+    --badge-corner-radius: 4.0rem;
+    --popup-border-width: 1px;
+    --popup-border-opacity: 0.1;
+    --popup-corner-radius: 0px;
+    --popup-shadow-opacity: 0.05;
+    --popup-shadow-horizontal-offset: 0px;
+    --popup-shadow-vertical-offset: 4px;
+    --popup-shadow-blur-radius: 5px;
+    --drawer-border-width: 1px;
+    --drawer-border-opacity: 0.1;
+    --drawer-shadow-opacity: 0.0;
+    --drawer-shadow-horizontal-offset: 0px;
+    --drawer-shadow-vertical-offset: 4px;
+    --drawer-shadow-blur-radius: 5px;
+    --spacing-sections-desktop: 0px;
+    --spacing-sections-mobile: 0px;
+    --grid-desktop-vertical-spacing: 8px;
+    --grid-desktop-horizontal-spacing: 8px;
+    --grid-mobile-vertical-spacing: 4px;
+    --grid-mobile-horizontal-spacing: 4px;
+    --text-boxes-border-opacity: 0.1;
+    --text-boxes-border-width: 0px;
+    --text-boxes-radius: 0px;
+    --text-boxes-shadow-opacity: 0.0;
+    --text-boxes-shadow-visible: 0;
+    --text-boxes-shadow-horizontal-offset: 0px;
+    --text-boxes-shadow-vertical-offset: 4px;
+    --text-boxes-shadow-blur-radius: 5px;
+    --buttons-radius: 0px;
+    --buttons-radius-outset: 0px;
+    --buttons-border-width: 1px;
+    --buttons-border-opacity: 1.0;
+    --buttons-shadow-opacity: 0.0;
+    --buttons-shadow-visible: 0;
+    --buttons-shadow-horizontal-offset: 0px;
+    --buttons-shadow-vertical-offset: 4px;
+    --buttons-shadow-blur-radius: 5px;
+    --buttons-border-offset: 0px;
+    --inputs-radius: 0px;
+    --inputs-border-width: 1px;
+    --inputs-border-opacity: 0.55;
+    --inputs-shadow-opacity: 0.0;
+    --inputs-shadow-horizontal-offset: 0px;
+    --inputs-margin-offset: 0px;
+    --inputs-shadow-vertical-offset: 4px;
+    --inputs-shadow-blur-radius: 5px;
+    --inputs-radius-outset: 0px;
+    --variant-pills-radius: 28px;
+    --variant-pills-border-width: 1px;
+    --variant-pills-border-opacity: 0.55;
+    --variant-pills-shadow-opacity: 0.0;
+    --variant-pills-shadow-horizontal-offset: 0px;
+    --variant-pills-shadow-vertical-offset: 4px;
+    --variant-pills-shadow-blur-radius: 5px;
+}
+.simpleText{
+    font-family: var(--font-heading-family);
+    font-style: var(--font-heading-style);
+    font-size: calc(var(--font-heading-scale)* 1.5rem);
+    font-weight: var(--font-heading-weight);
+    letter-spacing: calc(var(--font-heading-scale)* .06rem);
+    color: rgb(var(--color-foreground));
+    line-height: calc(1 + .3 / max(1, var(--font-heading-scale)));
+    word-break: break-word;
+}
 .featured{
     border-color: black;
     border-width: 0.1em;
