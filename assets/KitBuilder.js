@@ -1,9 +1,12 @@
 var selectedProducts = [0,0,0,0,0,0];
 
 function selected(sectionIndex, item, id, idvariant) {
-    removeSelections(sectionIndex);
-    item.classList.add('selected');
     setFeaturedProduct(id);
+    removeSelections(sectionIndex);
+    if(idvariant == selectedProducts[sectionIndex-1]){
+        return;
+    }
+    item.classList.add('selected');
     selectedProducts[sectionIndex-1] = idvariant;
 }
 
