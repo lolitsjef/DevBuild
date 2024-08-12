@@ -52,7 +52,7 @@ async function selected(sectionIndex, item, id, idvariant, description, featured
             cents = cents.toString();
         }
         let total = "$".concat(dollar.toString(), ".", cents);
-        document.getElementById('featuredproductprice').innerHTML = total;
+        document.getElementById('selectedItemTotal').innerHTML = total;
 
 }
 
