@@ -1,9 +1,12 @@
 var selectedProducts = [0,0,0,0,0,0];
+var selectProductIDs = [0,0,0,0,0,0];
 
 async function selected(sectionIndex, item, id, idvariant, description, featured_image, title, sectionName) {
     removeSelections(sectionIndex);
     if(idvariant == selectedProducts[sectionIndex-1]){
         selectedProducts[sectionIndex-1] = 0;
+        selectedProductIDs[sectionIndex-1] = 0;
+
         document.getElementById("selectedItem" + sectionIndex).innerHTML = "No " + sectionName;
         document.getElementById("selectedItemPrice" + sectionIndex).innerHTML = "$0.00";
     }
@@ -13,6 +16,7 @@ async function selected(sectionIndex, item, id, idvariant, description, featured
         document.getElementById("featuredproductimage").src = "//devbuild.digital/cdn/shop/" + featured_image;
         document.getElementById('featuredproductname').innerHTML = title;
         document.getElementById('featuredproductdesc').innerHTML = description;
+
         const product = await getProductById(id);
         var dollar = product.price / 100;
         var cents = product.price % 100;
@@ -29,14 +33,15 @@ async function selected(sectionIndex, item, id, idvariant, description, featured
         document.getElementById('featuredproductprice').innerHTML = price;
 
         selectedProducts[sectionIndex-1] = idvariant;
+        selectedProductIDs[sectionIndex-1] = id;
         document.getElementById("selectedItem" + sectionIndex).innerHTML = title;
         document.getElementById("selectedItemPrice" + sectionIndex).innerHTML = price;
     }
 
     var totalPrice = 0;
-        for(var i = 0; i < selectedProducts.length; i++){
-            if(selectedProducts[i] != 0){
-                const product = await getProductById(selectedProducts[i]);
+        for(var i = 0; i < selectedProductIDs.length; i++){
+            if(selectedProductIDs[i] != 0){
+                const product = await getProductById(selectedProductIDs[i]);
                 totalPrice += product.price;
             }
         }
