@@ -20,30 +20,28 @@ function removeSelections(sectionIndex) {
 }
 
 async function setFeaturedProduct(id, description, featured_image, title){
-    if(id == 0) {
-        //set blank product
+    
+    document.getElementById("featuredproductimage").src = "//devbuild.digital/cdn/shop/" + featured_image;
+    document.getElementById('featuredproductname').innerHTML = title;
+    document.getElementById('featuredproductdesc').innerHTML = description;
+
+    const product = await getProductById(id);
+    var dollar = product.price / 100;
+    var cents = product.price % 100;
+    console.log(product.price);
+    console.log(dollar);
+    console.log(cents);
+    if (cents == 0){
+        cents = "00"
     }
-    else {
-        const product = await getProductById(id);
-        document.getElementById("featuredproductimage").src = "//devbuild.digital/cdn/shop/" + featured_image;
-        document.getElementById('featuredproductname').innerHTML = title;
-        document.getElementById('featuredproductdesc').innerHTML = description;
-        var dollar = product.price / 100;
-        var cents = product.price % 100;
-        console.log(product.price);
-        console.log(dollar);
-        console.log(cents);
-        if (cents == 0){
-            cents = "00"
-        }
-        else{
-            cents = cents.toString();
-        }
-        let price = "$".concat(dollar.toString(), ".", cents);
-        console.log(price);
-        document.getElementById('featuredproductprice').innerHTML = price;
-        return product;
+    else{
+        cents = cents.toString();
     }
+    let price = "$".concat(dollar.toString(), ".", cents);
+    console.log(price);
+    document.getElementById('featuredproductprice').innerHTML = price;
+    return product;
+    
 
 
 }
