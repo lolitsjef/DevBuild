@@ -1,5 +1,5 @@
 var selectedProducts = [0,0,0,0,0,0];
-var selectProductIDs = [0,0,0,0,0,0];
+var selectedProductIDs = [0,0,0,0,0,0];
 
 async function selected(sectionIndex, item, id, idvariant, description, featured_image, title, sectionName) {
     removeSelections(sectionIndex);
