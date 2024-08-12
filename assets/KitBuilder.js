@@ -1,14 +1,38 @@
 var selectedProducts = [0,0,0,0,0,0];
 
-function selected(sectionIndex, item, id, idvariant, description, featured_image, title) {
+async function selected(sectionIndex, item, id, idvariant, description, featured_image, title) {
     setFeaturedProduct(id, description, featured_image, title);
     removeSelections(sectionIndex);
     if(idvariant == selectedProducts[sectionIndex-1]){
         selectedProducts[sectionIndex-1] = 0;
         return;
     }
-    item.classList.add('selected');
-    selectedProducts[sectionIndex-1] = idvariant;
+    else{
+        item.classList.add('selected');
+
+        document.getElementById("featuredproductimage").src = "//devbuild.digital/cdn/shop/" + featured_image;
+        document.getElementById('featuredproductname').innerHTML = title;
+        document.getElementById('featuredproductdesc').innerHTML = description;
+        const product = await getProductById(id);
+        var dollar = product.price / 100;
+        var cents = product.price % 100;
+        console.log(product.price);
+        console.log(dollar);
+        console.log(cents);
+        if (cents == 0){
+            cents = "00"
+        }
+        else{
+            cents = cents.toString();
+        }
+        let price = "$".concat(dollar.toString(), ".", cents);
+        document.getElementById('featuredproductprice').innerHTML = price;
+        
+        selectedProducts[sectionIndex-1] = idvariant;
+        document.getElementById("selectedItem" + sectionIndex).innerHTML = title;
+        document.getElementById("selectedItemPrice" + sectionIndex).innerHTML = price;
+    }
+
 }
 
 function removeSelections(sectionIndex) {
@@ -17,33 +41,6 @@ function removeSelections(sectionIndex) {
         var item = sectionItems[i];
         item.classList.remove('selected');
     }
-}
-
-async function setFeaturedProduct(id, description, featured_image, title){
-    
-    document.getElementById("featuredproductimage").src = "//devbuild.digital/cdn/shop/" + featured_image;
-    document.getElementById('featuredproductname').innerHTML = title;
-    document.getElementById('featuredproductdesc').innerHTML = description;
-
-    const product = await getProductById(id);
-    var dollar = product.price / 100;
-    var cents = product.price % 100;
-    console.log(product.price);
-    console.log(dollar);
-    console.log(cents);
-    if (cents == 0){
-        cents = "00"
-    }
-    else{
-        cents = cents.toString();
-    }
-    let price = "$".concat(dollar.toString(), ".", cents);
-    console.log(price);
-    document.getElementById('featuredproductprice').innerHTML = price;
-    return product;
-    
-
-
 }
 
 async function getProductById(id) {
@@ -89,10 +86,6 @@ async function addToCart(formData){
     .catch((error) => {
         console.error('Error:', error);
     });
-}
-
-function updateKitList(){
-    
 }
 
 
