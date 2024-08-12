@@ -58,7 +58,7 @@
                 <div class = components> 
                     {% if block.settings.product1.id != blank %}
                     {% assign product1 = all_products[block.settings.product1] %}
-                    <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product1.id}}, {{product1.variants.first.id}} )">
+                    <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product1.id}}, {{product1.variants.first.id}}, {{block.settings.product1desc}}, {{block.settings.product1img}}, {{block.settings.product1name}} )">
                         <img class = "productimage" height="400px" width="400px" src = {{product1.featured_image | image_url: width: 400}}>
                         <div class = "productinfo"> 
                             <span class = simpleText>{{ block.settings.product1name }}</span>
@@ -74,7 +74,7 @@
 
                     {% if block.settings.product2.id != blank %}
                     {% assign product2 = all_products[block.settings.product2] %}
-                    <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product2.id}}, {{product2.variants.first.id}})">
+                    <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product2.id}}, {{product1.variants.first.id}}, {{block.settings.product2desc}}, {{block.settings.product2img}}, {{block.settings.product2name}} )">
                         <img class = "productimage" height="400px" width="400px" src = {{product2.featured_image | image_url: width: 400}}>
 
                         <div class = "productinfo"> 
@@ -92,7 +92,7 @@
 
                     {% if block.settings.product3.id != blank %}
                     {% assign product3 = all_products[block.settings.product3] %}
-                    <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product3.id}}, {{product3.variants.first.id}})">
+                    <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product3.id}}, {{product3.variants.first.id}}, {{block.settings.product3desc}}, {{block.settings.product3img}}, {{block.settings.product3name}} )">
                         <img class = "productimage" height="400px" width="400px" src = {{product3.featured_image | image_url: width: 400}}>
                         <div class = "productinfo"> 
                             <span class = simpleText>{{ block.settings.product3name }}</span>
@@ -393,6 +393,16 @@
                         "id": "product1name"
                     },
                     {
+                        "type": "text",
+                        "label": "Product 1 Description",
+                        "id": "product1desc"
+                    },
+                    {
+                        "type": "image_picker",
+                        "label": "Product 1 Image",
+                        "id": "product1img"
+                    },
+                    {
                         "type": "product",
                         "label": "Product",
                         "id": "product2"
@@ -403,6 +413,16 @@
                         "id": "product2name"
                     },
                     {
+                        "type": "text",
+                        "label": "Product 2 Description",
+                        "id": "product2desc"
+                    },
+                    {
+                        "type": "image_picker",
+                        "label": "Product 2 Image",
+                        "id": "product2img"
+                    },
+                    {
                         "type": "product",
                         "label": "Product",
                         "id": "product3"
@@ -411,6 +431,16 @@
                         "type": "text",
                         "label": "Product 3 Name",
                         "id": "product3name"
+                    },
+                    {
+                        "type": "text",
+                        "label": "Product 3 Description",
+                        "id": "product3desc"
+                    },
+                    {
+                        "type": "image_picker",
+                        "label": "Product 3 Image",
+                        "id": "product3img"
                     }
                 ]                            
             }

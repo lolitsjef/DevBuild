@@ -1,7 +1,7 @@
 var selectedProducts = [0,0,0,0,0,0];
 
-function selected(sectionIndex, item, id, idvariant) {
-    setFeaturedProduct(id);
+function selected(sectionIndex, item, id, idvariant, description, featured_image, title) {
+    setFeaturedProduct(id, description, featured_image, title);
     removeSelections(sectionIndex);
     if(idvariant == selectedProducts[sectionIndex-1]){
         selectedProducts[sectionIndex-1] = 0;
@@ -19,15 +19,15 @@ function removeSelections(sectionIndex) {
     }
 }
 
-async function setFeaturedProduct(id){
+async function setFeaturedProduct(id, description, featured_image, title){
     if(id == 0) {
         //set blank product
     }
     else {
         const product = await getProductById(id);
-        document.getElementById("featuredproductimage").src=product.featured_image;
-        document.getElementById('featuredproductname').innerHTML = product.title;
-        document.getElementById('featuredproductdesc').innerHTML = product.description;
+        document.getElementById("featuredproductimage").src = featured_image;
+        document.getElementById('featuredproductname').innerHTML = title;
+        document.getElementById('featuredproductdesc').innerHTML = description;
         var dollar = product.price / 100;
         var cents = product.price % 100;
         console.log(product.price);
