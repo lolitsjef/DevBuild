@@ -25,7 +25,7 @@ async function setFeaturedProduct(id, description, featured_image, title){
     }
     else {
         const product = await getProductById(id);
-        document.getElementById("featuredproductimage").src = featured_image;
+        document.getElementById("featuredproductimage").src = "//devbuild.digital/cdn/shop/" + featured_image;
         document.getElementById('featuredproductname').innerHTML = title;
         document.getElementById('featuredproductdesc').innerHTML = description;
         var dollar = product.price / 100;
