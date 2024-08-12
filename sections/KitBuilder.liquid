@@ -72,10 +72,10 @@
                             <span class = heavyText>{{ block.settings.product1name }}</span>
                         </div>
                         <div class = "productprice">
-                            {% assign p1_price_in_cents = product1.price %} 
-                            {% assign p1_price_in_dollars = price_in_cents | divided_by: 100 %}
-                            {% assign p1_price_remainder = price_in_cents | modulo: 100 %}
-                            ${{ p1_price_in_dollars }}.{{ p1_price_remainder | append: "00" | slice: 0, 2 }}
+                            {% assign p1priceincents = product1.price %} 
+                            {% assign p1priceindollars = price_in_cents | divided_by: 100 %}
+                            {% assign p1priceremainder = price_in_cents | modulo: 100 %}
+                            ${{ p1priceindollars }}.{{ p1priceremainder | append: "00" | slice: 0, 2 }}
                         </div>
                     </div>
                     {% endif %}
@@ -89,10 +89,10 @@
                             <span class = heavyText>{{ block.settings.product2name }}</span>
                         </div>
                         <div class = "productprice">
-                            {% assign p2_price_in_cents = product2.price %} 
-                            {% assign p2_price_in_dollars = price_in_cents | divided_by: 100 %}
-                            {% assign p2_price_remainder = price_in_cents | modulo: 100 %}
-                            ${{ p2_price_in_dollars }}.{{ p2_price_remainder | append: "00" | slice: 0, 2 }}
+                            {% assign p2priceincents = product2.price %} 
+                            {% assign p2priceindollars = price_in_cents | divided_by: 100 %}
+                            {% assign p2priceremainder = price_in_cents | modulo: 100 %}
+                            ${{ p2priceindollars }}.{{ p2priceremainder | append: "00" | slice: 0, 2 }}
                         </div>
 
                     </div>
@@ -106,10 +106,10 @@
                             <span class = heavyText>{{ block.settings.product3name }}</span>
                         </div>
                         <div class = "productprice">
-                            {% assign p3_price_in_cents = product3.price %} 
-                            {% assign p3_price_in_dollars = price_in_cents | divided_by: 100 %}
-                            {% assign p3_price_remainder = price_in_cents | modulo: 100 %}
-                            ${{ p3_price_in_dollars }}.{{ p3_price_remainder | append: "00" | slice: 0, 2 }}
+                            {% assign p3priceincents = product3.price %} 
+                            {% assign p3priceindollars = price_in_cents | divided_by: 100 %}
+                            {% assign p3priceremainder = price_in_cents | modulo: 100 %}
+                            ${{ p3priceindollars }}.{{ p3priceremainder | append: "00" | slice: 0, 2 }}
                         </div>  
 
                     </div>
