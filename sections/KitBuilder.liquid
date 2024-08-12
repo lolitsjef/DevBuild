@@ -32,14 +32,16 @@
                 {%endfor%}
             </div>
             <div>
-                <div class = "selectedItem"> 
-                    <div class = "heavyText">Total</div>
-                    <div class = "simpleText" id = "selectedItemTotal{{forloop.index}}">$55.00</div>
-                </div>
+                <div class = checkoutBottom>
+                    <div class = "selectedItem"> 
+                        <div class = "heavyText">Total</div>
+                        <div class = "simpleText" id = "selectedItemTotal{{forloop.index}}">$55.00</div>
+                    </div>
 
-                <div id = "cButton" class = "checkoutButton"><button onclick ="checkout()">Add All to Cart</button></div>
-                <div id = cMessage class = "hide">
-                    Your items have been added to cart, refresh or <a href= "/cart">view cart</a> to see updated cart.
+                    <div id = "cButton" class = "checkoutButton"><button onclick ="checkout()">Add All to Cart</button></div>
+                    <div id = cMessage class = "hide">
+                        Your items have been added to cart, refresh or <a href= "/cart">view cart</a> to see updated cart.
+                    </div>
                 </div>
             </div>
            
@@ -223,7 +225,10 @@
     --variant-pills-shadow-vertical-offset: 4px;
     --variant-pills-shadow-blur-radius: 5px;
 }
-
+.checkoutBottom{
+    margin-top: 1em;
+    border-top: solid;
+}
 .a{
     text-align: right;
     margin-top: 1em;
