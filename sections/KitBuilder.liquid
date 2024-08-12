@@ -26,8 +26,8 @@
             <div class = "kitList">
                 {% for block in section.blocks %}
                     <div class = "selectedItem"> 
-                        <div class = "heavyText" id = "selectedItem{{forloop.index}}"> item {{forloop.index}}</div>
-                        <div class = "simpleText" id = "selectedItemPrice{{forloop.index}}">${{forloop.index}}.00</div>
+                        <div class = "heavyText" id = "selectedItem{{forloop.index}}"> No {{block.settings.SectionHeader}}</div>
+                        <div class = "simpleText" id = "selectedItemPrice{{forloop.index}}">$0.00</div>
                     </div>
                 {%endfor%}
             </div>
