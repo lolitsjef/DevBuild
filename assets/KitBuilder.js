@@ -1,6 +1,7 @@
 var selectedProducts = [0,0,0,0,0,0];
 
 async function selected(sectionIndex, item, id, idvariant, description, featured_image, title) {
+    removeSelections(sectionIndex);
     if(idvariant == selectedProducts[sectionIndex-1]){
         selectedProducts[sectionIndex-1] = 0;
         return;
@@ -30,7 +31,6 @@ async function selected(sectionIndex, item, id, idvariant, description, featured
         document.getElementById("selectedItem" + sectionIndex).innerHTML = title;
         document.getElementById("selectedItemPrice" + sectionIndex).innerHTML = price;
     }
-    removeSelections(sectionIndex);
 }
 
 function removeSelections(sectionIndex) {
