@@ -6,8 +6,6 @@ async function selected(sectionIndex, item, id, idvariant, description, featured
         selectedProducts[sectionIndex-1] = 0;
         document.getElementById("selectedItem" + sectionIndex).innerHTML = "No " + sectionName;
         document.getElementById("selectedItemPrice" + sectionIndex).innerHTML = "$0.00";
-        return;
-
     }
     else{
         item.classList.add('selected');
@@ -33,8 +31,9 @@ async function selected(sectionIndex, item, id, idvariant, description, featured
         selectedProducts[sectionIndex-1] = idvariant;
         document.getElementById("selectedItem" + sectionIndex).innerHTML = title;
         document.getElementById("selectedItemPrice" + sectionIndex).innerHTML = price;
+    }
 
-        var totalPrice = 0;
+    var totalPrice = 0;
         for(var i = 0; i < selectedProducts.length; i++){
             if(selectedProducts[i] != 0){
                 const product = await getProductById(selectedProducts[i]);
@@ -56,8 +55,6 @@ async function selected(sectionIndex, item, id, idvariant, description, featured
         let total = "$".concat(dollar.toString(), ".", cents);
         document.getElementById('featuredproductprice').innerHTML = total;
 
-
-    }
 }
 
 function removeSelections(sectionIndex) {
