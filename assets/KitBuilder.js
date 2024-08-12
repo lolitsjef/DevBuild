@@ -33,6 +33,28 @@ async function selected(sectionIndex, item, id, idvariant, description, featured
         selectedProducts[sectionIndex-1] = idvariant;
         document.getElementById("selectedItem" + sectionIndex).innerHTML = title;
         document.getElementById("selectedItemPrice" + sectionIndex).innerHTML = price;
+
+        var totalPrice = 0;
+        for(var i = 0; i < selectedProducts.length; i++){
+            const product = await getProductById(id);
+            totalPrice += product.price;
+        }
+
+        var dollar = product.totalPrice / 100;
+        var cents = product.totalPrice % 100;
+        console.log(product.totalPrice);
+        console.log(dollar);
+        console.log(cents);
+        if (cents == 0){
+            cents = "00"
+        }
+        else{
+            cents = cents.toString();
+        }
+        let total = "$".concat(dollar.toString(), ".", cents);
+        document.getElementById('featuredproductprice').innerHTML = total;
+
+
     }
 }
 
