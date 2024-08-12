@@ -60,10 +60,15 @@
             "SectionDesc": "This is a dad hat you can wear",
             "product1": "bmw-e30-washed-pigment-dyed-cotton-dad-hat",
             "product1name": "Dad Hat 1",
+            "product1desc": "this is my favorite dad hat i love it so much.",
+            "product1img": "shopify:\/\/shop_images\/greenhat1.jpg",
             "product2": "bmw-e30-two-tone-dad-hat",
             "product2name": "Dad Hat 2",
+            "product2desc": "this is another dad hat you can wear",
+            "product2img": "shopify:\/\/shop_images\/bluehat1.jpg",
             "product3": "",
-            "product3name": ""
+            "product3name": "",
+            "product3desc": ""
           }
         },
         "kit_section_a8XYgq": {
@@ -73,10 +78,16 @@
             "SectionDesc": "This mouuint will hold your amazing camera",
             "product1": "immersionrc-powerplay-mounting-kit-cold-shoe-bracket",
             "product1name": "Cold Shoe Bracket",
+            "product1desc": "BMW E30 Dad HatThis washed cotton twill dad hat features an original illustration of a BMW E30 and an adjustable velcro strap. One size fits most.BMW E30 Dad HatThis washed cotton twill dad hat features an original illustration of a BMW E30 and an adjustable velcro strap. One size fits most.BMW E30 Dad HatThis washed cotton twill dad hat features an original illustration of a BMW E30 and an adjustable velcro strap. One size fits most.",
+            "product1img": "shopify:\/\/shop_images\/mount_handycam.jpg",
             "product2": "immersionrc-powerplay-mounting-kit-for-sony-handycam-hot-shoe",
             "product2name": "Sony Handycam Accessory Shoe",
+            "product2desc": "BMW E30 Dad HatThis washed cotton twill dad hat features an original illustration of a BMW E30 and an adjustable velcro strap. One size fits most.BMW E30 Dad HatThis washed cotton twill dad hat features an original illustration of a BMW E30 and an adjustable velcro strap. One size fits most.BMW E30 Dad HatThis washed cotton twill dad hat features an original illustration of a BMW E30 and an adjustable velcro strap. One size fits most.BMW E30 Dad HatThis washed cotton twill dad hat features an original illustration of a BMW E30 and an adjustable velcro strap. One size fits most.",
+            "product2img": "shopify:\/\/shop_images\/mount_3.jpg",
             "product3": "immersionrc-powerplay-hot-shoe-mount",
-            "product3name": "Traditional Hot Shoe"
+            "product3name": "Traditional Hot Shoe",
+            "product3desc": "BMW E30 Dad HatThis washed cotton twill dad hat features an original illustration of a BMW E30 and an adjustable velcro strap. One size fits most.BMW E30 Dad HatThis washed cotton twill dad hat features an original illustration of a BMW E30 and an adjustable velcro strap. One size fits most.",
+            "product3img": "shopify:\/\/shop_images\/spacer3_802d6887-be52-4aba-878e-2591743f6d7e.jpg"
           }
         },
         "kit_section_9BeNek": {
@@ -86,10 +97,14 @@
             "SectionDesc": "I love steering wheels",
             "product1": "steering-wheel-wall-mount",
             "product1name": "Steering Wheel Mount",
+            "product1desc": "BMW E30 Dad HatThis washed cotton twill dad hat features an original illustration of a BMW E30 and an adjustable velcro strap. One size fits most.",
+            "product1img": "shopify:\/\/shop_images\/SteeringWheelMountSKU2.jpg",
             "product2": "",
             "product2name": "",
+            "product2desc": "",
             "product3": "",
-            "product3name": ""
+            "product3name": "",
+            "product3desc": ""
           }
         }
       },
