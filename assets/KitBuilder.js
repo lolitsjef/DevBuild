@@ -1,10 +1,13 @@
 var selectedProducts = [0,0,0,0,0,0];
 
-async function selected(sectionIndex, item, id, idvariant, description, featured_image, title) {
+async function selected(sectionIndex, item, id, idvariant, description, featured_image, title, sectionName) {
     removeSelections(sectionIndex);
     if(idvariant == selectedProducts[sectionIndex-1]){
         selectedProducts[sectionIndex-1] = 0;
+        document.getElementById("selectedItem" + sectionIndex).innerHTML = "No " + sectionName;
+        document.getElementById("selectedItemPrice" + sectionIndex).innerHTML = "$0.00";
         return;
+
     }
     else{
         item.classList.add('selected');
