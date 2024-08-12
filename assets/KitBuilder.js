@@ -20,9 +20,6 @@ async function selected(sectionIndex, item, id, idvariant, description, featured
         const product = await getProductById(id);
         var dollar = product.price / 100;
         var cents = product.price % 100;
-        console.log(product.price);
-        console.log(dollar);
-        console.log(cents);
         if (cents == 0){
             cents = "00"
         }
@@ -46,11 +43,8 @@ async function selected(sectionIndex, item, id, idvariant, description, featured
             }
         }
 
-        var dollar = product.totalPrice / 100;
-        var cents = product.totalPrice % 100;
-        console.log(product.totalPrice);
-        console.log(dollar);
-        console.log(cents);
+        var dollar = totalPrice / 100;
+        var cents = totalPrice % 100;
         if (cents == 0){
             cents = "00"
         }
