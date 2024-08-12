@@ -76,6 +76,7 @@
                             {% assign p1priceindollars = price_in_cents | divided_by: 100 %}
                             {% assign p1priceremainder = price_in_cents | modulo: 100 %}
                             ${{ p1priceindollars }}.{{ p1priceremainder | append: "00" | slice: 0, 2 }}
+                            {{product1.price}}
                         </div>
                     </div>
                     {% endif %}
@@ -93,6 +94,8 @@
                             {% assign p2priceindollars = price_in_cents | divided_by: 100 %}
                             {% assign p2priceremainder = price_in_cents | modulo: 100 %}
                             ${{ p2priceindollars }}.{{ p2priceremainder | append: "00" | slice: 0, 2 }}
+                            {{product2.price}}
+
                         </div>
 
                     </div>
@@ -110,6 +113,7 @@
                             {% assign p3priceindollars = price_in_cents | divided_by: 100 %}
                             {% assign p3priceremainder = price_in_cents | modulo: 100 %}
                             ${{ p3priceindollars }}.{{ p3priceremainder | append: "00" | slice: 0, 2 }}
+                            {{product3.price}}
                         </div>  
 
                     </div>
