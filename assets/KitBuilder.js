@@ -36,8 +36,10 @@ async function selected(sectionIndex, item, id, idvariant, description, featured
 
         var totalPrice = 0;
         for(var i = 0; i < selectedProducts.length; i++){
-            const product = await getProductById(id);
-            totalPrice += product.price;
+            if(selectedProducts[i] != 0){
+                const product = await getProductById(selectedProducts[i]);
+                totalPrice += product.price;
+            }
         }
 
         var dollar = product.totalPrice / 100;
