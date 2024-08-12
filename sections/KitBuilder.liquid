@@ -17,7 +17,7 @@
                         {% assign price_in_dollars = price_in_cents | divided_by: 100 %}
                         {% assign price_remainder = price_in_cents | modulo: 100 %}
                     </div>
-                    <h3 id="featuredproductprice">${{ price_in_dollars }}.{{ price_remainder | append: "00" | slice: 0, 2 }}</h3>
+                    <div class="simpleText" id="featuredproductprice">${{ price_in_dollars }}.{{ price_remainder | append: "00" | slice: 0, 2 }}</div>
                 </div>
 
             </div>
@@ -26,7 +26,7 @@
             <div class = "kitList">
                 {% for block in section.blocks %}
                     <div class = "selectedItem"> 
-                        <div class = "simpleText" id = "selectedItem{{forloop.index}}"> item {{forloop.index}}</div>
+                        <div class = "heavyText" id = "selectedItem{{forloop.index}}"> item {{forloop.index}}</div>
                         <div class = "simpleText" id = "selectedItemPrice{{forloop.index}}">${{forloop.index}}.00</div>
                     </div>
                 {%endfor%}
@@ -63,7 +63,7 @@
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product1.id}}, {{product1.variants.first.id}}, '{{block.settings.product1desc}}', '{{block.settings.product1img}}', '{{block.settings.product1name}}')">
                         <img class = "productimage" height="400px" width="400px" src = {{block.settings.product1img | image_url: width: 400}}>
                         <div class = "productinfo"> 
-                            <span class = simpleText>{{ block.settings.product1name }}</span>
+                            <span class = heavyText>{{ block.settings.product1name }}</span>
                         </div>
                         <div class = "productprice">
                             {% assign p1_price_in_cents = product1.price %} 
@@ -80,7 +80,7 @@
                         <img class = "productimage" height="400px" width="400px" src = {{block.settings.product2img | image_url: width: 400}}>
 
                         <div class = "productinfo"> 
-                            <span class = simpleText>{{ block.settings.product2name }}</span>
+                            <span class = heavyText>{{ block.settings.product2name }}</span>
                         </div>
                         <div class = "productprice">
                             {% assign p2_price_in_cents = product1.price %} 
@@ -97,7 +97,7 @@
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product3.id}}, {{product3.variants.first.id}}, '{{block.settings.product3desc}}', '{{block.settings.product3img}}', '{{block.settings.product3name}}')">
                         <img class = "productimage" height="400px" width="400px" src = {{block.settings.product3img | image_url: width: 400}}>
                         <div class = "productinfo"> 
-                            <span class = simpleText>{{ block.settings.product3name }}</span>
+                            <span class = heavyText>{{ block.settings.product3name }}</span>
                         </div>
                         <div class = "productprice">
                             {% assign p3_price_in_cents = product1.price %} 
@@ -232,6 +232,15 @@
     font-style: var(--font-heading-style);
     font-size: calc(var(--font-heading-scale)* 1.5rem);
     font-weight: var(--font-heading-weight);
+    letter-spacing: calc(var(--font-heading-scale)* .06rem);
+    word-break: break-word;
+    vertical-align: top;
+}
+.heavyText{
+    font-family: var(--font-heading-family);
+    font-style: var(--font-heading-style);
+    font-size: calc(var(--font-heading-scale)* 1.5rem);
+    font-weight: bold;
     letter-spacing: calc(var(--font-heading-scale)* .06rem);
     word-break: break-word;
     vertical-align: top;
