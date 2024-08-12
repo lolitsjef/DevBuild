@@ -3,7 +3,7 @@ var selectedProductIDs = [0,0,0,0,0,0];
 
 async function selected(sectionIndex, item, id, idvariant, description, featured_image, title, sectionName) {
     removeSelections(sectionIndex);
-    if(idvariant == selectedProducts[sectionIndex-1]){
+    if(id == selectedProductIDs[sectionIndex-1]){
         selectedProducts[sectionIndex-1] = 0;
         selectedProductIDs[sectionIndex-1] = 0;
 
