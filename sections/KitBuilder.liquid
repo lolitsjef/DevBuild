@@ -73,8 +73,8 @@
                         </div>
                         <div class = "productprice">
                             {% assign p1priceincents = product1.price %} 
-                            {% assign p1priceindollars = price_in_cents | divided_by: 100 %}
-                            {% assign p1priceremainder = price_in_cents | modulo: 100 %}
+                            {% assign p1priceindollars = p1priceincents | divided_by: 100 %}
+                            {% assign p1priceremainder = priceincents | modulo: 100 %}
                             ${{ p1priceindollars }}.{{ p1priceremainder | append: "00" | slice: 0, 2 }}
                             {{product1.price}}
                         </div>
@@ -91,8 +91,8 @@
                         </div>
                         <div class = "productprice">
                             {% assign p2priceincents = product2.price %} 
-                            {% assign p2priceindollars = price_in_cents | divided_by: 100 %}
-                            {% assign p2priceremainder = price_in_cents | modulo: 100 %}
+                            {% assign p2priceindollars = p2priceincents | divided_by: 100 %}
+                            {% assign p2priceremainder = p2priceincents | modulo: 100 %}
                             ${{ p2priceindollars }}.{{ p2priceremainder | append: "00" | slice: 0, 2 }}
                             {{product2.price}}
 
@@ -110,8 +110,8 @@
                         </div>
                         <div class = "productprice">
                             {% assign p3priceincents = product3.price %} 
-                            {% assign p3priceindollars = price_in_cents | divided_by: 100 %}
-                            {% assign p3priceremainder = price_in_cents | modulo: 100 %}
+                            {% assign p3priceindollars = p3priceincents | divided_by: 100 %}
+                            {% assign p3priceremainder = p3priceincents | modulo: 100 %}
                             ${{ p3priceindollars }}.{{ p3priceremainder | append: "00" | slice: 0, 2 }}
                             {{product3.price}}
                         </div>  
