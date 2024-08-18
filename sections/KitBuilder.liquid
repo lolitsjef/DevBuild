@@ -10,15 +10,13 @@
             <div class = "feautedproductinfo">
                 {% assign defaultProductImage = defaultProduct.featured_image %}
                 <img class = "featuredproductimage" src = "{{section.blocks[0].settings.product1img | image_url: width: 400}}" id = "featuredproductimage"height="400px" width="400px">
-                <div class = "featuredproductdesc">
-                    <div id="featuredproductdesc">
+                <div class = "featuredproductdesc" id = "featuredproductdesc">
                         {{block.settings.product1desc}}
                         {% assign price_in_cents = defaultProduct.price %} 
                         {% assign price_in_dollars = price_in_cents | divided_by: 100 %}
                         {% assign price_remainder = price_in_cents | modulo: 100 %}
-                    </div>
-                    <div class="simpleText a" id="featuredproductprice">${{ price_in_dollars }}.{{ price_remainder | append: "00" | slice: 0, 2 }}</div>
                 </div>
+                <div class="simpleText a" id="featuredproductprice">${{ price_in_dollars }}.{{ price_remainder | append: "00" | slice: 0, 2 }}</div>
 
             </div>
         </div>
@@ -293,7 +291,7 @@
     justify-content: space-between;
     flex-direction: column;
     height: 100%;
-    width: 100%;
+    width: auto;
 }
 .checkout{
     width: 100%;
