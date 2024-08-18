@@ -12,7 +12,7 @@
                 <img class = "featuredproductimage" src = "{{section.blocks[0].settings.product1img | image_url: width: 400}}" id = "featuredproductimage"height="400px" width="400px">
                 <div class = "featuredproductdesc">
                     <div id="featuredproductdesc">
-                        {{defaultProduct.description}}
+                        {{block.settings.product1desc}}
                         {% assign price_in_cents = defaultProduct.price %} 
                         {% assign price_in_dollars = price_in_cents | divided_by: 100 %}
                         {% assign price_remainder = price_in_cents | modulo: 100 %}
