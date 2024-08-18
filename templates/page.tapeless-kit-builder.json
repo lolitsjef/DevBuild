@@ -26,14 +26,14 @@
         "heading_6dHDXP": {
           "type": "heading",
           "settings": {
-            "heading": "Tapeless Kit Builder",
-            "heading_size": "h0"
+            "heading": "Build Your Tapeless Camcorder Setup",
+            "heading_size": "h1"
           }
         },
         "text_WXAGy6": {
           "type": "text",
           "settings": {
-            "text": "<p>Build your tapeless kit... devin type stuff here<\/p>"
+            "text": "<p>See listings in 'All Products' (can you make that clickable?) for more product details<\/p><p>*ImmersionRC Powerplay not included (move this to the bottom below the two boxes)<\/p>"
           }
         }
       },
@@ -56,16 +56,15 @@
         "kit_section_3ThagF": {
           "type": "Kit-Section",
           "settings": {
-            "SectionHeader": "Hat",
-            "SectionDesc": "This is a dad hat you can wear",
-            "product1": "bmw-e30-washed-pigment-dyed-cotton-dad-hat",
-            "product1name": "Dad Hat 1",
-            "product1desc": "this is my favorite dad hat i love it so much.",
-            "product1img": "shopify:\/\/shop_images\/greenhat1.jpg",
-            "product2": "bmw-e30-two-tone-dad-hat",
-            "product2name": "Dad Hat 2",
-            "product2desc": "this is another dad hat you can wear",
-            "product2img": "shopify:\/\/shop_images\/bluehat1.jpg",
+            "SectionHeader": "Mount",
+            "SectionDesc": "For camcorders with hot\/cold shoes",
+            "product1": "immersionrc-powerplay-hot-shoe-mount",
+            "product1name": "ImmersionRC Powerplay Mount",
+            "product1desc": "",
+            "product1img": "shopify:\/\/shop_images\/mount_1.jpg",
+            "product2": "",
+            "product2name": "",
+            "product2desc": "",
             "product3": "",
             "product3name": "",
             "product3desc": ""
@@ -74,34 +73,34 @@
         "kit_section_a8XYgq": {
           "type": "Kit-Section",
           "settings": {
-            "SectionHeader": "Mount",
-            "SectionDesc": "This mouuint will hold your amazing camera",
-            "product1": "camcorder-a-v-cable-for-immersionrc-powerplay",
-            "product1name": "cable",
-            "product1desc": "BMW E30 Dad HatThis washed cotton twill dad hat features an original illustration of a BMW E30 and an adjustable velcro strap. One size fits most.BMW E30 Dad HatThis washed cotton twill dad hat features an original illustration of a BMW E30 and an adjustable velcro strap. One size fits most.BMW E30 Dad HatThis washed cotton twill dad hat features an original illustration of a BMW E30 and an adjustable velcro strap. One size fits most.",
-            "product1img": "shopify:\/\/shop_images\/NewPowerplayA_VCableSku.png",
+            "SectionHeader": "Brackets",
+            "SectionDesc": "Add for camcorders without a hot\/cold shoe",
+            "product1": "immersionrc-powerplay-mounting-kit-cold-shoe-bracket",
+            "product1name": "Extendo Cold Shoe Mounting Bracket",
+            "product1desc": "",
+            "product1img": "shopify:\/\/shop_images\/handycam_6c287315-321e-4ae4-9d1d-5091749a00ae.jpg",
             "product2": "cold-shoe-mounting-bracket",
-            "product2name": "Sony Handycam Accessory Shoe",
-            "product2desc": "BMW E30 Dad HatThis washed cotton twill dad hat features an original illustration of a BMW E30 and an adjustable velcro strap. One size fits most.BMW E30 Dad HatThis washed cotton twill dad hat features an original illustration of a BMW E30 and an adjustable velcro strap. One size fits most.BMW E30 Dad HatThis washed cotton twill dad hat features an original illustration of a BMW E30 and an adjustable velcro strap. One size fits most.BMW E30 Dad HatThis washed cotton twill dad hat features an original illustration of a BMW E30 and an adjustable velcro strap. One size fits most.",
+            "product2name": "Cold Shoe Mounting Bracket",
+            "product2desc": "",
             "product2img": "shopify:\/\/shop_images\/bracket_2.jpg",
-            "product3": "immersionrc-powerplay-hot-shoe-mount",
-            "product3name": "Traditional Hot Shoe",
-            "product3desc": "BMW E30 Dad HatThis washed cotton twill dad hat features an original illustration of a BMW E30 and an adjustable velcro strap. One size fits most.BMW E30 Dad HatThis washed cotton twill dad hat features an original illustration of a BMW E30 and an adjustable velcro strap. One size fits most.",
-            "product3img": "shopify:\/\/shop_images\/spacer3_802d6887-be52-4aba-878e-2591743f6d7e.jpg"
+            "product3": "",
+            "product3name": "",
+            "product3desc": ""
           }
         },
         "kit_section_9BeNek": {
           "type": "Kit-Section",
           "settings": {
-            "SectionHeader": "Steering Wheel",
-            "SectionDesc": "I love steering wheels",
-            "product1": "steering-wheel-wall-mount",
-            "product1name": "Steering Wheel Mount",
-            "product1desc": "BMW E30 Dad HatThis washed cotton twill dad hat features an original illustration of a BMW E30 and an adjustable velcro strap. One size fits most.",
-            "product1img": "shopify:\/\/shop_images\/SteeringWheelMountSKU2.jpg",
-            "product2": "",
-            "product2name": "",
+            "SectionHeader": "Cables",
+            "SectionDesc": "To connect the ImmersionRC Powerplay to your camcorder",
+            "product1": "camcorder-a-v-cable-for-immersionrc-powerplay",
+            "product1name": "3.5mm A\/V Cable",
+            "product1desc": "",
+            "product1img": "shopify:\/\/shop_images\/NewPowerplayA_VCableSku.png",
+            "product2": "cable-spacer-for-immersionrc-powerplay",
+            "product2name": "Cable Spacer (RCA Cable Placeholder)",
             "product2desc": "",
+            "product2img": "shopify:\/\/shop_images\/spacer.jpg",
             "product3": "",
             "product3name": "",
             "product3desc": ""
@@ -112,6 +111,9 @@
         "kit_section_3ThagF",
         "kit_section_a8XYgq",
         "kit_section_9BeNek"
+      ],
+      "custom_css": [
+
       ],
       "settings": {
       }
