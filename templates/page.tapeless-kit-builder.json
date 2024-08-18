@@ -33,7 +33,7 @@
         "text_WXAGy6": {
           "type": "text",
           "settings": {
-            "text": "<p>*ImmersionRC Powerplay not included<\/p>"
+            "text": "<p>See listings in 'All Products' (hyperlink) for more product details<\/p><p>*ImmersionRC Powerplay not included (move to bottom below the two boxes)<\/p>"
           }
         }
       },
@@ -111,6 +111,9 @@
         "kit_section_3ThagF",
         "kit_section_a8XYgq",
         "kit_section_9BeNek"
+      ],
+      "custom_css": [
+
       ],
       "settings": {
       }
