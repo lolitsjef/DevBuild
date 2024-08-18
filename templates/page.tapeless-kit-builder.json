@@ -33,7 +33,7 @@
         "text_WXAGy6": {
           "type": "text",
           "settings": {
-            "text": "<p>See listings in 'All Products' (can you make that clickable?) for more product details<\/p><p>*ImmersionRC Powerplay not included (move this to the bottom below the two boxes)<\/p>"
+            "text": "<p>See listings in 'All Products' (can you make that clickable?) for more product details<\/p>"
           }
         }
       },
