@@ -26,7 +26,7 @@
         "heading_6dHDXP": {
           "type": "heading",
           "settings": {
-            "heading": "Tapeless Kit Builder",
+            "heading": "Build Your Tapeless Camcorder Setup",
             "heading_size": "h0"
           }
         },
@@ -57,7 +57,7 @@
           "type": "Kit-Section",
           "settings": {
             "SectionHeader": "Mount",
-            "SectionDesc": "For hot\/cold shoe applications",
+            "SectionDesc": "For camcorders with hot\/cold shoes",
             "product1": "immersionrc-powerplay-hot-shoe-mount",
             "product1name": "ImmersionRC Powerplay Mount",
             "product1desc": "",
@@ -74,7 +74,7 @@
           "type": "Kit-Section",
           "settings": {
             "SectionHeader": "Brackets",
-            "SectionDesc": "For camcorders without hot\/cold shoes",
+            "SectionDesc": "Add for camcorders without a hot\/cold shoe",
             "product1": "immersionrc-powerplay-mounting-kit-cold-shoe-bracket",
             "product1name": "Extendo Cold Shoe Mounting Bracket",
             "product1desc": "",
