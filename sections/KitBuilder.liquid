@@ -7,17 +7,17 @@
         <div class = "featured">
             {% assign defaultProduct = all_products[section.blocks[0].settings.product1] %}
             <h2 id="featuredproductname">{{defaultProduct.title}}</h2>
-            <div class = "feautedproductinfo">
+            <div class = "featuredproduct">
                 {% assign defaultProductImage = defaultProduct.featured_image %}
                 <img class = "featuredproductimage" src = "{{section.blocks[0].settings.product1img | image_url: width: 400}}" id = "featuredproductimage"height="400px" width="400px">
-                <div class = "featuredproductdesc" id = "featuredproductdesc">
-                        {{section.blocks[0].settings.product1desc}}
+                <div class = "featuredproductinfo">
+                    <div class = "featuredproductdesc" id = "featuredproductdesc">{{section.blocks[0].settings.product1desc}}</div>
+                    {% assign price_in_cents = defaultProduct.price %} 
+                    {% assign price_in_dollars = price_in_cents | divided_by: 100 %}
+                    {% assign price_remainder = price_in_cents | modulo: 100 %}
+                    <div class="simpleText a" id="featuredproductprice">${{ price_in_dollars }}.{{ price_remainder | append: "00" | slice: 0, 2 }}</div>
                 </div>
-                {% assign price_in_cents = defaultProduct.price %} 
-                        {% assign price_in_dollars = price_in_cents | divided_by: 100 %}
-                        {% assign price_remainder = price_in_cents | modulo: 100 %}
-                <div class="simpleText a" id="featuredproductprice">${{ price_in_dollars }}.{{ price_remainder | append: "00" | slice: 0, 2 }}</div>
-
+               
             </div>
         </div>
         <div class = "checkout">
@@ -277,21 +277,22 @@
     height: auto;
     flex-grow: 1; 
 }
-.feautedproductinfo{
+.featuredproduct{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+.featuredproductinfo{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 .featuredproductimage{
     width: 25em; 
     height: 25em;
 }
 .featuredproductdesc{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    height: 100%;
-    width: auto;
+
 }
 .checkout{
     width: 100%;
