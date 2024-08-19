@@ -25,9 +25,9 @@
             "button_label_1": "ALL PRODUCTS",
             "button_link_1": "shopify:\/\/collections\/all",
             "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_label_2": "BUILD YOUR TAPELESS SETUP",
+            "button_link_2": "shopify:\/\/pages\/tapeless-kit-builder",
+            "button_style_secondary_2": true
           }
         }
       },
@@ -70,6 +70,7 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
+        "enable_quick_add": false,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 44,
