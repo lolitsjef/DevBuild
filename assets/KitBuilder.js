@@ -54,6 +54,23 @@ async function selected(sectionIndex, item, id, idvariant, description, featured
         let total = "$".concat(dollar.toString(), ".", cents);
         document.getElementById('selectedItemTotal').innerHTML = total;
 
+        var itemsSelected = false
+        for(let i = 0; i < selectedProducts.length; i++){
+            if(selectedProducts[i] != 0)
+            {
+                itemsSelected = true;
+            }
+        }
+        if(itemsSelected)
+        {
+            document.getElementById("cButton").classList.add("selected");
+        }
+        else
+        {
+            document.getElementById("cButton").classList.remove("selected");
+        }
+            
+
 }
 
 function removeSelections(sectionIndex) {
@@ -79,8 +96,7 @@ async function checkout(){
         var selectedItems = false;
         var formData = new FormData();
         for(let i = 0; i < selectedProducts.length; i++){
-            if(selectedProducts[i] != 0 && selectedProducts[i]){
-                if(selectedProducts[i] != 0){
+            if(selectedProducts[i] != 0){
                     let quantity = 1;
                     selectedItems = true;
                     for(let k = 0; k < data.items.length; k++){
@@ -89,7 +105,6 @@ async function checkout(){
                         }
                     }
                     formData.append("updates[" + selectedProducts[i] + "]", quantity);
-                }
             }
         } 
         if(selectedItems)
