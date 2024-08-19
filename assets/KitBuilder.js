@@ -97,13 +97,13 @@ async function checkout(){
 }
 
 function reset(){
-    selectedProducts = [0,0,0,0,0,0];
-    selectedProductIDs = [0,0,0,0,0,0];
     for(var i = 0; i < selectedProductIDs.length; i++){
         if(selectedProductIDs[i] != 0){
             removeSelections(i+1);
         }
     }
+    selectedProducts = [0,0,0,0,0,0];
+    selectedProductIDs = [0,0,0,0,0,0];
 
     document.getElementById("cButton").classList.remove("hide");
     document.getElementById("cMessage").classList.add("hide");
