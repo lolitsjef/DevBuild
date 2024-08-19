@@ -34,6 +34,22 @@ async function selected(sectionIndex, item, id, idvariant, description, featured
         document.getElementById("selectedItem" + sectionIndex).innerHTML = title;
         document.getElementById("selectedItemPrice" + sectionIndex).innerHTML = price;
     }
+    var itemsSelected = false
+    for(let i = 0; i < selectedProducts.length; i++){
+        if(selectedProducts[i] != 0)
+        {
+            itemsSelected = true;
+        }
+    }
+    if(itemsSelected)
+    {
+        document.getElementById("cButton").classList.add("checkoutSelected");
+    }
+    else
+    {
+        document.getElementById("cButton").classList.remove("checkoutSelected");
+    }
+        
 
     var totalPrice = 0;
         for(var i = 0; i < selectedProductIDs.length; i++){
@@ -53,24 +69,6 @@ async function selected(sectionIndex, item, id, idvariant, description, featured
         }
         let total = "$".concat(dollar.toString(), ".", cents);
         document.getElementById('selectedItemTotal').innerHTML = total;
-
-        var itemsSelected = false
-        for(let i = 0; i < selectedProducts.length; i++){
-            if(selectedProducts[i] != 0)
-            {
-                itemsSelected = true;
-            }
-        }
-        if(itemsSelected)
-        {
-            document.getElementById("cButton").classList.add("checkoutSelected");
-        }
-        else
-        {
-            document.getElementById("cButton").classList.remove("checkoutSelected");
-        }
-            
-
 }
 
 function removeSelections(sectionIndex) {
