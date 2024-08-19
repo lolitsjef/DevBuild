@@ -57,7 +57,6 @@ async function selected(sectionIndex, item, id, idvariant, description, featured
 }
 
 function removeSelections(sectionIndex) {
-    console.log('section' + sectionIndex)
     var sectionItems = document.getElementById('section' + sectionIndex).getElementsByClassName('productcard');
     for (var i = 0; i < sectionItems.length; i++) {
         var item = sectionItems[i];
@@ -100,24 +99,23 @@ async function checkout(){
 function reset(){
     selectedProducts = [0,0,0,0,0,0];
     selectedProductIDs = [0,0,0,0,0,0];
-    removeSelections("0");
     removeSelections("1");
     removeSelections("2");
     removeSelections("3");
     removeSelections("4");
     removeSelections("5");
+    removeSelections("6");
+
     document.getElementById("cButton").classList.remove("hide");
     document.getElementById("cMessage").classList.add("hide");
 }
 
 async function addToCart(formData){
-    console.log(formData);
     fetch(window.Shopify.routes.root + 'cart/update.js', {
         method: 'POST',
         body: formData
     })
     .then(response => response.json())
-    .then(data => console.log(data))
     .catch((error) => {
         console.error('Error:', error);
     });
