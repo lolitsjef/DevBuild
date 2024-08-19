@@ -63,11 +63,11 @@ async function selected(sectionIndex, item, id, idvariant, description, featured
         }
         if(itemsSelected)
         {
-            document.getElementById("cButton").classList.add("selected");
+            document.getElementById("cButton").classList.add("checkoutSelected");
         }
         else
         {
-            document.getElementById("cButton").classList.remove("selected");
+            document.getElementById("cButton").classList.remove("checkoutSelected");
         }
             
 
