@@ -100,6 +100,8 @@ function reset(){
     for(var i = 0; i < selectedProductIDs.length; i++){
         if(selectedProductIDs[i] != 0){
             removeSelections(i+1);
+            document.getElementById("selectedItem" + (i+1)).innerHTML = "No " + sectionName;
+            document.getElementById("selectedItemPrice" + (i+1)).innerHTML = "$0.00";
         }
     }
     selectedProducts = [0,0,0,0,0,0];
@@ -107,6 +109,8 @@ function reset(){
 
     document.getElementById("cButton").classList.remove("hide");
     document.getElementById("cMessage").classList.add("hide");
+
+
 }
 
 async function addToCart(formData){
