@@ -2,54 +2,6 @@
 {{ 'KitBuilder.js' | asset_url | script_tag }}
 
 <div class="KitBuilder">
-    <h2>{{ section.settings.headline }}</h2>
-    <div class = main>
-        <div class = "featured">
-            {% assign defaultProduct = all_products[section.blocks[0].settings.product1] %}
-            <div class = "featuredproducttitle"> <h2 id="featuredproductname">{{section.blocks[0].settings.product1name}}</h2></div>
-            <div class = "featuredproduct">
-                {% assign defaultProductImage = defaultProduct.featured_image %}
-                <img class = "featuredproductimage" src = "{{section.blocks[0].settings.product1img | image_url: width: 400}}" id = "featuredproductimage"height="400px" width="400px">
-                <div class = "featuredproductdesc simpleText" id = "featuredproductdesc">{{section.blocks[0].settings.product1desc}}</div>
-                {% assign price_in_cents = defaultProduct.price %} 
-                {% assign price_in_dollars = price_in_cents | divided_by: 100 %}
-                {% assign price_remainder = price_in_cents | modulo: 100 %}
-                <div class="simpleText d" id="featuredproductprice">${{ price_in_dollars }}.{{ price_remainder | append: "00" | slice: 0, 2 }}</div>
-               
-            </div>
-        </div>
-        <div class = "checkout">
-            <div class = "featuredproducttitle"><h2>Your Tapeless Kit</h2> </div>
-            <div class = "kitList">
-                {% for block in section.blocks %}
-                    <div class = "selectedItem"> 
-                        <div class = "heavyText" id = "selectedItem{{forloop.index}}"> No {{block.settings.SectionHeader}}</div>
-                        <div class = "simpleText" id = "selectedItemPrice{{forloop.index}}">$0.00</div>
-                    </div>
-                {%endfor%}
-            </div>
-            <div>
-                <div class = checkoutBottom>
-                    <div class = "selectedItem"> 
-                        <div class = "heavyText">Total</div>
-                        <div class = "simpleText" id = "selectedItemTotal" >$0.00</div>
-                    </div>
-                    <div class = "b">
-                        <div id = "cButton" class = "checkoutButton" onclick ="checkout()"> <div class = "heavyText">Add All to Cart</div></div>
-                        <div id = cMessage class = "hide">
-                            <div class = "simpleText">Your items have been added to cart, refresh or <a class = "linkText" href= "/cart"><span class = "linkText">view cart</span></a> to see updated cart.
-                                                      You can also <span class = " linkText" onclick ="reset()">create another kit</span>.</div>
-                        </div>
-                    </div>
-                    <div class = "simpleText b"> *ImmersionRC Powerplay not included </div>    
-                </div>
-            </div>
-           
-        </div>
-        
-
-    </div>
-
     <div class = kits>
         {% for block in section.blocks %}
             <div id = "section{{forloop.index}}" class = kitsection>
@@ -115,6 +67,52 @@
                 </div>
             </div>
         {%endfor%}
+    </div>
+    <div class = main>
+        <div class = "featured">
+            {% assign defaultProduct = all_products[section.blocks[0].settings.product1] %}
+            <div class = "featuredproducttitle"> <h2 id="featuredproductname">{{section.blocks[0].settings.product1name}}</h2></div>
+            <div class = "featuredproduct">
+                {% assign defaultProductImage = defaultProduct.featured_image %}
+                <img class = "featuredproductimage" src = "{{section.blocks[0].settings.product1img | image_url: width: 400}}" id = "featuredproductimage"height="400px" width="400px">
+                <div class = "featuredproductdesc simpleText" id = "featuredproductdesc">{{section.blocks[0].settings.product1desc}}</div>
+                {% assign price_in_cents = defaultProduct.price %} 
+                {% assign price_in_dollars = price_in_cents | divided_by: 100 %}
+                {% assign price_remainder = price_in_cents | modulo: 100 %}
+                <div class="simpleText d" id="featuredproductprice">${{ price_in_dollars }}.{{ price_remainder | append: "00" | slice: 0, 2 }}</div>
+               
+            </div>
+        </div>
+        <div class = "checkout">
+            <div class = "featuredproducttitle"><h2>Your Tapeless Kit</h2> </div>
+            <div class = "kitList">
+                {% for block in section.blocks %}
+                    <div class = "selectedItem"> 
+                        <div class = "heavyText" id = "selectedItem{{forloop.index}}"> No {{block.settings.SectionHeader}}</div>
+                        <div class = "simpleText" id = "selectedItemPrice{{forloop.index}}">$0.00</div>
+                    </div>
+                {%endfor%}
+            </div>
+            <div>
+                <div class = checkoutBottom>
+                    <div class = "selectedItem"> 
+                        <div class = "heavyText">Total</div>
+                        <div class = "simpleText" id = "selectedItemTotal" >$0.00</div>
+                    </div>
+                    <div class = "b">
+                        <div id = "cButton" class = "checkoutButton" onclick ="checkout()"> <div class = "heavyText">Add All to Cart</div></div>
+                        <div id = cMessage class = "hide">
+                            <div class = "simpleText">Your items have been added to cart, refresh or <a class = "linkText" href= "/cart"><span class = "linkText">view cart</span></a> to see updated cart.
+                                                      You can also <span class = " linkText" onclick ="reset()">create another kit</span>.</div>
+                        </div>
+                    </div>
+                    <div class = "simpleText b"> *ImmersionRC Powerplay not included </div>    
+                </div>
+            </div>
+           
+        </div>
+        
+
     </div>
 </div>
 
