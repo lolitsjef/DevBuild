@@ -57,6 +57,7 @@ async function selected(sectionIndex, item, id, idvariant, description, featured
 }
 
 function removeSelections(sectionIndex) {
+    console.log('section' + sectionIndex)
     var sectionItems = document.getElementById('section' + sectionIndex).getElementsByClassName('productcard');
     for (var i = 0; i < sectionItems.length; i++) {
         var item = sectionItems[i];
