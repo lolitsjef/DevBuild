@@ -99,12 +99,12 @@ async function checkout(){
 function reset(){
     selectedProducts = [0,0,0,0,0,0];
     selectedProductIDs = [0,0,0,0,0,0];
-    removeSelections(0);
-    removeSelections(1);
-    removeSelections(2);
-    removeSelections(3);
-    removeSelections(4);
-    removeSelections(5);
+    removeSelections("0");
+    removeSelections("1");
+    removeSelections("2");
+    removeSelections("3");
+    removeSelections("4");
+    removeSelections("5");
     document.getElementById("cButton").classList.remove("hide");
     document.getElementById("cMessage").classList.add("hide");
 }
