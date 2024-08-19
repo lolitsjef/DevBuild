@@ -82,7 +82,7 @@ async function checkout(){
             if(selectedProducts[i] != 0 && selectedProducts[i]){
                 if(selectedProducts[i] != 0){
                     let quantity = 1;
-                    selecter = true;
+                    selected = true;
                     for(let k = 0; k < data.items.length; k++){
                         if(data.items[k].id == selectedProducts[i]){
                             quantity = data.items[k].quantity + 1;
