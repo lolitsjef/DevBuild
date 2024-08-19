@@ -22,11 +22,11 @@
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "ALL PRODUCTS",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
+            "button_label_1": "BUILD YOUR TAPELESS SETUP",
+            "button_link_1": "shopify:\/\/pages\/tapeless-kit-builder",
+            "button_style_secondary_1": false,
+            "button_label_2": "ALL PRODUCTS",
+            "button_link_2": "shopify:\/\/collections\/all",
             "button_style_secondary_2": false
           }
         }
@@ -36,7 +36,7 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/devbuild_accessories_for_website.png",
+        "image": "shopify:\/\/shop_images\/minions.gif",
         "image_overlay_opacity": 40,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
@@ -70,6 +70,7 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
+        "enable_quick_add": false,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 44,
