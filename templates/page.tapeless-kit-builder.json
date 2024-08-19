@@ -33,7 +33,7 @@
         "text_WXAGy6": {
           "type": "text",
           "settings": {
-            "text": "<p>See listings in 'All Products' (can you make that clickable?) for more product details<\/p>"
+            "text": "<p>See listings in '<a href=\"\/collections\/all\" title=\"\/collections\/all\">All Products<\/a>' for more product details<\/p>"
           }
         }
       },
