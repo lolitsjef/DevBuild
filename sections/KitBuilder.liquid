@@ -14,7 +14,7 @@
                 {% assign price_in_cents = defaultProduct.price %} 
                 {% assign price_in_dollars = price_in_cents | divided_by: 100 %}
                 {% assign price_remainder = price_in_cents | modulo: 100 %}
-                <div class="simpleText a" id="featuredproductprice">${{ price_in_dollars }}.{{ price_remainder | append: "00" | slice: 0, 2 }}</div>
+                <div class="simpleText" id="featuredproductprice">${{ price_in_dollars }}.{{ price_remainder | append: "00" | slice: 0, 2 }}</div>
                
             </div>
         </div>
@@ -294,7 +294,7 @@
     border-radius: 0.25em;
     border-style: solid;
     padding: 0em 1em;
-    padding-bottom: 1em;
+    padding-bottom: 2em;
     margin-bottom: 1em;
     height: 45em;
 }
