@@ -396,7 +396,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".button{border-radius: 10%}"
+      ".button{border-radius: 10%;}"
     ]
   }
 }
