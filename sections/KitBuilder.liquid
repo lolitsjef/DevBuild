@@ -81,18 +81,17 @@
                     {% assign product2 = all_products[block.settings.product2] %}
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product2.id}}, {{product1.variants.first.id}}, '{{block.settings.product2desc}}', '{{block.settings.product2img}}', '{{block.settings.product2name}}', '{{block.settings.SectionHeader}}')">
                         <img class = "productimage" height="400px" width="400px" src = {{block.settings.product2img | image_url: width: 400}}>
-                        <div class = "productcardbottom">
-                            <div class = "productinfo"> 
-                                <span class = heavyText>{{ block.settings.product2name }}</span>
-                            </div>
-                            <div class = "productprice">
-                                {% assign p2priceincents = product2.price %} 
-                                {% assign p2priceindollars = p2priceincents | divided_by: 100 %}
-                                {% assign p2priceremainder = p2priceincents | modulo: 100 %}
-                                ${{ p2priceindollars }}.{{ p2priceremainder | append: "00" | slice: 0, 2 }}
-                            </div>
-                        </div>
 
+                        <div class = "productinfo"> 
+                            <span class = heavyText>{{ block.settings.product2name }}</span>
+                        </div>
+                        <div class = "productprice">
+                            {% assign p2priceincents = product2.price %} 
+                            {% assign p2priceindollars = p2priceincents | divided_by: 100 %}
+                            {% assign p2priceremainder = p2priceincents | modulo: 100 %}
+                            ${{ p2priceindollars }}.{{ p2priceremainder | append: "00" | slice: 0, 2 }}
+
+                        </div>
 
                     </div>
                     {% endif %}
@@ -230,15 +229,6 @@
 .link{
     color: rgba(var(--color-link), var(--alpha-link));
 }
-.productcardbottom{
-    border-radius: 0.25;
-    color: black;
-}
-.productcardbottom.selected {
-    background-color: black;
-    color: white;
-}
-
 .checkoutBottom{
     margin-top: 0.75em;
     padding-top: 0.5em;
@@ -456,7 +446,10 @@
     transition-duration: 300ms;
     transition-timing-function: ease;
 }
-
+.productcard.selected {
+    background-color: black;
+    color: white;
+}
 .productcard:hover .productinfo {
     text-decoration: underline;
 }
