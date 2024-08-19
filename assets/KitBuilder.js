@@ -7,11 +7,15 @@ async function selected(sectionIndex, item, id, idvariant, description, featured
         selectedProducts[sectionIndex-1] = 0;
         selectedProductIDs[sectionIndex-1] = 0;
 
+        updatecheckoutcolor();
         document.getElementById("selectedItem" + sectionIndex).innerHTML = "No " + sectionName;
         document.getElementById("selectedItemPrice" + sectionIndex).innerHTML = "$0.00";
     }
     else{
         item.classList.add('selected');
+        selectedProducts[sectionIndex-1] = idvariant;
+        selectedProductIDs[sectionIndex-1] = id;
+        updatecheckoutcolor();
 
         document.getElementById("featuredproductimage").src = "//devbuild.digital/cdn/shop/" + featured_image;
         document.getElementById('featuredproductname').innerHTML = title;
@@ -29,25 +33,9 @@ async function selected(sectionIndex, item, id, idvariant, description, featured
         let price = "$".concat(dollar.toString(), ".", cents);
         document.getElementById('featuredproductprice').innerHTML = price;
 
-        selectedProducts[sectionIndex-1] = idvariant;
-        selectedProductIDs[sectionIndex-1] = id;
+
         document.getElementById("selectedItem" + sectionIndex).innerHTML = title;
         document.getElementById("selectedItemPrice" + sectionIndex).innerHTML = price;
-    }
-    var itemsSelected = false
-    for(let i = 0; i < selectedProducts.length; i++){
-        if(selectedProducts[i] != 0)
-        {
-            itemsSelected = true;
-        }
-    }
-    if(itemsSelected)
-    {
-        document.getElementById("cButton").classList.add("checkoutSelected");
-    }
-    else
-    {
-        document.getElementById("cButton").classList.remove("checkoutSelected");
     }
         
 
@@ -71,6 +59,23 @@ async function selected(sectionIndex, item, id, idvariant, description, featured
         document.getElementById('selectedItemTotal').innerHTML = total;
 }
 
+function updatecheckoutcolor(){
+    var itemsSelected = false
+    for(let i = 0; i < selectedProducts.length; i++){
+        if(selectedProducts[i] != 0)
+        {
+            itemsSelected = true;
+        }
+    }
+    if(itemsSelected)
+    {
+        document.getElementById("cButton").classList.add("checkoutSelected");
+    }
+    else
+    {
+        document.getElementById("cButton").classList.remove("checkoutSelected");
+    }
+}
 function removeSelections(sectionIndex) {
     var sectionItems = document.getElementById('section' + sectionIndex).getElementsByClassName('productcard');
     for (var i = 0; i < sectionItems.length; i++) {
