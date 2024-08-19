@@ -55,11 +55,11 @@
         {% for block in section.blocks %}
             <div id = "section{{forloop.index}}" class = kitsection>
 
-                <div class = "kitsectiontitle">
+                <div class = kitsectiontitle>
                     <h2>{{ block.settings.SectionHeader }}</h2>
                 </div>
-                <div class = "kitsectiondesc">
-                        <span class = "simpletext">{{ block.settings.SectionDesc }}</span>
+                <div class = kitsectiondesc>
+                        <div class = simpleText>{{ block.settings.SectionDesc }}</div>
                 </div>
                 <div class = components> 
                     {% if block.settings.product1.id != blank %}
@@ -243,9 +243,7 @@
     align-items: center;
     justify-content: center;
 }
-.c{
-    width: 80%;
-}
+
 .selectedItem{
     display: flex;
     flex-direction: row;
