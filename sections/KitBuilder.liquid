@@ -84,7 +84,7 @@
             </div>
         </div>
         <div class = "checkout">
-            <div class = "featuredproducttitle"><h2>Your Tapeless Kit</h2> </div>
+            <div class = "checkoutproducttitle"><h2>Your Tapeless Kit</h2> </div>
             <div class = "kitList">
                 {% for block in section.blocks %}
                     <div class = "selectedItem"> 
@@ -325,6 +325,7 @@
     border-color: black;
     border-width: 0.1em;
     border-top: solid;
+    flex-grow: 1; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
