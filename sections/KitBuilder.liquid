@@ -11,7 +11,7 @@
                 {% assign defaultProductImage = defaultProduct.featured_image %}
                 <img class = "featuredproductimage" src = "{{section.blocks[0].settings.product1img | image_url: width: 400}}" id = "featuredproductimage"height="400px" width="400px">
                 <div class = "featuredproductinfo">
-                    <div class = "simpleText" id = "featuredproductdesc">{{section.blocks[0].settings.product1desc}}</div>
+                    <div class = "featuredproductdesc simpleText" id = "featuredproductdesc">{{section.blocks[0].settings.product1desc}}</div>
                     {% assign price_in_cents = defaultProduct.price %} 
                     {% assign price_in_dollars = price_in_cents | divided_by: 100 %}
                     {% assign price_remainder = price_in_cents | modulo: 100 %}
@@ -311,7 +311,9 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    height: 12em;
+}
+.featuredproductdesc{
+    height: 10em;
 }
 .featuredproductimage{
     justify-content: center;
