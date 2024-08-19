@@ -37,7 +37,7 @@
                         <div class = "simpleText" id = "selectedItemTotal" >$0.00</div>
                     </div>
                     <div class = "b">
-                        <div id = "cButton" class = "checkoutButton" onclick ="checkout()"> <div class = "linkText">Add All to Cart</div></div>
+                        <div id = "cButton" class = "checkoutButton" onclick ="checkout()"> <div class = "simpleText">Add All to Cart</div></div>
                         <div id = cMessage class = "hide">
                             <div class = "simpleText">Your items have been added to cart, refresh or <a class = "linkText" href= "/cart">view cart</a> to see updated cart.
                                                       You can also <span class = " linkText" onclick ="reset()">create another kit</span>.</div>
@@ -272,7 +272,7 @@
     cursor: pointer;
 }
 .linkText:hover{
-    text-decoration-thickness: bold;
+    text-decoration-thickness: 3px;
 }
 
 .heavyText{
@@ -338,6 +338,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.checkoutButton:hover{
+    text-decoration: underline;
 }
 
 .KitBuilder{
