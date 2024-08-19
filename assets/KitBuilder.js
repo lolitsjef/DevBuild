@@ -105,6 +105,8 @@ function reset(){
     removeSelections(3);
     removeSelections(4);
     removeSelections(5);
+    document.getElementById("cButton").classList.remove("hide");
+    document.getElementById("cMessage").classList.add("hide");
 }
 
 async function addToCart(formData){
