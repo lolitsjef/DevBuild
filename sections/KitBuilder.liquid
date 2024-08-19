@@ -17,14 +17,16 @@
                     {% assign product1 = all_products[block.settings.product1] %}
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product1.id}}, {{product1.variants.first.id}}, '{{block.settings.product1desc}}', '{{block.settings.product1img}}', '{{block.settings.product1name}}', '{{block.settings.SectionHeader}}')">
                         <img class = "productimage" height="400px" width="400px" src = {{block.settings.product1img | image_url: width: 400}}>
-                        <div class = "productinfo"> 
-                            <span class = heavyText>{{ block.settings.product1name }}</span>
-                        </div>
-                        <div class = "productprice">
-                            {% assign p1priceincents = product1.price %} 
-                            {% assign p1priceindollars = p1priceincents | divided_by: 100 %}
-                            {% assign p1priceremainder = priceincents | modulo: 100 %}
-                            ${{ p1priceindollars }}.{{ p1priceremainder | append: "00" | slice: 0, 2 }}
+                        <div class = productcardinfo>
+                            <div class = "productinfo"> 
+                                <span class = heavyText>{{ block.settings.product1name }}</span>
+                            </div>
+                            <div class = "productprice">
+                                {% assign p1priceincents = product1.price %} 
+                                {% assign p1priceindollars = p1priceincents | divided_by: 100 %}
+                                {% assign p1priceremainder = priceincents | modulo: 100 %}
+                                ${{ p1priceindollars }}.{{ p1priceremainder | append: "00" | slice: 0, 2 }}
+                            </div>
                         </div>
                     </div>
                     {% endif %}
@@ -33,17 +35,18 @@
                     {% assign product2 = all_products[block.settings.product2] %}
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product2.id}}, {{product1.variants.first.id}}, '{{block.settings.product2desc}}', '{{block.settings.product2img}}', '{{block.settings.product2name}}', '{{block.settings.SectionHeader}}')">
                         <img class = "productimage" height="400px" width="400px" src = {{block.settings.product2img | image_url: width: 400}}>
-
-                        <div class = "productinfo"> 
-                            <span class = heavyText>{{ block.settings.product2name }}</span>
+                        <div class = productcardinfo>
+                            <div class = "productinfo"> 
+                                <span class = heavyText>{{ block.settings.product2name }}</span>
+                            </div>
+                            <div class = "productprice">
+                                {% assign p2priceincents = product2.price %} 
+                                {% assign p2priceindollars = p2priceincents | divided_by: 100 %}
+                                {% assign p2priceremainder = p2priceincents | modulo: 100 %}
+                                ${{ p2priceindollars }}.{{ p2priceremainder | append: "00" | slice: 0, 2 }}
+                            </div>
                         </div>
-                        <div class = "productprice">
-                            {% assign p2priceincents = product2.price %} 
-                            {% assign p2priceindollars = p2priceincents | divided_by: 100 %}
-                            {% assign p2priceremainder = p2priceincents | modulo: 100 %}
-                            ${{ p2priceindollars }}.{{ p2priceremainder | append: "00" | slice: 0, 2 }}
 
-                        </div>
 
                     </div>
                     {% endif %}
@@ -52,14 +55,16 @@
                     {% assign product3 = all_products[block.settings.product3] %}
                     <div class = "productcard" onclick="selected({{ forloop.index }}, this, {{product3.id}}, {{product3.variants.first.id}}, '{{block.settings.product3desc}}', '{{block.settings.product3img}}', '{{block.settings.product3name}}', '{{block.settings.SectionHeader}}')">
                         <img class = "productimage" height="400px" width="400px" src = {{block.settings.product3img | image_url: width: 400}}>
-                        <div class = "productinfo"> 
-                            <span class = heavyText>{{ block.settings.product3name }}</span>
-                        </div>
-                        <div class = "productprice">
-                            {% assign p3priceincents = product3.price %} 
-                            {% assign p3priceindollars = p3priceincents | divided_by: 100 %}
-                            {% assign p3priceremainder = p3priceincents | modulo: 100 %}
-                            ${{ p3priceindollars }}.{{ p3priceremainder | append: "00" | slice: 0, 2 }}
+                        <div class = productcardinfo>
+                            <div class = "productinfo"> 
+                                <span class = heavyText>{{ block.settings.product3name }}</span>
+                            </div>
+                            <div class = "productprice">
+                                {% assign p3priceincents = product3.price %} 
+                                {% assign p3priceindollars = p3priceincents | divided_by: 100 %}
+                                {% assign p3priceremainder = p3priceincents | modulo: 100 %}
+                                ${{ p3priceindollars }}.{{ p3priceremainder | append: "00" | slice: 0, 2 }}
+                            </div>  
                         </div>  
 
                     </div>
@@ -447,7 +452,7 @@
     transition-duration: 300ms;
     transition-timing-function: ease;
 }
-.productcard.selected {
+.selected .productcardinfo{
     background-color: black;
     color: white;
     transition-duration: 500ms;

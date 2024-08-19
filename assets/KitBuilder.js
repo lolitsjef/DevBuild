@@ -76,13 +76,13 @@ async function checkout(){
     var cartContents = await fetch(window.Shopify.routes.root + 'cart.js')
     .then(response => response.json())
     .then(data => {         
-        var selected = false;
+        var selectedItems = false;
         var formData = new FormData();
         for(let i = 0; i < selectedProducts.length; i++){
             if(selectedProducts[i] != 0 && selectedProducts[i]){
                 if(selectedProducts[i] != 0){
                     let quantity = 1;
-                    selected = true;
+                    selectedItems = true;
                     for(let k = 0; k < data.items.length; k++){
                         if(data.items[k].id == selectedProducts[i]){
                             quantity = data.items[k].quantity + 1;
@@ -92,7 +92,7 @@ async function checkout(){
                 }
             }
         } 
-        if(selected)
+        if(selectedItems)
         {
             addToCart(formData);
             document.getElementById("cButton").classList.add("hide");
