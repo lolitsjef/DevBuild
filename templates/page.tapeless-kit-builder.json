@@ -60,7 +60,7 @@
             "SectionDesc": "For camcorders with hot\/cold shoes",
             "product1": "immersionrc-powerplay-mounting-kit-cold-shoe-bracket",
             "product1name": "ImmersionRC Powerplay Mount",
-            "product1desc": "This mount has a collar nut that tightens to secure itself to any camcorder's hot\/cold shoe The thumb screw allows you to adjust the display angle of the Powerplay.",
+            "product1desc": "This mount has a collar nut that tightens to secure itself to any camcorder´s hot\/cold shoe The thumb screw allows you to adjust the display angle of the Powerplay.",
             "product1img": "shopify:\/\/shop_images\/mount_1.jpg",
             "product2": "",
             "product2name": "",
@@ -68,22 +68,6 @@
             "product3": "",
             "product3name": "",
             "product3desc": ""
-          }
-        },
-        "kit_section_PYHdnX": {
-          "type": "Kit-Section",
-          "settings": {
-            "SectionHeader": "",
-            "SectionDesc": "",
-            "product1": "",
-            "product1name": "",
-            "product1desc": "",
-            "product2": "",
-            "product2name": "",
-            "product2desc": "&#39;",
-            "product3": "",
-            "product3name": "",
-            "product3desc": "&#39;"
           }
         },
         "kit_section_a8XYgq": {
@@ -125,7 +109,6 @@
       },
       "block_order": [
         "kit_section_3ThagF",
-        "kit_section_PYHdnX",
         "kit_section_a8XYgq",
         "kit_section_9BeNek"
       ],
