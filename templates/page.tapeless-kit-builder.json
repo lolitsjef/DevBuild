@@ -70,20 +70,20 @@
             "product3desc": ""
           }
         },
-        "kit_section_EwA9GD": {
+        "kit_section_PYHdnX": {
           "type": "Kit-Section",
           "settings": {
             "SectionHeader": "",
             "SectionDesc": "",
             "product1": "",
             "product1name": "",
-            "product1desc": "&#39;",
+            "product1desc": "",
             "product2": "",
             "product2name": "",
-            "product2desc": "",
+            "product2desc": "&#39;",
             "product3": "",
             "product3name": "",
-            "product3desc": ""
+            "product3desc": "&#39;"
           }
         },
         "kit_section_a8XYgq": {
@@ -125,7 +125,7 @@
       },
       "block_order": [
         "kit_section_3ThagF",
-        "kit_section_EwA9GD",
+        "kit_section_PYHdnX",
         "kit_section_a8XYgq",
         "kit_section_9BeNek"
       ],
