@@ -94,6 +94,7 @@ async function checkout(){
     });
     document.getElementById("cButton").classList.add("hide");
     document.getElementById("cMessage").classList.remove("hide");
+    document.getElementById("rButton").classList.remove("hide");
 }
 
 async function addToCart(formData){
