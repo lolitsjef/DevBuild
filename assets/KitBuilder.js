@@ -100,7 +100,7 @@ function reset(){
     for(var i = 0; i < selectedProductIDs.length; i++){
         if(selectedProductIDs[i] != 0){
             removeSelections(i+1);
-            document.getElementById("selectedItem" + (i+1)).innerHTML = "No " + sectionName;
+            document.getElementById("selectedItem" + (i+1)).innerHTML = "No " + document.getElementById("section" + (i+1) + "name").innerHTML;
             document.getElementById("selectedItemPrice" + (i+1)).innerHTML = "$0.00";
         }
     }
