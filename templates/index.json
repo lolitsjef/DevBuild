@@ -24,10 +24,10 @@
           "settings": {
             "button_label_1": "BUILD YOUR TAPELESS SETUP",
             "button_link_1": "shopify:\/\/pages\/tapeless-kit-builder",
-            "button_style_secondary_1": true,
+            "button_style_secondary_1": false,
             "button_label_2": "ALL PRODUCTS",
             "button_link_2": "shopify:\/\/collections\/all",
-            "button_style_secondary_2": true
+            "button_style_secondary_2": false
           }
         }
       },
