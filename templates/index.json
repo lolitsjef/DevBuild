@@ -35,6 +35,9 @@
         "heading",
         "button"
       ],
+      "custom_css": [
+        ".button--primary{border-radius: 0.25em;}"
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/minions.gif",
         "image_overlay_opacity": 40,
