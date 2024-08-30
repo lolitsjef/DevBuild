@@ -399,13 +399,6 @@
     transition-duration: 300ms;
     transition-timing-function: ease;
 }
-@media (max-width: 768px) {
-    .kitsection {
-        justify-content: center;
-        text-align:center;
-    }
-}
-
 
 .kitsection:hover{
     box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 5px;
@@ -426,6 +419,7 @@
     margin-top: -1em;
     cursor: pointer;
 }
+
 .components{
     display: flex;
     align: center;
@@ -446,6 +440,11 @@
     line-height: 1.25em;
     margin-bottom: 1em;
     cursor: pointer;
+}
+@media (max-width: 768px) {
+    .productcard {
+        flex-direction: row;
+    }
 }
 .productinfo{
     vertical-align: top;
