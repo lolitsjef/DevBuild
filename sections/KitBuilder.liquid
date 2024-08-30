@@ -400,6 +400,7 @@
     transition-timing-function: ease;
 }
 
+
 .kitsection:hover{
     box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 5px;
 }
@@ -423,6 +424,11 @@
     display: flex;
     align: center;
     margin-top: -1em;
+}
+@media (max-width: 768px) {
+    .components {
+        flex-direction: column;
+    }
 }
 .productcard {
     width: 10em;
