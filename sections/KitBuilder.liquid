@@ -94,7 +94,7 @@
                 {% for block in section.blocks %}
                     <div class = "selectedItem"> 
                         <div class = "heavyText" id = "selectedItem{{forloop.index}}"> No {{block.settings.SectionHeader}}</div>
-                        <div class = "simpleText" id = "selectedItemPrice{{forloop.index}}">$0.00</div>
+                        <div class = "simpleText selectedItemPrice" id = "selectedItemPrice{{forloop.index}}">$0.00</div>
                     </div>
                 {%endfor%}
             </div>
@@ -231,6 +231,9 @@
 }
 .link{
     color: rgba(var(--color-link), var(--alpha-link));
+}
+.selectedItemPrice{
+    min-width:5em;
 }
 .checkoutBottom{
     margin-top: 0.75em;
