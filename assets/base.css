@@ -1730,7 +1730,7 @@ details[open] > .share-button__fallback {
 .customer .field input {
   flex-grow: 1;
   text-align: left;
-  padding: 1em, 1.5rem;
+  padding: 1rem, 1.5rem;
   margin: var(--inputs-border-width);
   transition: box-shadow var(--duration-short) ease;
 }
