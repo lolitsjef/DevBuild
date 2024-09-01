@@ -3348,6 +3348,7 @@ details-disclosure > details {
 }
 .price__regular .price-item--regular {
   font-size: 12px;
+  margin-top: 0 !important;
 }
 /* Element Hovers: Vertical Lift, 3d Lift */
 
