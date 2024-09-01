@@ -85,7 +85,6 @@
                 {% assign price_in_dollars = price_in_cents | divided_by: 100 %}
                 {% assign price_remainder = price_in_cents | modulo: 100 %}
                 <div class="simpleText d" id="featuredproductprice">${{ price_in_dollars }}.{{ price_remainder | append: "00" | slice: 0, 2 }}</div>
-               
             </div>
         </div>
         <div class = "checkout">
@@ -237,6 +236,9 @@
 .selectedItemPrice{
     min-width:5em;
     text-align: right;
+}
+.kitList{
+    margin-top: -2em;
 }
 .checkoutBottom{
     margin-top: 0.75em;
