@@ -442,7 +442,7 @@
 .card__heading a {
 
   font-size: 16px !important;
-  font-weight: bold;
+  font-weight: 500;
   padding-right: 1rem !important;
 
 }
