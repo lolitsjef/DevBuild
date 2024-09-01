@@ -445,6 +445,9 @@
   padding-right: 1rem !important;
 
 }
+.card-information a {
+  font-size: 12px !important;
+}
 
 /* Card Shape Hover Rules */
 
