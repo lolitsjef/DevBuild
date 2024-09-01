@@ -3346,7 +3346,9 @@ details-disclosure > details {
     }
   }
 }
-
+.price__regular .price-item--regular {
+  font-size: 10px;
+}
 /* Element Hovers: Vertical Lift, 3d Lift */
 
 @media (prefers-reduced-motion: no-preference) and (hover: hover) {
