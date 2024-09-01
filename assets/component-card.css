@@ -441,15 +441,11 @@
 
 .card__heading a {
 
-  font-size: 16px !important;
+  font-size: 15px !important;
   font-weight: 600;
   padding-right: 1rem !important;
 
 }
-.card-information a {
-  font-size: 8px !important;
-}
-
 
 /* Card Shape Hover Rules */
 
