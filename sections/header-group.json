@@ -17,7 +17,7 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Save 15% on all orders $75+ (Discount applied at checkout)",
             "link": ""
           }
         }
@@ -25,9 +25,8 @@
       "block_order": [
         "announcement-bar-0"
       ],
-      "disabled": true,
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "show_line_separator": true,
         "show_social": false,
         "auto_rotate": false,
