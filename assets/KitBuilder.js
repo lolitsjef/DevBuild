@@ -135,8 +135,7 @@ function reset(){
     document.getElementById("cButton").classList.remove("hide");
     document.getElementById("cMessage").classList.add("hide");
     document.getElementById('selectedItemTotal').innerHTML ="$0.00";
-
-
+    document.getElementById("cButton").classList.remove("checkoutSelected");
 
 }
 
