@@ -439,6 +439,12 @@
   clip-path: polygon(var(--shape--blob-1));
 }
 
+.card__heading a {
+
+  font-size: 18px !important;
+
+}
+
 /* Card Shape Hover Rules */
 
 @media (prefers-reduced-motion: no-preference) {
