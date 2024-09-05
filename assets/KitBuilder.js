@@ -92,7 +92,10 @@ async function getProductById(id) {
 	return await fetch(`/products/${handle}.js`).then(response => response.json());
 }
 
-function checkout(){       
+async function checkout(){
+    await fetch(window.Shopify.routes.root + 'cart.js')
+    .then(response => response.json())
+    .then(data => {         
         var selectedItems = false;
         var formData = new FormData();
         for(let i = 0; i < selectedProducts.length; i++){
@@ -111,8 +114,11 @@ function checkout(){
         {
             addToCart(formData);
             document.getElementById("cButton").classList.add("hide");
-            document.getElementById("cMessage").classList.remove("hide")  
+            document.getElementById("cMessage").classList.remove("hide");
         }
+    });
+
+
 }
 
 function reset(){
