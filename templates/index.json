@@ -36,12 +36,12 @@
         "button"
       ],
       "custom_css": [
-        ".button--primary{border-radius: 0.25em;}"
+        ".button--primary {border-radius: 0.25em;}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/minions.gif",
+        "image": "shopify:\/\/shop_images\/RCA_Sony.jpg",
         "image_overlay_opacity": 40,
-        "image_height": "large",
+        "image_height": "medium",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
