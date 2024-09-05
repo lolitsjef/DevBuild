@@ -92,7 +92,7 @@ async function getProductById(id) {
 	return await fetch(`/products/${handle}.js`).then(response => response.json());
 }
 
-async function checkout(){       
+function checkout(){       
         var selectedItems = false;
         var formData = new FormData();
         for(let i = 0; i < selectedProducts.length; i++){
