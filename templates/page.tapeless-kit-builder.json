@@ -1,20 +1,18 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-page",
       "disabled": true,
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
@@ -33,7 +31,7 @@
         "text_WXAGy6": {
           "type": "text",
           "settings": {
-            "text": "<p>See listings in '<a href=\"\/collections\/all\" title=\"\/collections\/all\">All Products<\/a>' for more product details<\/p>"
+            "text": "<p>See listings in '<a href=\"/collections/all\" title=\"/collections/all\">All Products</a>' for more product details</p>"
           }
         }
       },
@@ -57,11 +55,11 @@
           "type": "Kit-Section",
           "settings": {
             "SectionHeader": "Mount",
-            "SectionDesc": "For camcorders with hot\/cold shoes",
+            "SectionDesc": "For camcorders with hot/cold shoes",
             "product1": "immersionrc-powerplay-hot-shoe-mount",
             "product1name": "ImmersionRC Powerplay Mount",
-            "product1desc": "This mount has a collar nut that tightens to secure itself to any camcorder‘s hot\/cold shoe. The thumb screw allows you to adjust the display angle of the Powerplay.",
-            "product1img": "shopify:\/\/shop_images\/mount_crop_2.jpg",
+            "product1desc": "This mount has a collar nut that tightens to secure itself to any camcorder‘s hot/cold shoe. The thumb screw allows you to adjust the display angle of the Powerplay.",
+            "product1img": "shopify://shop_images/mount_crop_2.jpg",
             "product2": "",
             "product2name": "",
             "product2desc": "",
@@ -74,15 +72,15 @@
           "type": "Kit-Section",
           "settings": {
             "SectionHeader": "Brackets",
-            "SectionDesc": "Add for camcorders without a hot\/cold shoe",
+            "SectionDesc": "Add for camcorders without a hot/cold shoe",
             "product1": "cold-shoe-mounting-bracket",
             "product1name": "Cold Shoe Mounting Bracket",
-            "product1desc": "Recommended for most Sony Handycams. Distance from center of screw to the center of the cold shoe is approximately 3.65 inches or 92mm.",
-            "product1img": "shopify:\/\/shop_images\/bracket_crop.jpg",
-            "product2": "immersionrc-powerplay-mounting-kit-cold-shoe-bracket",
+            "product1desc": "Recommended for most Sony Handycams and smaller handheld camcorders. Dimensions provided in bracket product listings.",
+            "product1img": "shopify://shop_images/bracket_2.jpg",
+            "product2": "extendo-cold-shoe-mounting-bracket",
             "product2name": "Extendo Cold Shoe Mounting Bracket",
-            "product2desc": "Recommended for larger camcorders (including Sony VX1000\/2000, Canon GL1\/2). Distance from center of screw to the center of the cold shoe is approximately MAKE IT SLIGHTLY SHORTER and put new lengths here and make sure it is reflected in the standalone listing.",
-            "product2img": "shopify:\/\/shop_images\/bracket_2_horizontal.jpg",
+            "product2desc": "Measures 1 inch longer than the original bracket. Recommended for larger camcorders (JVC, RCA, Sony VX, Canon GL/XL). Dimensions provided in bracket product listings.",
+            "product2img": "shopify://shop_images/extendosku.jpg",
             "product3": "",
             "product3name": "",
             "product3desc": ""
@@ -94,16 +92,17 @@
             "SectionHeader": "Cables",
             "SectionDesc": "To connect the ImmersionRC Powerplay to your camcorder",
             "product1": "camcorder-a-v-cable-for-immersionrc-powerplay",
-            "product1name": "3.5mm to 3.5mm A\/V Cable",
-            "product1desc": "For camcorders with 3.5mm A\/V outputs. This is a directional cable: the TRS side plugs into your camcorder and the TRRS side plugs into your Powerplay.",
-            "product1img": "shopify:\/\/shop_images\/3.5mm_cable_crop.jpg",
+            "product1name": "3.5mm to 3.5mm A/V Cable",
+            "product1desc": "For camcorders with 3.5mm A/V outputs. This is a directional cable: the TRS side plugs into your camcorder and the TRRS side plugs into your Powerplay.",
+            "product1img": "shopify://shop_images/3.5mm_cable_crop.jpg",
             "product2": "rca-camcorder-a-v-cable-for-immersionrc-powerplay",
-            "product2name": "RCA to 3.5mm A\/V Cable",
-            "product2desc": "For camcorders with two and three channel RCA A\/V outputs.",
-            "product2img": "shopify:\/\/shop_images\/RCA2.jpg",
-            "product3": "",
-            "product3name": "",
-            "product3desc": ""
+            "product2name": "RCA to 3.5mm A/V Cable",
+            "product2desc": "For camcorders with two and three channel RCA A/V outputs.",
+            "product2img": "shopify://shop_images/RCA2.jpg",
+            "product3": "sony-10-pin-camcorder-a-v-cable-for-immersionrc-powerplay",
+            "product3name": "Sony 10-Pin A/V Cable",
+            "product3desc": "For camcorders with Sony's 10-pin A/V output.",
+            "product3img": "shopify://shop_images/10-pinsku.jpg"
           }
         }
       },
@@ -112,11 +111,8 @@
         "kit_section_a8XYgq",
         "kit_section_9BeNek"
       ],
-      "custom_css": [
-
-      ],
-      "settings": {
-      }
+      "custom_css": [],
+      "settings": {}
     }
   },
   "order": [
