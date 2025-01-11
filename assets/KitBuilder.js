@@ -1,6 +1,6 @@
 var selectedProducts = [0,0,0,0,0,0];
 var selectedProductIDs = [0,0,0,0,0,0];
-
+//testing
 async function selected(sectionIndex, item, id, idvariant, description, featured_image, title, sectionName) {
     removeSelections(sectionIndex);
     if(id == selectedProductIDs[sectionIndex-1]){
