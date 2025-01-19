@@ -12,9 +12,68 @@
     "header_video_dNcWR8": {
       "type": "HeaderVideo",
       "settings": {}
+    },
+    "multirow_iqQb6k": {
+      "type": "multirow",
+      "blocks": {
+        "row_gzXVg3": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/sonylifestyle.png",
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Build Your Tapeless Camcorder Setup",
+            "button_link": "shopify://pages/tapeless-kit-builder"
+          }
+        },
+        "row_6hpJdz": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/mount_cover_2.png",
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Build Your Tapeless Camcorder Setup",
+            "button_link": "shopify://pages/tapeless-kit-builder"
+          }
+        },
+        "row_NA3tcb": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/RCA_Panasonic.jpg",
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Build Your Tapeless Camcorder Setup",
+            "button_link": "shopify://pages/tapeless-kit-builder"
+          }
+        }
+      },
+      "block_order": [
+        "row_gzXVg3",
+        "row_6hpJdz",
+        "row_NA3tcb"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "scheme-4",
+        "row_color_scheme": "scheme-4",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "header_video_dNcWR8"
+    "header_video_dNcWR8",
+    "multirow_iqQb6k"
   ]
 }
