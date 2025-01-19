@@ -30,23 +30,23 @@
         "row_6hpJdz": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/mount_cover_2.png",
+            "image": "shopify://shop_images/RCA_Panasonic.jpg",
             "caption": "Caption",
             "heading": "Row",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "Build Your Tapeless Camcorder Setup",
-            "button_link": "shopify://pages/tapeless-kit-builder"
+            "button_label": "View All Products",
+            "button_link": "shopify://collections/all"
           }
         },
         "row_NA3tcb": {
           "type": "row",
           "settings": {
-            "image": "shopify://shop_images/RCA_Panasonic.jpg",
+            "image": "shopify://shop_images/dclassic2023-07-05153108.846.jpg",
             "caption": "Caption",
             "heading": "Row",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "Build Your Tapeless Camcorder Setup",
-            "button_link": "shopify://pages/tapeless-kit-builder"
+            "button_label": "Contact Us",
+            "button_link": "shopify://pages/contact"
           }
         }
       },
