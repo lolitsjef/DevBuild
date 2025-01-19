@@ -9,41 +9,12 @@
  */
 {
   "sections": {
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Tapeless Camcorder Accessories",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "tapeless-camcorder-accessories",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
-      }
-    },
     "header_video_dNcWR8": {
       "type": "HeaderVideo",
       "settings": {}
     }
   },
   "order": [
-    "header_video_dNcWR8",
-    "featured_collection"
+    "header_video_dNcWR8"
   ]
 }
